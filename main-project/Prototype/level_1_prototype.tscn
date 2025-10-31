@@ -1,12 +1,11 @@
-[gd_scene load_steps=8 format=4 uid="uid://cowrdywxcocyx"]
+[gd_scene load_steps=7 format=4 uid="uid://cowrdywxcocyx"]
 
 [ext_resource type="TileSet" uid="uid://bi56668yleiwe" path="res://map_tileset.tres" id="1_81p1p"]
-[ext_resource type="Texture2D" path="res://assets/enemies sprites/slime/slime_idle_anim_strip_5.png" id="2_fhilm"]
-[ext_resource type="Texture2D" path="res://assets/miscellaneous sprites/save_point_saving_anim_strip_3.png" id="3_5vl2o"]
-[ext_resource type="Texture2D" path="res://assets/miscellaneous sprites/lever_turned_left.png" id="3_dgjy6"]
-[ext_resource type="Texture2D" path="res://assets/miscellaneous sprites/door.png" id="4_636tp"]
-[ext_resource type="Texture2D" path="res://assets/herochar sprites(new)/herochar_attack_anim_strip_4(new).png" id="5_636tp"]
-[ext_resource type="Texture2D" path="res://assets/miscellaneous sprites/coin_anim_strip_6.png" id="7_7opp7"]
+[ext_resource type="Texture2D" uid="uid://cwwqvn1dy0i8p" path="res://assets/metroidvania_asset/enemies sprites/slime/slime_idle_anim_strip_5.png" id="2_fhilm"]
+[ext_resource type="Texture2D" uid="uid://cqx2w55q8ajgv" path="res://assets/metroidvania_asset/miscellaneous sprites/save_point_saving_anim_strip_3.png" id="3_5vl2o"]
+[ext_resource type="Texture2D" uid="uid://b68ya7jnpwycg" path="res://assets/metroidvania_asset/miscellaneous sprites/lever_turned_left.png" id="3_dgjy6"]
+[ext_resource type="Texture2D" uid="uid://evn7gs2bj4ho" path="res://assets/metroidvania_asset/miscellaneous sprites/door.png" id="4_636tp"]
+[ext_resource type="Texture2D" uid="uid://c3rjenqxakv0l" path="res://assets/metroidvania_asset/miscellaneous sprites/coin_anim_strip_6.png" id="7_7opp7"]
 
 [node name="Level1Prototype" type="Node2D"]
 
@@ -44,12 +43,6 @@ texture = ExtResource("4_636tp")
 position = Vector2(1029, -75)
 texture = ExtResource("3_5vl2o")
 hframes = 3
-
-[node name="HerocharAttackAnimStrip4(new)" type="Sprite2D" parent="TileMap"]
-position = Vector2(66, 48)
-scale = Vector2(2, 2)
-texture = ExtResource("5_636tp")
-hframes = 4
 
 [node name="Pickups" type="Node2D" parent="TileMap"]
 

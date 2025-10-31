@@ -1,7 +1,7 @@
 [gd_scene load_steps=26 format=3 uid="uid://dm5vfyywhwu36"]
 
 [ext_resource type="Script" uid="uid://c7jgc8llyp4oq" path="res://Prototype/player_prototype.gd" id="1_dh76u"]
-[ext_resource type="Texture2D" uid="uid://cai6lni4au5kc" path="res://assets/Characters/MiniSwordMan.png" id="2_dh76u"]
+[ext_resource type="Texture2D" uid="uid://cai6lni4au5kc" path="res://assets/character_asset/MiniSwordMan.png" id="2_dh76u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_naehq"]
 atlas = ExtResource("2_dh76u")
