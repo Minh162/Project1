@@ -1,27 +1,68 @@
-[gd_scene load_steps=4 format=3 uid="uid://ccb0hnepu6pj3"]
+[gd_scene load_steps=6 format=3 uid="uid://ccb0hnepu6pj3"]
 
-[ext_resource type="PackedScene" uid="uid://dm5vfyywhwu36" path="res://Prototype/player_demo.tscn" id="1_hwyic"]
+[ext_resource type="Texture2D" uid="uid://c1n5ihfrnvtyu" path="res://icon.svg" id="1_fynsg"]
+[ext_resource type="PackedScene" uid="uid://gfypnx766u88" path="res://characters/prince.tscn" id="1_hwyic"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_24uoo"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fynsg"]
+size = Vector2(240, 29)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hwyic"]
-size = Vector2(54, 4)
+size = Vector2(162.29834, 15.213949)
 
 [node name="Node" type="Node"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(23, 51)
 scale = Vector2(2, 1)
-collision_mask = 0
+collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(26, 0.9999999)
-scale = Vector2(54, 4)
+position = Vector2(119, 13.000002)
+scale = Vector2(240, 28.000004)
 texture = SubResource("PlaceholderTexture2D_24uoo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(26, 1)
+position = Vector2(119, 13.5)
+shape = SubResource("RectangleShape2D_fynsg")
+
+[node name="Enemy1" type="StaticBody2D" parent="."]
+position = Vector2(314.00003, 26.000002)
+scale = Vector2(0.14787602, 3.1549995)
+collision_layer = 4
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy1"]
+scale = Vector2(1.3310677, 0.11810023)
+texture = ExtResource("1_fynsg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy1"]
+scale = Vector2(0.9999998, 1)
 shape = SubResource("RectangleShape2D_hwyic")
 
-[node name="PlayerDemo" parent="." instance=ExtResource("1_hwyic")]
-position = Vector2(33, 33)
+[node name="Enemy2" type="StaticBody2D" parent="."]
+position = Vector2(326, 25)
+scale = Vector2(0.14787602, 3.1549995)
+collision_layer = 4
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy2"]
+scale = Vector2(1.3310677, 0.11810023)
+texture = ExtResource("1_fynsg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy2"]
+scale = Vector2(0.9999998, 1)
+shape = SubResource("RectangleShape2D_hwyic")
+
+[node name="Prince" parent="." node_paths=PackedStringArray("SpawnPoint") instance=ExtResource("1_hwyic")]
+position = Vector2(99, -8)
+scale = Vector2(2, 2)
+SpawnPoint = NodePath("../Marker2D")
+
+[node name="Camera2D" type="Camera2D" parent="Prince"]
+position = Vector2(-0.5, -23.5)
+zoom = Vector2(2, 2)
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(189, -52)
