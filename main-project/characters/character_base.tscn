@@ -1,52 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://bffut8uk2qqct"]
+[gd_scene load_steps=3 format=3 uid="uid://bffut8uk2qqct"]
 
 [ext_resource type="Script" uid="uid://dl4ltxioqa7me" path="res://characters/character_base.gd" id="1_1mj81"]
 [ext_resource type="PackedScene" uid="uid://ca4oa4igebadu" path="res://components/health_component.tscn" id="2_gepiv"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_mvoo7"]
-animations = [{
-"frames": [],
-"loop": true,
-"name": &"attack",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"fall",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"hurt",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"jump",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"move",
-"speed": 5.0
-}]
-
 [node name="CharacterBase" type="CharacterBody2D"]
 script = ExtResource("1_1mj81")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_mvoo7")
-animation = &"fall"
+[node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 [node name="HealthComponent" parent="." instance=ExtResource("2_gepiv")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HealthComponent"]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]

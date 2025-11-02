@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccchd0fggd573"]
+
+[ext_resource type="Script" uid="uid://ltwb2tcj4wfc" path="res://traps/hurt_area.gd" id="1_dv05c"]
+
+[node name="HurtArea" type="Area2D"]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_dv05c")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

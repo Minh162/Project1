@@ -6,13 +6,21 @@ class_name HealthComponent
 var current_health : int = 0
 var parent_node : Node2D
 
+signal death
+signal hurt
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	parent_node = get_parent() as Node2D
 	current_health = max_health
 
-func get_hurt() -> void:
-	current_health -= 1
+func get_hurt(taken_damage) -> void:
+	if current_health > 0:
+		current_health -= taken_damage
+		hurt.emit()
+	
+	if current_health <= 0:
+		death.emit()
 
 func get_hurt_and_back_to_spawn_point() -> void:
 	current_health -= 1

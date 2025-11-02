@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://8vawg5br04m6"]
+
+[ext_resource type="Script" uid="uid://haorpwtj2wmk" path="res://components/health_component.gd" id="1_fw1ev"]
+
+[node name="Enemy" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="HealthComponent" type="Area2D" parent="."]
+script = ExtResource("1_fw1ev")
+metadata/_custom_type_script = "uid://haorpwtj2wmk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HealthComponent"]

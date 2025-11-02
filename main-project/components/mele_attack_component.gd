@@ -1,6 +1,8 @@
 extends Area2D
 class_name MeleAttackComponent
 
+@export var damage_to_deal : int = 2
+
 var list_enemies_in_attack_range: Array
 
 func _ready() -> void:
@@ -15,22 +17,14 @@ func _input(event: InputEvent) -> void:
 			scale.x = -1
 
 func _on_area_entered(area: Area2D) -> void:
-	print("enemy entered attackrange")
+	if area is not HealthComponent:
+		return
 	list_enemies_in_attack_range.append(area)
 
 func _on_area_exited(area: Area2D) -> void:
-	list_enemies_in_attack_range.erase(area)
-
-func _on_body_entered(body: Node2D) -> void:
-	if body in list_enemies_in_attack_range:
-		return
-	print("enemy entered attackrange")
-	list_enemies_in_attack_range.append(body)
+	if area in list_enemies_in_attack_range:
+		list_enemies_in_attack_range.erase(area)
 
 func deal_damage() -> void:
-	for enemy in list_enemies_in_attack_range:
-		print("Attack enemy: " + str(enemy))
-
-
-func _on_body_exited(body: Node2D) -> void:
-	list_enemies_in_attack_range.erase(body)
+	for enemy: HealthComponent in list_enemies_in_attack_range:
+		enemy.get_hurt(damage_to_deal)
