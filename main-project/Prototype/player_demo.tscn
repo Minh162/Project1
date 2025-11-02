@@ -1,7 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://dm5vfyywhwu36"]
+[gd_scene load_steps=28 format=3 uid="uid://dm5vfyywhwu36"]
 
 [ext_resource type="Script" uid="uid://c7jgc8llyp4oq" path="res://Prototype/player_prototype.gd" id="1_dh76u"]
 [ext_resource type="Texture2D" uid="uid://cai6lni4au5kc" path="res://assets/character_asset/MiniSwordMan.png" id="2_dh76u"]
+[ext_resource type="PackedScene" uid="uid://ca4oa4igebadu" path="res://components/health_component.tscn" id="3_kt2jk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_naehq"]
 atlas = ExtResource("2_dh76u")
@@ -187,8 +188,13 @@ animations = [{
 radius = 4.0
 height = 12.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kt2jk"]
+size = Vector2(6, 11)
+
 [node name="PlayerDemo" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("1_dh76u")
+JUMP_VELOCITY = -300.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_g87m8")
@@ -200,3 +206,13 @@ offset = Vector2(0, -15)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -6)
 shape = SubResource("CapsuleShape2D_dh76u")
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_kt2jk")]
+collision_layer = 2
+collision_mask = 12
+max_health = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HealthComponent"]
+position = Vector2(0, -5.5)
+shape = SubResource("RectangleShape2D_kt2jk")
+debug_color = Color(0.83128375, 0.24601951, 0.7619162, 0.41960785)

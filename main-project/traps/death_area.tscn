@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmije8msgr607"]
+
+[ext_resource type="Script" uid="uid://b8jpr6fhtmrr1" path="res://traps/death_area.gd" id="1_judoe"]
+
+[node name="DeathArea" type="Area2D"]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_judoe")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
