@@ -1,0 +1,6 @@
+res://map_tileset.tres
+res://Prototype/player_demo.tscn
+res://Prototype/player_demo.gd
+res://Prototype/player_prototype.gd
+res://Prototype/Main.tscn
+res://Prototype/level_1_prototype.tscn
