@@ -13,7 +13,7 @@ size = Vector2(240, 29)
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(23, 51)
 scale = Vector2(2, 1)
-collision_mask = 2
+collision_mask = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(119, 13.000002)
@@ -37,5 +37,5 @@ zoom = Vector2(2, 2)
 position = Vector2(189, -52)
 
 [node name="Slime" parent="." instance=ExtResource("2_fynsg")]
-position = Vector2(260, 48)
+position = Vector2(280, 50.000004)
 scale = Vector2(1.5, 1.5)

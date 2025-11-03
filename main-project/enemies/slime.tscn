@@ -232,17 +232,18 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qtm3c"]
-radius = 6.0
+radius = 4.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_n1ijq"]
 radius = 7.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mks6d"]
-size = Vector2(11, 13)
+size = Vector2(14, 12)
 
-[node name="Slime" node_paths=PackedStringArray("health_component") instance=ExtResource("1_6ftag")]
+[node name="Slime" node_paths=PackedStringArray("health_component", "hurt_area") instance=ExtResource("1_6ftag")]
 script = ExtResource("2_mks6d")
 health_component = NodePath("HealthComponent")
+hurt_area = NodePath("HurtArea")
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 position = Vector2(0, -8)
@@ -251,7 +252,7 @@ animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2(0, -6)
+position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_qtm3c")
 
 [node name="HealthComponent" parent="." index="2"]
@@ -268,6 +269,11 @@ debug_color = Color(0.81047857, 0.28726298, 0.7442894, 0.41960785)
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtArea" index="0"]
-position = Vector2(0.5, -6.5)
+position = Vector2(0, -6)
 shape = SubResource("RectangleShape2D_mks6d")
 debug_color = Color(0.75390434, 0.45428276, 0.14208585, 0.41960785)
+
+[node name="GroundCheck" type="RayCast2D" parent="." index="4"]
+position = Vector2(-8, 0)
+target_position = Vector2(0, 10)
+hit_from_inside = true
