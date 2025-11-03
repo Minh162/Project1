@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqr2ksrou3nv"]
+
+[ext_resource type="Texture2D" uid="uid://do7bnbxb7xj5q" path="res://assets/tiles/dungeon tile/Dungeon Tile Set.png" id="1_bgb3n"]
+[ext_resource type="PackedScene" uid="uid://dmije8msgr607" path="res://traps/death_area.tscn" id="2_nchjb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iojk1"]
+size = Vector2(31, 8)
+
+[node name="Spike" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-16, -16)
+texture = ExtResource("1_bgb3n")
+centered = false
+region_enabled = true
+region_rect = Rect2(80, 224, 32, 16)
+
+[node name="DeathArea" parent="." instance=ExtResource("2_nchjb")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathArea"]
+position = Vector2(-0.5, -4)
+shape = SubResource("RectangleShape2D_iojk1")

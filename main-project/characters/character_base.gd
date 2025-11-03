@@ -83,7 +83,7 @@ func apply_knockback(direction: Vector2, force: float, knockback_duration: float
 	knockback_timer = knockback_duration
 
 func handle_attack_anim() -> void:
-	if Input.is_action_just_pressed("attack"):
+	if Input.is_action_just_pressed("attack") and not is_attacking:
 		is_attacking = true
 		var mouse_direction = get_global_mouse_position().x - global_position.x
 		if mouse_direction > 0:

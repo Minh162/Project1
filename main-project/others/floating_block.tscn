@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgl8trl56hbih"]
+
+[ext_resource type="Texture2D" uid="uid://cklj3cq2w21r4" path="res://assets/tiles/forest tile/Tileset/Pixel_Woods_Tileset.png" id="1_y22to"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_35pww"]
+size = Vector2(48, 16)
+
+[node name="FloatingBlock" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_y22to")
+region_enabled = true
+region_rect = Rect2(16, 80, 48, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_35pww")

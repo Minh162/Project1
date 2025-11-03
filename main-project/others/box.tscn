@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://beeplk2ic3u17"]
+
+[node name="Box" type="StaticBody2D"]
+collision_mask = 6
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

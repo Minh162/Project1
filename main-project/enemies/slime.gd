@@ -47,11 +47,12 @@ func _on_death() -> void:
 	if not is_alive:
 		return
 	is_alive = false
+	hurt_area.queue_free()
 	animated_sprite_2d.play("death")
 	await animated_sprite_2d.animation_finished
 	queue_free()
 
-func _on_hurt() -> void:
+func _on_hurt(_hurt_pos: Vector2) -> void:
 	can_move = false
 	is_hurting = true
 	animated_sprite_2d.play("hit")

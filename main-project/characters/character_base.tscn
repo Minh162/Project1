@@ -6,6 +6,7 @@
 [node name="CharacterBase" type="CharacterBody2D" node_paths=PackedStringArray("health_component")]
 script = ExtResource("1_1mj81")
 health_component = NodePath("HealthComponent")
+double_jump_velocity = -200.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
