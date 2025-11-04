@@ -3,9 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://dhww2u6xkl0vg" path="res://assets/sunny_asset/sunny-land/assets/environment/tileset.png" id="1_e7tgj"]
 [ext_resource type="Texture2D" uid="uid://bcouwte0pmquo" path="res://assets/metroidvania_asset/hud elements/coins_hud.png" id="2_6tfee"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_yxnuy"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6tfee"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4i6w6"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cp6np"]
 texture = ExtResource("1_e7tgj")
 1:1/0 = 0
 1:1/0/terrain_set = 0
@@ -631,12 +631,12 @@ texture = ExtResource("1_e7tgj")
 
 [sub_resource type="TileSet" id="TileSet_kkgur"]
 physics_layer_0/collision_layer = 1
-physics_layer_0/physics_material = SubResource("PhysicsMaterial_yxnuy")
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_6tfee")
 physics_layer_1/collision_layer = 1
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "ground"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
-sources/0 = SubResource("TileSetAtlasSource_4i6w6")
+sources/0 = SubResource("TileSetAtlasSource_cp6np")
 
 [node name="WorldLv1" type="Node2D"]
 position = Vector2(61, -157)

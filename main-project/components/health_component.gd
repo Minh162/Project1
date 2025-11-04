@@ -21,6 +21,8 @@ func get_hurt(taken_damage, hurt_pos: Vector2 = Vector2.ZERO) -> void:
 	
 	if current_health <= 0:
 		death.emit()
+	
+	print(current_health)
 
 func get_hurt_and_back_to_spawn_point() -> void:
 	current_health -= 1

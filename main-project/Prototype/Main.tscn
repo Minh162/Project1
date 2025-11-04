@@ -1,12 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccb0hnepu6pj3"]
+[gd_scene load_steps=6 format=3 uid="uid://ccb0hnepu6pj3"]
 
 [ext_resource type="PackedScene" uid="uid://gfypnx766u88" path="res://characters/prince.tscn" id="1_hwyic"]
-[ext_resource type="PackedScene" uid="uid://ddyfys5jth01v" path="res://enemies/slime.tscn" id="2_fynsg"]
+[ext_resource type="PackedScene" uid="uid://dm7lt04uuygl2" path="res://enemies/goblin.tscn" id="2_fynsg"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_24uoo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fynsg"]
 size = Vector2(240, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0bjgt"]
+size = Vector2(90, 47)
 
 [node name="Node" type="Node"]
 
@@ -26,16 +29,22 @@ shape = SubResource("RectangleShape2D_fynsg")
 
 [node name="Prince" parent="." node_paths=PackedStringArray("SpawnPoint") instance=ExtResource("1_hwyic")]
 position = Vector2(99, -8)
-scale = Vector2(2, 2)
 SpawnPoint = NodePath("../Marker2D")
 
 [node name="Camera2D" type="Camera2D" parent="Prince"]
-position = Vector2(-0.5, -23.5)
-zoom = Vector2(2, 2)
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(189, -52)
 
-[node name="Slime" parent="." instance=ExtResource("2_fynsg")]
-position = Vector2(280, 50.000004)
-scale = Vector2(1.5, 1.5)
+[node name="TriggerRange" type="Area2D" parent="."]
+position = Vector2(383, 50)
+scale = Vector2(2, 2)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerRange"]
+position = Vector2(0.5, -23.5)
+shape = SubResource("RectangleShape2D_0bjgt")
+
+[node name="Goblin" parent="TriggerRange" node_paths=PackedStringArray("trigger_range_area") instance=ExtResource("2_fynsg")]
+trigger_range_area = NodePath("..")

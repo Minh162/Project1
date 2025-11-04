@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dj1a2m3n587v3"]
+
+[ext_resource type="Script" uid="uid://d1pc3fewn2dl6" path="res://components/monster_attack_component.gd" id="1_sd45g"]
+
+[node name="MonsterAttackComponent" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_sd45g")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
