@@ -104,6 +104,7 @@ func _on_player_hurt(hurt_pos: Vector2) -> void:
 	is_hurting = false
 
 func _on_player_death() -> void:
+	set_collision_layer_value(2, false)
 	is_alive = false
 	anim_player.play("death")
 

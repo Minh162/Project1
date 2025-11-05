@@ -4,13 +4,17 @@ extends CharacterBody2D
 @export var health_component : HealthComponent
 @export var monster_attack_component : MonsterAttackComponent
 @export var trigger_range_area: Area2D
-@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+
+
 var is_alive : bool = true
 var can_move : bool = true
 var is_hurting : bool = false
 var is_attacking : bool = false
 
 var list_player_entered_range = []
+var list_player_entered_alive = []
+
 var focus_object : Node2D
 var direction : int:
 	set(value):
@@ -28,21 +32,24 @@ func _ready() -> void:
 	trigger_range_area.body_entered.connect(_on_trigger_range_body_entered)
 	trigger_range_area.body_exited.connect(_on_trigger_range_body_exited)
 	health_component.hurt.connect(_on_globin_hurt)
+	health_component.death.connect(_on_globin_death)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	set_anim()
 
 func _physics_process(delta: float) -> void:
-	if not is_alive:
+	list_player_entered_alive = list_player_entered_range.filter(func(player:PlayerCharacter): return player.is_alive)
+	
+	if not is_alive or is_hurting:
 		return
 	
-	if monster_attack_component.list_player_in_attack_range:
-		attack()
-		return
-	
-	if not list_player_entered_range:
+	if not list_player_entered_alive:
 		direction = 0
 	else:
+		if monster_attack_component.list_player_in_attack_range and not is_attacking:
+			attack()
+			return
+		
 		var dir_x = global_position.direction_to(find_nearest_player().global_position).normalized().x
 		
 		if dir_x > 0:
@@ -53,7 +60,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
-	if direction:
+	if direction and can_move and not is_attacking and not is_hurting:
 		velocity.x = direction * speed
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
@@ -62,27 +69,22 @@ func _physics_process(delta: float) -> void:
 
 func attack() -> void:
 	is_attacking = true
-	velocity.x = 0
-	animated_sprite_2d.play("attack")
-	await animated_sprite_2d.animation_finished
-	monster_attack_component._deal_damage()
+	animation_player.play("attack")
+	await animation_player.animation_finished
 	is_attacking = false
 
 func set_anim() -> void:
-	if is_attacking || is_hurting:
-		return
-	
-	if not is_alive or is_hurting:
+	if not is_alive or is_attacking or is_hurting:
 		return
 	
 	if velocity.x:
-		animated_sprite_2d.play("move")
+		animation_player.play("move")
 	else:
-		animated_sprite_2d.play("idle")
+		animation_player.play("idle")
 
 func find_nearest_player() -> Node2D:
-	var nearest_player: Node2D = list_player_entered_range[0]
-	for player: Node2D in list_player_entered_range:
+	var nearest_player: Node2D = list_player_entered_alive[0]
+	for player: Node2D in list_player_entered_alive:
 		if self.global_position.distance_squared_to(player.global_position) < self.global_position.distance_squared_to(nearest_player.global_position):
 			nearest_player = player
 	return nearest_player
@@ -98,8 +100,8 @@ func _on_trigger_range_body_exited(body: Node2D) -> void:
 func _on_globin_hurt(_hurt_pos: Vector2) -> void:
 	is_hurting = true
 	can_move = false
-	animated_sprite_2d.play("hit")
-	await animated_sprite_2d.animation_finished
+	animation_player.play("hit")
+	await animation_player.animation_finished
 	can_move = true
 	is_hurting = false
 
@@ -107,6 +109,6 @@ func _on_globin_death() -> void:
 	if not is_alive:
 		return
 	is_alive = false
-	animated_sprite_2d.play("death")
-	await animated_sprite_2d.animation_finished
+	animation_player.play("death")
+	await animation_player.animation_finished
 	queue_free()

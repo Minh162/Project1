@@ -20,4 +20,4 @@ func _on_area_exited(area: Area2D) -> void:
 
 func _deal_damage() -> void:
 	for player: HealthComponent in list_player_in_attack_range:
-		player.get_hurt(damage_to_deal)
+		player.get_hurt(damage_to_deal, self.global_position)
