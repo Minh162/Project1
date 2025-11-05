@@ -1,8 +1,7 @@
-[gd_scene load_steps=20 format=4 uid="uid://de3hb8hip4eqj"]
+[gd_scene load_steps=19 format=4 uid="uid://de3hb8hip4eqj"]
 
 [ext_resource type="TileSet" uid="uid://l27bsl1ldyw7" path="res://combined_tileset.tres" id="1_6cvei"]
 [ext_resource type="Texture2D" uid="uid://cklj3cq2w21r4" path="res://assets/tiles/forest tile/Tileset/Pixel_Woods_Tileset.png" id="2_que50"]
-[ext_resource type="PackedScene" uid="uid://dmije8msgr607" path="res://traps/death_area.tscn" id="2_y0kc7"]
 [ext_resource type="Texture2D" uid="uid://do7bnbxb7xj5q" path="res://assets/tiles/dungeon tile/Dungeon Tile Set.png" id="3_hey2k"]
 [ext_resource type="PackedScene" uid="uid://c4524x040s4ep" path="res://others/checkpoint.tscn" id="3_ne2mo"]
 [ext_resource type="PackedScene" uid="uid://gfypnx766u88" path="res://characters/prince.tscn" id="4_6cvei"]
@@ -11,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bqqlyj0h138bi" path="res://assets/metroidvania_asset/tiles and background_foreground (new)/background.png" id="5_que50"]
 [ext_resource type="PackedScene" uid="uid://wk1poh2tnmxc" path="res://Prototype/trigger_range_for_goblin.tscn" id="6_172wr"]
 [ext_resource type="PackedScene" uid="uid://dk1wbddcpsedk" path="res://others/goal.tscn" id="6_hey2k"]
+[ext_resource type="PackedScene" uid="uid://dm7lt04uuygl2" path="res://enemies/goblin.tscn" id="7_fldb1"]
 [ext_resource type="PackedScene" uid="uid://cqr2ksrou3nv" path="res://traps/spike.tscn" id="8_g2hoc"]
 [ext_resource type="PackedScene" uid="uid://dbw8a0quast5t" path="res://others/coin.tscn" id="8_que50"]
 
@@ -611,9 +611,6 @@ sources/3 = SubResource("TileSetAtlasSource_guvtl")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2hoc"]
 size = Vector2(172, 30)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rus8k"]
-size = Vector2(98, 52)
-
 [node name="Level2" type="Node2D"]
 
 [node name="TileMap" type="Node2D" parent="."]
@@ -643,17 +640,18 @@ position = Vector2(474, -240)
 [node name="TriggerRange" parent="TileMap/Enemies" instance=ExtResource("6_172wr")]
 position = Vector2(1703, -192)
 
+[node name="Goblin" parent="TileMap/Enemies/TriggerRange" index="0"]
+position = Vector2(46.5, 0)
+
+[node name="Goblin2" parent="TileMap/Enemies/TriggerRange" node_paths=PackedStringArray("trigger_range_area") instance=ExtResource("7_fldb1")]
+position = Vector2(-50, 0)
+trigger_range_area = NodePath("..")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Enemies/TriggerRange"]
 position = Vector2(-3.5, -15)
 shape = SubResource("RectangleShape2D_g2hoc")
 
 [node name="Trap" type="Node" parent="TileMap"]
-
-[node name="DeathArea" parent="TileMap/Trap" instance=ExtResource("2_y0kc7")]
-position = Vector2(577, 101)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Trap/DeathArea"]
-shape = SubResource("RectangleShape2D_rus8k")
 
 [node name="Spike" parent="TileMap/Trap" instance=ExtResource("8_g2hoc")]
 position = Vector2(546, -142)
@@ -784,3 +782,5 @@ layer = -10
 [node name="Sprite2D" type="Sprite2D" parent="Background"]
 texture = ExtResource("5_que50")
 centered = false
+
+[editable path="TileMap/Enemies/TriggerRange"]
