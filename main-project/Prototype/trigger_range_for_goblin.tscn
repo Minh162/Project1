@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://wk1poh2tnmxc"]
+
+[ext_resource type="PackedScene" uid="uid://dm7lt04uuygl2" path="res://enemies/goblin.tscn" id="1_dwx0r"]
+
+[node name="TriggerRange" type="Area2D"]
+scale = Vector2(2, 2)
+collision_layer = 0
+collision_mask = 2
+
+[node name="Goblin" parent="." node_paths=PackedStringArray("trigger_range_area") instance=ExtResource("1_dwx0r")]
+trigger_range_area = NodePath("..")
