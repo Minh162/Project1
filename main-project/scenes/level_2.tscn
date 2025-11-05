@@ -657,10 +657,10 @@ shape = SubResource("RectangleShape2D_g2hoc")
 position = Vector2(546, -142)
 
 [node name="Spike2" parent="TileMap/Trap" instance=ExtResource("8_g2hoc")]
-position = Vector2(970, -160)
+position = Vector2(967, -160)
 
 [node name="Spike3" parent="TileMap/Trap" instance=ExtResource("8_g2hoc")]
-position = Vector2(1001, -160)
+position = Vector2(1006, -160)
 
 [node name="Spike8" parent="TileMap/Trap" instance=ExtResource("8_g2hoc")]
 position = Vector2(1170, -159)

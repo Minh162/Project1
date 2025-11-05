@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3yun6mmdkvfk"
-path="res://.godot/imported/bird_flying_anim_strip_3.png-2313d17886bae685a9830f59e12c504e.ctex"
+uid="uid://clsjh7eg1dhha"
+path="res://.godot/imported/Hit Wall 1 (52x54).png-d2f50ef7c658f7e4ed129d377e18f11a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/metroidvania_asset/fauna sprites/bird_flying_anim_strip_3.png"
-dest_files=["res://.godot/imported/bird_flying_anim_strip_3.png-2313d17886bae685a9830f59e12c504e.ctex"]
+source_file="res://assets/more_enemy_assets/Skull/Hit Wall 1 (52x54).png"
+dest_files=["res://.godot/imported/Hit Wall 1 (52x54).png-d2f50ef7c658f7e4ed129d377e18f11a.ctex"]
 
 [params]
 
