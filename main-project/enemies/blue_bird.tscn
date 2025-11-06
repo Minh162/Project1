@@ -1,0 +1,153 @@
+[gd_scene load_steps=23 format=3 uid="uid://d0e1c304ipgrs"]
+
+[ext_resource type="Texture2D" uid="uid://bf11xcvs7l711" path="res://assets/more_enemy_assets/BlueBird/Flying (32x32).png" id="1_7iwg1"]
+[ext_resource type="Script" uid="uid://ce28u8bn44hu0" path="res://enemies/blue_bird.gd" id="1_wsdw1"]
+[ext_resource type="PackedScene" uid="uid://ccchd0fggd573" path="res://traps/hurt_area.tscn" id="2_e2yph"]
+[ext_resource type="Texture2D" uid="uid://bnc2dubcnvdcf" path="res://assets/more_enemy_assets/BlueBird/Hit (32x32).png" id="3_55q6a"]
+[ext_resource type="PackedScene" uid="uid://ca4oa4igebadu" path="res://components/health_component.tscn" id="4_qdux3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2yph"]
+atlas = ExtResource("1_7iwg1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wsdw1"]
+atlas = ExtResource("1_7iwg1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qdux3"]
+atlas = ExtResource("1_7iwg1")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55q6a"]
+atlas = ExtResource("1_7iwg1")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3oil"]
+atlas = ExtResource("1_7iwg1")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_itdar"]
+atlas = ExtResource("1_7iwg1")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xhttm"]
+atlas = ExtResource("1_7iwg1")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rdxdi"]
+atlas = ExtResource("1_7iwg1")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50mq3"]
+atlas = ExtResource("1_7iwg1")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2re1o"]
+atlas = ExtResource("3_55q6a")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cj686"]
+atlas = ExtResource("3_55q6a")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_swue1"]
+atlas = ExtResource("3_55q6a")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2i1yf"]
+atlas = ExtResource("3_55q6a")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5fcf4"]
+atlas = ExtResource("3_55q6a")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2re1o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2yph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wsdw1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qdux3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55q6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3oil")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_itdar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xhttm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rdxdi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50mq3")
+}],
+"loop": true,
+"name": &"flying",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2re1o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cj686")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_swue1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2i1yf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5fcf4")
+}],
+"loop": false,
+"name": &"hit",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wsdw1"]
+size = Vector2(23, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qdux3"]
+size = Vector2(28, 21.5)
+
+[node name="BlueBird" type="PathFollow2D" node_paths=PackedStringArray("health_component")]
+rotates = false
+script = ExtResource("1_wsdw1")
+speed = 0.2
+health_component = NodePath("HealthComponent")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2re1o")
+animation = &"hit"
+autoplay = "flying"
+frame = 4
+frame_progress = 1.0
+
+[node name="HurtArea" parent="." instance=ExtResource("2_e2yph")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtArea"]
+position = Vector2(2.5, 0.5)
+shape = SubResource("RectangleShape2D_wsdw1")
+
+[node name="HealthComponent" parent="." instance=ExtResource("4_qdux3")]
+collision_layer = 4
+collision_mask = 2
+max_health = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HealthComponent"]
+position = Vector2(0, 0.25)
+shape = SubResource("RectangleShape2D_qdux3")
+debug_color = Color(0.9670357, 0, 0.47979528, 0.41960785)
