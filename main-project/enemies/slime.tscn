@@ -241,6 +241,7 @@ radius = 7.0
 size = Vector2(14, 12)
 
 [node name="Slime" node_paths=PackedStringArray("health_component", "hurt_area") instance=ExtResource("1_6ftag")]
+collision_layer = 4
 script = ExtResource("2_mks6d")
 health_component = NodePath("HealthComponent")
 hurt_area = NodePath("HurtArea")

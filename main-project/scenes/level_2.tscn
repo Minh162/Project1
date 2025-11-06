@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bafj7nctd6b1h" path="res://assets/tiles/floating island tile/AssetSheet_Yellow.png" id="4_172wr"]
 [ext_resource type="PackedScene" uid="uid://ddyfys5jth01v" path="res://enemies/slime.tscn" id="5_hey2k"]
 [ext_resource type="Texture2D" uid="uid://bqqlyj0h138bi" path="res://assets/metroidvania_asset/tiles and background_foreground (new)/background.png" id="5_que50"]
-[ext_resource type="PackedScene" uid="uid://wk1poh2tnmxc" path="res://Prototype/trigger_range_for_goblin.tscn" id="6_172wr"]
+[ext_resource type="PackedScene" uid="uid://wk1poh2tnmxc" path="res://enemies/enemy_trigger_range.tscn" id="6_172wr"]
 [ext_resource type="PackedScene" uid="uid://dk1wbddcpsedk" path="res://others/goal.tscn" id="6_hey2k"]
 [ext_resource type="PackedScene" uid="uid://dm7lt04uuygl2" path="res://enemies/goblin.tscn" id="7_fldb1"]
 [ext_resource type="PackedScene" uid="uid://cqr2ksrou3nv" path="res://traps/spike.tscn" id="8_g2hoc"]
@@ -640,11 +640,12 @@ position = Vector2(474, -240)
 [node name="TriggerRange" parent="TileMap/Enemies" instance=ExtResource("6_172wr")]
 position = Vector2(1703, -192)
 
-[node name="Goblin" parent="TileMap/Enemies/TriggerRange" index="0"]
-position = Vector2(46.5, 0)
-
 [node name="Goblin2" parent="TileMap/Enemies/TriggerRange" node_paths=PackedStringArray("trigger_range_area") instance=ExtResource("7_fldb1")]
 position = Vector2(-50, 0)
+trigger_range_area = NodePath("..")
+
+[node name="Goblin3" parent="TileMap/Enemies/TriggerRange" node_paths=PackedStringArray("trigger_range_area") instance=ExtResource("7_fldb1")]
+position = Vector2(44.5, 0)
 trigger_range_area = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Enemies/TriggerRange"]
