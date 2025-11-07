@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://b00jmjqa1ea2t"]
+
+[node name="MultiplayerUiDraw" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 161.0
+offset_top = 252.0
+offset_right = 221.0
+offset_bottom = 283.0
+text = "Create"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button5" type="Button" parent="."]
+offset_left = 161.0
+offset_top = 252.0
+offset_right = 221.0
+offset_bottom = 283.0
+text = "Create"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button8" type="Button" parent="."]
+offset_left = 1140.0
+offset_top = 67.0
+offset_right = 1200.0
+offset_bottom = 98.0
+text = "Back"
+
+[node name="Button9" type="Button" parent="."]
+offset_left = 53.0
+offset_top = 77.0
+offset_right = 113.0
+offset_bottom = 108.0
+text = "Back"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 596.0
+offset_top = 249.0
+offset_right = 656.0
+offset_bottom = 280.0
+text = "Join"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 185.0
+offset_top = 367.0
+offset_right = 850.0
+offset_bottom = 642.0
+text = "Join from available room"
+
+[node name="Button10" type="Button" parent="."]
+offset_left = 347.0
+offset_top = 248.0
+offset_right = 497.0
+offset_bottom = 279.0
+text = "Continue last save"
+
+[node name="Button6" type="Button" parent="."]
+offset_left = 1117.0
+offset_top = 381.0
+offset_right = 1782.0
+offset_bottom = 656.0
+text = ".../...(number of players)
+
+Player1(Host)
+Player 2(Kick)
+Player3(Kick)"
+alignment = 0
+
+[node name="Button7" type="Button" parent="."]
+offset_left = 1404.0
+offset_top = 272.0
+offset_right = 1513.0
+offset_bottom = 306.0
+text = "(In the room)"
+alignment = 0
+
+[node name="Button4" type="Button" parent="."]
+offset_left = 686.0
+offset_top = 247.0
+offset_right = 847.0
+offset_bottom = 278.0
+text = "Or enter room code"
+metadata/_edit_use_anchors_ = true
