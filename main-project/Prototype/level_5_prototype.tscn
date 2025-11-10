@@ -471,7 +471,7 @@ hframes = 6
 frame = 4
 
 [node name="CoinAnimStrip44" type="Sprite2D" parent="TileMapLayer/Coin"]
-position = Vector2(77, 338)
+position = Vector2(55, 615)
 texture = ExtResource("5_t3d3k")
 hframes = 6
 frame = 4
@@ -714,4 +714,16 @@ offset_top = 231.0
 offset_right = 1041.0
 offset_bottom = 254.0
 text = "4"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label13" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = -0.40833333
+anchor_right = -0.40833333
+offset_left = 40.0
+offset_top = 322.0
+offset_right = 150.0
+offset_bottom = 371.0
+text = "Start Point
+ "
 metadata/_edit_use_anchors_ = true
