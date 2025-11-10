@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dl4ltxioqa7me" path="res://characters/character_base.gd" id="1_1mj81"]
 [ext_resource type="PackedScene" uid="uid://ca4oa4igebadu" path="res://components/health_component.tscn" id="2_gepiv"]
 
-[node name="CharacterBase" type="CharacterBody2D" node_paths=PackedStringArray("health_component")]
+[node name="CharacterBase" type="CharacterBody2D" node_paths=PackedStringArray("health_component") groups=["Player"]]
 script = ExtResource("1_1mj81")
 health_component = NodePath("HealthComponent")
 double_jump_velocity = -200.0

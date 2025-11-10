@@ -1,0 +1,239 @@
+[gd_scene load_steps=22 format=3 uid="uid://dy453cyhrwp5e"]
+
+[ext_resource type="Script" uid="uid://colbhiornlcbf" path="res://Prototype/TestBoss/FlyingMonster/flying_monster.gd" id="1_leej7"]
+[ext_resource type="Texture2D" uid="uid://untagf4obolg" path="res://Prototype/TestBoss/FlyingMonster/FlyingMonsterSpriteSheet.png" id="1_p760j"]
+[ext_resource type="Script" uid="uid://c2i1gugc522of" path="res://Prototype/TestBoss/FlyingMonster/fsm_test.gd" id="3_8nfe2"]
+[ext_resource type="Script" uid="uid://c5pwtnwr3pk7e" path="res://Prototype/TestBoss/FlyingMonster/wait_player.gd" id="4_44obp"]
+[ext_resource type="Script" uid="uid://cn7c67rvep5ni" path="res://Prototype/TestBoss/FlyingMonster/rest_state.gd" id="5_8gw4x"]
+[ext_resource type="Script" uid="uid://ces50v5suifdb" path="res://Prototype/TestBoss/FlyingMonster/idle.gd" id="6_lwvki"]
+[ext_resource type="Script" uid="uid://cytaj802xrco1" path="res://Prototype/TestBoss/FlyingMonster/active_state.gd" id="6_pd0nt"]
+[ext_resource type="Script" uid="uid://d4ixlww6go1s6" path="res://Prototype/TestBoss/FlyingMonster/shoot_state.gd" id="7_e8vug"]
+[ext_resource type="PackedScene" uid="uid://dfg23m7fd87hk" path="res://Prototype/TestBoss/FlyingMonster/flying_monster_bullet.tscn" id="8_0jh52"]
+[ext_resource type="Script" uid="uid://rl35ru7a6mni" path="res://Prototype/TestBoss/FlyingMonster/dash_state.gd" id="9_vukie"]
+[ext_resource type="Script" uid="uid://b7hu82tixbaqc" path="res://Prototype/TestBoss/FlyingMonster/hurt.gd" id="10_x7la4"]
+[ext_resource type="Script" uid="uid://dacp7qmqgv587" path="res://Prototype/TestBoss/FlyingMonster/death.gd" id="12_lwvki"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_leej7"]
+radius = 32.89377
+
+[sub_resource type="Animation" id="Animation_pd0nt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FlyingMonster/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_p760j"]
+resource_name = "attack"
+step = 0.125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FlyingMonster/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [16, 17, 18, 19, 20, 21, 22, 23]
+}
+
+[sub_resource type="Animation" id="Animation_44obp"]
+resource_name = "death"
+length = 0.23333667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FlyingMonster/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666667, 0.10000001, 0.13333334, 0.16666667, 0.20000334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [32, 33, 34, 35, 36, 37, 38]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FlyingMonster")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.23333333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_8nfe2"]
+resource_name = "flying"
+length = 0.5000125
+loop_mode = 1
+step = 0.125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FlyingMonster/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [8, 9, 10, 11]
+}
+
+[sub_resource type="Animation" id="Animation_f61xb"]
+resource_name = "hurt"
+length = 0.5000125
+step = 0.125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FlyingMonster/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [24, 25, 26, 27]
+}
+
+[sub_resource type="Animation" id="Animation_leej7"]
+resource_name = "idle"
+length = 0.5000125
+loop_mode = 1
+step = 0.125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FlyingMonster/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8nfe2"]
+_data = {
+&"RESET": SubResource("Animation_pd0nt"),
+&"attack": SubResource("Animation_p760j"),
+&"death": SubResource("Animation_44obp"),
+&"flying": SubResource("Animation_8nfe2"),
+&"hurt": SubResource("Animation_f61xb"),
+&"idle": SubResource("Animation_leej7")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f61xb"]
+size = Vector2(306, 164)
+
+[node name="FlyingMonster" type="Area2D"]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_leej7")
+max_health = 20
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5, 6)
+shape = SubResource("CircleShape2D_leej7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_p760j")
+hframes = 8
+vframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_8nfe2")
+}
+autoplay = "idle"
+
+[node name="FiniteStateMachine" type="Node" parent="." node_paths=PackedStringArray("debug_label", "initial_state", "monster", "anim_player", "rest_timer")]
+script = ExtResource("3_8nfe2")
+debug_label = NodePath("../DebugLabel")
+initial_state = NodePath("WaitPlayer")
+monster = NodePath("..")
+anim_player = NodePath("../AnimationPlayer")
+rest_timer = NodePath("../RestTimer")
+
+[node name="WaitPlayer" type="Node" parent="FiniteStateMachine"]
+script = ExtResource("4_44obp")
+
+[node name="Rest" type="Node" parent="FiniteStateMachine"]
+script = ExtResource("5_8gw4x")
+
+[node name="Idle" type="Node" parent="FiniteStateMachine"]
+script = ExtResource("6_lwvki")
+
+[node name="Active" type="Node" parent="FiniteStateMachine"]
+script = ExtResource("6_pd0nt")
+
+[node name="Shoot" type="Node" parent="FiniteStateMachine" node_paths=PackedStringArray("bullet_holder")]
+script = ExtResource("7_e8vug")
+bullet_scene = ExtResource("8_0jh52")
+bullet_holder = NodePath("../../BulletHolder")
+
+[node name="Dash" type="Node" parent="FiniteStateMachine"]
+script = ExtResource("9_vukie")
+
+[node name="Hurt" type="Node" parent="FiniteStateMachine"]
+script = ExtResource("10_x7la4")
+
+[node name="Death" type="Node" parent="FiniteStateMachine"]
+script = ExtResource("12_lwvki")
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+shape = SubResource("RectangleShape2D_f61xb")
+
+[node name="BossUI" type="CanvasLayer" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="BossUI"]
+visible = false
+custom_minimum_size = Vector2(200, 0)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_right = 100.0
+offset_bottom = 16.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 8
+
+[node name="DebugLabel" type="Label" parent="."]
+offset_left = -33.0
+offset_top = -51.0
+offset_right = 16.0
+offset_bottom = -28.0
+theme_override_font_sizes/font_size = 8
+text = "debug"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BulletHolder" type="Node" parent="."]
+
+[node name="RestTimer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+
+[connection signal="body_entered" from="PlayerDetection" to="FiniteStateMachine/WaitPlayer" method="_on_player_detection_body_entered"]
