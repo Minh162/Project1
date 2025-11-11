@@ -392,7 +392,31 @@ offset_left = -53.0
 offset_top = -62.0
 offset_right = 57.0
 offset_bottom = -39.0
-text = "BOSS HOLDER"
+text = "ENEMY"
+
+[node name="Icon19" type="Sprite2D" parent="TileMapLayer/Emeny"]
+position = Vector2(1439.9999, 283)
+scale = Vector2(0.2734375, 0.28515634)
+texture = ExtResource("2_2ksdt")
+
+[node name="Label" type="Label" parent="TileMapLayer/Emeny/Icon19"]
+offset_left = -53.0
+offset_top = -62.0
+offset_right = 57.0
+offset_bottom = -39.0
+text = "ENEMY"
+
+[node name="Icon20" type="Sprite2D" parent="TileMapLayer/Emeny"]
+position = Vector2(1572.9998, 195)
+scale = Vector2(0.2734375, 0.28515634)
+texture = ExtResource("2_2ksdt")
+
+[node name="Label" type="Label" parent="TileMapLayer/Emeny/Icon20"]
+offset_left = -53.0
+offset_top = -62.0
+offset_right = 57.0
+offset_bottom = -39.0
+text = "FLY ENEMY"
 
 [node name="Icon2" type="Sprite2D" parent="TileMapLayer/Emeny"]
 position = Vector2(1125.0001, 520)
@@ -684,7 +708,7 @@ hframes = 6
 frame = 4
 
 [node name="CoinAnimStrip18" type="Sprite2D" parent="TileMapLayer/Coin"]
-position = Vector2(1369, 269)
+position = Vector2(1394, 277)
 texture = ExtResource("3_2ksdt")
 hframes = 6
 frame = 4
@@ -790,23 +814,23 @@ frame = 4
 [node name="Label2" type="Label" parent="TileMapLayer/Portal"]
 anchors_preset = -1
 anchor_left = -0.40833333
-anchor_right = -0.40833333
-offset_left = 764.0
-offset_top = 60.0
-offset_right = 874.0
-offset_bottom = 109.0
-text = "1
- "
+anchor_right = -0.80833334
+anchor_bottom = -0.15625
+offset_left = 423.0
+offset_top = 56.0
+offset_right = 533.0
+offset_bottom = 105.0
+text = "1 "
 metadata/_edit_use_anchors_ = true
 
 [node name="Label13" type="Label" parent="TileMapLayer/Portal"]
 anchors_preset = -1
 anchor_left = -0.40833333
 anchor_right = -0.40833333
-offset_left = 454.0
-offset_top = 229.0
-offset_right = 564.0
-offset_bottom = 278.0
+offset_left = 106.0
+offset_top = 221.0
+offset_right = 216.0
+offset_bottom = 270.0
 text = "Start Point
  "
 metadata/_edit_use_anchors_ = true
@@ -814,114 +838,120 @@ metadata/_edit_use_anchors_ = true
 [node name="Label3" type="Label" parent="TileMapLayer/Portal"]
 anchors_preset = -1
 anchor_left = -0.40833333
-anchor_right = -0.40833333
-offset_left = 842.0
-offset_top = 60.0
-offset_right = 952.0
-offset_bottom = 109.0
-text = "1
- "
+anchor_right = -0.80833334
+anchor_bottom = -0.1625
+offset_left = 501.0
+offset_top = 56.0
+offset_right = 611.0
+offset_bottom = 105.0
+text = "1 "
 metadata/_edit_use_anchors_ = true
 
 [node name="Label4" type="Label" parent="TileMapLayer/Portal"]
 anchors_preset = -1
 anchor_left = -0.40833333
-anchor_right = -0.40833333
-offset_left = 949.0
-offset_top = 229.0
-offset_right = 1059.0
-offset_bottom = 278.0
-text = "2-3
- "
+anchor_right = -0.75
+anchor_bottom = -0.1625
+offset_left = 608.0
+offset_top = 225.0
+offset_right = 718.0
+offset_bottom = 274.0
+text = "2-3 "
 metadata/_edit_use_anchors_ = true
 
 [node name="Label5" type="Label" parent="TileMapLayer/Portal"]
 anchors_preset = -1
 anchor_left = -0.40833333
-anchor_right = -0.40833333
-offset_left = 747.0
-offset_top = 510.0
-offset_right = 857.0
-offset_bottom = 559.0
-text = "2
- "
+anchor_right = -0.80833334
+anchor_bottom = -0.1625
+offset_left = 406.0
+offset_top = 506.0
+offset_right = 516.0
+offset_bottom = 555.0
+text = "2 "
 metadata/_edit_use_anchors_ = true
 
 [node name="Label6" type="Label" parent="TileMapLayer/Portal"]
 anchors_preset = -1
 anchor_left = -0.40833333
-anchor_right = -0.40833333
-offset_left = 538.0
-offset_top = 327.0
-offset_right = 648.0
-offset_bottom = 376.0
+anchor_right = -0.825
+anchor_bottom = -0.1625
+offset_left = 197.0
+offset_top = 323.0
+offset_right = 307.0
+offset_bottom = 372.0
 text = "3"
 metadata/_edit_use_anchors_ = true
 
 [node name="Label7" type="Label" parent="TileMapLayer/Portal"]
 anchors_preset = -1
 anchor_left = -0.40833333
-anchor_right = -0.40833333
-offset_left = 1366.0
-offset_top = 501.0
-offset_right = 1476.0
-offset_bottom = 550.0
+anchor_right = -0.76666665
+anchor_bottom = -0.1625
+offset_left = 1025.0
+offset_top = 497.0
+offset_right = 1135.0
+offset_bottom = 546.0
 text = "3-4"
 metadata/_edit_use_anchors_ = true
 
 [node name="Label8" type="Label" parent="TileMapLayer/Portal"]
 anchors_preset = -1
 anchor_left = -0.40833333
-anchor_right = -0.40833333
-offset_left = 1449.0
-offset_top = 499.0
-offset_right = 1559.0
-offset_bottom = 548.0
+anchor_right = -0.825
+anchor_bottom = -0.1625
+offset_left = 1108.0
+offset_top = 495.0
+offset_right = 1218.0
+offset_bottom = 544.0
 text = "3"
 metadata/_edit_use_anchors_ = true
 
 [node name="Label9" type="Label" parent="TileMapLayer/Portal"]
 anchors_preset = -1
 anchor_left = -0.40833333
-anchor_right = -0.40833333
-offset_left = 1578.0
-offset_top = 438.0
-offset_right = 1688.0
-offset_bottom = 487.0
+anchor_right = -0.825
+anchor_bottom = -0.1625
+offset_left = 1237.0
+offset_top = 434.0
+offset_right = 1347.0
+offset_bottom = 483.0
 text = "4"
 metadata/_edit_use_anchors_ = true
 
 [node name="Label10" type="Label" parent="TileMapLayer/Portal"]
 anchors_preset = -1
 anchor_left = -0.40833333
-anchor_right = -0.40833333
-offset_left = 1659.0
-offset_top = 277.0
-offset_right = 1769.0
-offset_bottom = 326.0
+anchor_right = -0.825
+anchor_bottom = -0.1625
+offset_left = 1318.0
+offset_top = 273.0
+offset_right = 1428.0
+offset_bottom = 322.0
 text = "5"
 metadata/_edit_use_anchors_ = true
 
 [node name="Label11" type="Label" parent="TileMapLayer/Portal"]
 anchors_preset = -1
 anchor_left = -0.40833333
-anchor_right = -0.40833333
-offset_left = 1738.0
-offset_top = 277.0
-offset_right = 1848.0
-offset_bottom = 326.0
+anchor_right = -0.825
+anchor_bottom = -0.1625
+offset_left = 1398.0
+offset_top = 280.0
+offset_right = 1508.0
+offset_bottom = 329.0
 text = "5"
 metadata/_edit_use_anchors_ = true
 
 [node name="Label12" type="Label" parent="TileMapLayer/Portal"]
 anchors_preset = -1
 anchor_left = -0.40833333
-anchor_right = -0.40833333
-offset_left = 1317.0
-offset_top = 39.0
-offset_right = 1427.0
-offset_bottom = 114.0
+anchor_right = -0.7125
+anchor_bottom = -0.1625
+offset_left = 976.0
+offset_top = 35.0
+offset_right = 1086.0
+offset_bottom = 110.0
 text = "Next
-level
-"
+level"
 metadata/_edit_use_anchors_ = true
