@@ -50,9 +50,25 @@ position = Vector2(118, 149)
 scale = Vector2(0.26427805, 0.264278)
 texture = ExtResource("5_ya0k3")
 
-[node name="Canvas" type="Node" parent="."]
+[node name="Icon12" type="Sprite2D" parent="."]
+top_level = true
+position = Vector2(47, 91.99999)
+scale = Vector2(0.19365998, 0.13456985)
+texture = ExtResource("4_f37e2")
 
-[node name="HighestScoreLabel" type="Label" parent="Canvas"]
+[node name="Label4" type="Label" parent="Icon12"]
+top_level = true
+offset_left = 25.0
+offset_top = 78.0
+offset_right = 66.0
+offset_bottom = 105.0
+theme_override_font_sizes/font_size = 8
+text = "player idle
+"
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+
+[node name="HighestScoreLabel" type="Label" parent="CanvasGroup"]
 offset_left = 404.0
 offset_top = -192.0
 offset_right = 712.0
@@ -62,23 +78,24 @@ theme_override_fonts/font = ExtResource("6_ddg2q")
 theme_override_font_sizes/font_size = 46
 text = "Highest Score: "
 
-[node name="Name" type="Label" parent="Canvas"]
+[node name="Name" type="Label" parent="CanvasGroup"]
+top_level = true
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -51.0
-offset_top = 3.0
+offset_top = 2.0
 offset_right = 51.0
-offset_bottom = 50.0
+offset_bottom = 49.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_q4xqd")
 theme_override_font_sizes/font_size = 51
 text = "GAME"
 
-[node name="Button" type="Node" parent="Canvas"]
+[node name="Button" type="Node" parent="CanvasGroup"]
 
-[node name="Button Play" type="Button" parent="Canvas/Button"]
+[node name="Button Play" type="Button" parent="CanvasGroup/Button"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -97,7 +114,7 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_nof8e")
 text = "New Game
 "
 
-[node name="Button Continue" type="Button" parent="Canvas/Button"]
+[node name="Button Continue" type="Button" parent="CanvasGroup/Button"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -116,7 +133,7 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_nof8e")
 text = "Continue
 "
 
-[node name="Button Multilplayer" type="Button" parent="Canvas/Button"]
+[node name="Button Multilplayer" type="Button" parent="CanvasGroup/Button"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -134,7 +151,7 @@ theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxEmpty_nof8e")
 text = "Multiplayer"
 
-[node name="Button Settings" type="Button" parent="Canvas/Button"]
+[node name="Button Settings" type="Button" parent="CanvasGroup/Button"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -152,7 +169,7 @@ theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxEmpty_nof8e")
 text = "Settings"
 
-[node name="Button Quit" type="Button" parent="Canvas/Button"]
+[node name="Button Quit" type="Button" parent="CanvasGroup/Button"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -169,19 +186,3 @@ theme_override_fonts/font = ExtResource("6_ddg2q")
 theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxEmpty_nof8e")
 text = "Quit"
-
-[node name="Icon12" type="Sprite2D" parent="."]
-top_level = true
-position = Vector2(47, 91.99999)
-scale = Vector2(0.19365998, 0.13456985)
-texture = ExtResource("4_f37e2")
-
-[node name="Label4" type="Label" parent="Icon12"]
-top_level = true
-offset_left = 25.0
-offset_top = 78.0
-offset_right = 66.0
-offset_bottom = 105.0
-theme_override_font_sizes/font_size = 8
-text = "player idle
-"
