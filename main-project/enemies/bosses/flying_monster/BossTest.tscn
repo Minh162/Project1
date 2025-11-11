@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://c8ajm6ca7l8e2"]
 
-[ext_resource type="PackedScene" uid="uid://dy453cyhrwp5e" path="res://Prototype/TestBoss/FlyingMonster/flying_monster.tscn" id="1_oxy82"]
+[ext_resource type="PackedScene" uid="uid://dy453cyhrwp5e" path="res://enemies/bosses/flying_monster/flying_monster.tscn" id="1_oxy82"]
 [ext_resource type="PackedScene" uid="uid://gfypnx766u88" path="res://characters/prince.tscn" id="2_mb06y"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_oxy82"]

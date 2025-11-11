@@ -1,5 +1,6 @@
-extends StateTest
+extends FlyingMonsterState
 
+@export var dash_time : float = 0.5
 @export var dash_number : int = 2
 var current_dash_time = 0
 
@@ -8,6 +9,10 @@ func enter() -> void:
 	dash()
 
 func dash() -> void:
+	if not state_machine.monster.focused_player:
+		state_machine.change_state("idle")
+		return
+	
 	if current_dash_time == dash_number:
 		state_machine.change_state("rest")
 		return
@@ -19,7 +24,7 @@ func dash() -> void:
 		state_machine.monster,
 		"global_position",
 		state_machine.monster.focused_player.global_position,
-		1.0
+		dash_time
 	)
 	state_machine.anim_player.play("flying")
 	tween.tween_interval(1.0)
@@ -27,6 +32,6 @@ func dash() -> void:
 		state_machine.monster,
 		"global_position",
 		state_machine.monster.active_point.global_position,
-		1.0
+		0.5
 	)
 	tween.tween_callback(dash).set_delay(1.0)

@@ -1,8 +1,6 @@
-extends StateTest
-
+extends FlyingMonsterState
 
 @onready var hurt_collision: CollisionShape2D = $"../../CollisionShape2D"
-
 
 func enter() -> void:
 	state_machine.rest_timer.stop()
@@ -26,3 +24,5 @@ func enter() -> void:
 	await state_machine.anim_player.animation_finished
 	
 	state_machine.anim_player.play("death")
+	
+	

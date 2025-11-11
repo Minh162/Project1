@@ -1,7 +1,7 @@
 extends Node
-class_name StateTest
+class_name FlyingMonsterState
 
-var state_machine: StateMachineTest
+var state_machine: FlyingMonsterStateMachine
 
 func enter() -> void:
 	pass

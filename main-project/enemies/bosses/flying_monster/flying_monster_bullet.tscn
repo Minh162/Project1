@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=3 uid="uid://dfg23m7fd87hk"]
+
+[ext_resource type="Texture2D" uid="uid://bsalwyiptw5tn" path="res://assets/bosses/flying_monster/All_Fire_Bullet_Pixel_16x16.png" id="1_eq044"]
+[ext_resource type="Script" uid="uid://c7i10jmv741nv" path="res://enemies/bosses/flying_monster/flying_monster_bullet.gd" id="2_8lep4"]
+[ext_resource type="PackedScene" uid="uid://ccchd0fggd573" path="res://traps/hurt_area.tscn" id="3_wsu5a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8lep4"]
+atlas = ExtResource("1_eq044")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wsu5a"]
+atlas = ExtResource("1_eq044")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_708hm"]
+atlas = ExtResource("1_eq044")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eom8t"]
+atlas = ExtResource("1_eq044")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8bt4"]
+atlas = ExtResource("1_eq044")
+region = Rect2(64, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ulqr1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8lep4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wsu5a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_708hm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eom8t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8bt4")
+}],
+"loop": true,
+"name": &"flash",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1lj21"]
+size = Vector2(14, 14)
+
+[node name="FlyingMonsterBullet" type="AnimatedSprite2D"]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_ulqr1")
+animation = &"flash"
+autoplay = "flash"
+frame_progress = 0.3101111
+script = ExtResource("2_8lep4")
+speed = 400.0
+
+[node name="HurtArea" parent="." instance=ExtResource("3_wsu5a")]
+damage_to_deal = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtArea"]
+shape = SubResource("RectangleShape2D_1lj21")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+rect = Rect2(-4, -4, 8, 8)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

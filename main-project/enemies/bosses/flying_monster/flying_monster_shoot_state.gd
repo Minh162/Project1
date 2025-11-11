@@ -1,4 +1,4 @@
-extends StateTest
+extends FlyingMonsterState
 
 @export var bullet_scene: PackedScene
 @export var bullet_holder: Node

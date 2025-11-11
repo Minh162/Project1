@@ -1,4 +1,4 @@
-extends StateTest
+extends FlyingMonsterState
 
 func enter() -> void:
 	state_machine.monster.can_be_hurt = true

@@ -1,25 +1,32 @@
 extends HealthComponent
-class_name BossEnemy
+class_name FlyingBoss
 
 @export var rest_point: Marker2D
 @export var active_point: Marker2D
 
-@onready var sprite_2d: Sprite2D = $Sprite2D
+@onready var progress_bar: ProgressBar = $BossUI/ProgressBar
+@onready var flying_monster_sprite: Sprite2D = $FlyingMonsterSprite
+
+signal boss_start
+signal boss_slained
 
 var focused_player : PlayerCharacter
 var can_be_hurt : bool = false
 
 func _ready() -> void:
 	current_health = max_health
+	progress_bar.max_value = max_health
+	progress_bar.value = current_health
 
 func _process(_delta: float) -> void:
+	progress_bar.value = current_health
 	focused_player = find_nearest_player()
 	if focused_player:
 		var direction_to_player : Vector2 = self.global_position.direction_to(focused_player.global_position).normalized()
 		if direction_to_player.x > 0:
-			sprite_2d.flip_h = true
+			flying_monster_sprite.flip_h = true
 		elif direction_to_player.x < 0:
-			sprite_2d.flip_h = false
+			flying_monster_sprite.flip_h = false
 
 func find_nearest_player() -> PlayerCharacter:
 	var nearest_player: PlayerCharacter = get_tree().get_first_node_in_group("Player")

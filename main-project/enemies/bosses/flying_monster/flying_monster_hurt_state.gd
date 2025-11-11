@@ -1,4 +1,4 @@
-extends StateTest
+extends FlyingMonsterState
 
 
 func enter() -> void:

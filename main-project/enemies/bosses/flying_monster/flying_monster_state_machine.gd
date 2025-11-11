@@ -1,12 +1,11 @@
 extends Node
-class_name StateMachineTest
+class_name FlyingMonsterStateMachine
 
-@export var debug_label: Label
-@export var initial_state: StateTest
-@export var monster : HealthComponent
+@export var initial_state: FlyingMonsterState
+@export var monster : FlyingBoss
 @export var anim_player: AnimationPlayer
 @export var rest_timer : Timer
-var current_state: StateTest
+var current_state: FlyingMonsterState
 var states: Dictionary = {}
 
 func _ready() -> void:
@@ -16,7 +15,7 @@ func _ready() -> void:
 	rest_timer.timeout.connect(_on_rest_timer_timeout)
 	
 	for child in get_children():
-		if child is StateTest:
+		if child is FlyingMonsterState:
 			states[child.name.to_lower()] = child
 			child.state_machine = self
 	
@@ -26,9 +25,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if current_state:
 		current_state.update(delta)
-	
-	if debug_label:
-		debug_label.text = current_state.name.to_lower()
 
 func _physics_process(delta: float) -> void:
 	if current_state:
@@ -56,3 +52,4 @@ func _on_hurt(_hurt_pos) -> void:
 
 func _on_death() -> void:
 	change_state("death")
+	monster.boss_slained.emit()

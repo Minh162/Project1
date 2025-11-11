@@ -1,4 +1,4 @@
-extends Sprite2D
+extends AnimatedSprite2D
 class_name FlyingMonsterBullet
 
 @export var speed: float = 200.0

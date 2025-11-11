@@ -1,27 +1,28 @@
-[gd_scene load_steps=22 format=3 uid="uid://dy453cyhrwp5e"]
+[gd_scene load_steps=26 format=3 uid="uid://dy453cyhrwp5e"]
 
-[ext_resource type="Script" uid="uid://colbhiornlcbf" path="res://Prototype/TestBoss/FlyingMonster/flying_monster.gd" id="1_leej7"]
-[ext_resource type="Texture2D" uid="uid://untagf4obolg" path="res://Prototype/TestBoss/FlyingMonster/FlyingMonsterSpriteSheet.png" id="1_p760j"]
-[ext_resource type="Script" uid="uid://c2i1gugc522of" path="res://Prototype/TestBoss/FlyingMonster/fsm_test.gd" id="3_8nfe2"]
-[ext_resource type="Script" uid="uid://c5pwtnwr3pk7e" path="res://Prototype/TestBoss/FlyingMonster/wait_player.gd" id="4_44obp"]
-[ext_resource type="Script" uid="uid://cn7c67rvep5ni" path="res://Prototype/TestBoss/FlyingMonster/rest_state.gd" id="5_8gw4x"]
-[ext_resource type="Script" uid="uid://ces50v5suifdb" path="res://Prototype/TestBoss/FlyingMonster/idle.gd" id="6_lwvki"]
-[ext_resource type="Script" uid="uid://cytaj802xrco1" path="res://Prototype/TestBoss/FlyingMonster/active_state.gd" id="6_pd0nt"]
-[ext_resource type="Script" uid="uid://d4ixlww6go1s6" path="res://Prototype/TestBoss/FlyingMonster/shoot_state.gd" id="7_e8vug"]
-[ext_resource type="PackedScene" uid="uid://dfg23m7fd87hk" path="res://Prototype/TestBoss/FlyingMonster/flying_monster_bullet.tscn" id="8_0jh52"]
-[ext_resource type="Script" uid="uid://rl35ru7a6mni" path="res://Prototype/TestBoss/FlyingMonster/dash_state.gd" id="9_vukie"]
-[ext_resource type="Script" uid="uid://b7hu82tixbaqc" path="res://Prototype/TestBoss/FlyingMonster/hurt.gd" id="10_x7la4"]
-[ext_resource type="Script" uid="uid://dacp7qmqgv587" path="res://Prototype/TestBoss/FlyingMonster/death.gd" id="12_lwvki"]
+[ext_resource type="Script" uid="uid://colbhiornlcbf" path="res://enemies/bosses/flying_monster/flying_monster.gd" id="1_leej7"]
+[ext_resource type="Texture2D" uid="uid://cv25ane235fx8" path="res://assets/bosses/flying_monster/FlyingMonsterSpriteSheet.png" id="2_xf8ou"]
+[ext_resource type="Script" uid="uid://c2i1gugc522of" path="res://enemies/bosses/flying_monster/flying_monster_state_machine.gd" id="3_8nfe2"]
+[ext_resource type="Script" uid="uid://c5pwtnwr3pk7e" path="res://enemies/bosses/flying_monster/flying_monster_wait_player_state.gd" id="4_44obp"]
+[ext_resource type="Script" uid="uid://cn7c67rvep5ni" path="res://enemies/bosses/flying_monster/flying_monster_rest_state.gd" id="5_8gw4x"]
+[ext_resource type="Script" uid="uid://ces50v5suifdb" path="res://enemies/bosses/flying_monster/flying_monster_idle_state.gd" id="6_lwvki"]
+[ext_resource type="Script" uid="uid://cytaj802xrco1" path="res://enemies/bosses/flying_monster/flying_monster_active_state.gd" id="6_pd0nt"]
+[ext_resource type="Script" uid="uid://d4ixlww6go1s6" path="res://enemies/bosses/flying_monster/flying_monster_shoot_state.gd" id="7_e8vug"]
+[ext_resource type="PackedScene" uid="uid://dfg23m7fd87hk" path="res://enemies/bosses/flying_monster/flying_monster_bullet.tscn" id="8_0jh52"]
+[ext_resource type="Script" uid="uid://rl35ru7a6mni" path="res://enemies/bosses/flying_monster/flying_monster_dash_state.gd" id="9_vukie"]
+[ext_resource type="Script" uid="uid://b7hu82tixbaqc" path="res://enemies/bosses/flying_monster/flying_monster_hurt_state.gd" id="10_x7la4"]
+[ext_resource type="Script" uid="uid://dacp7qmqgv587" path="res://enemies/bosses/flying_monster/flying_monster_death_state.gd" id="12_lwvki"]
+[ext_resource type="PackedScene" uid="uid://ccchd0fggd573" path="res://traps/hurt_area.tscn" id="13_hqdlt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_leej7"]
-radius = 32.89377
+radius = 30.0
 
 [sub_resource type="Animation" id="Animation_pd0nt"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("FlyingMonster/Sprite2D:frame")
+tracks/0/path = NodePath("FlyingMonster/FlyingMonsterSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -37,7 +38,7 @@ step = 0.125
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("FlyingMonster/Sprite2D:frame")
+tracks/0/path = NodePath("FlyingMonster/FlyingMonsterSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -53,7 +54,7 @@ length = 0.23333667
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("FlyingMonster/Sprite2D:frame")
+tracks/0/path = NodePath("FlyingMonster/FlyingMonsterSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -85,7 +86,7 @@ step = 0.125
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("FlyingMonster/Sprite2D:frame")
+tracks/0/path = NodePath("FlyingMonster/FlyingMonsterSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -102,7 +103,7 @@ step = 0.125
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("FlyingMonster/Sprite2D:frame")
+tracks/0/path = NodePath("FlyingMonster/FlyingMonsterSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -120,7 +121,7 @@ step = 0.125
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("FlyingMonster/Sprite2D:frame")
+tracks/0/path = NodePath("FlyingMonster/FlyingMonsterSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -130,6 +131,41 @@ tracks/0/keys = {
 "values": [0, 1, 2, 3]
 }
 
+[sub_resource type="Animation" id="Animation_hqdlt"]
+resource_name = "wait_player_active"
+length = 0.75
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FlyingMonster/FlyingMonsterSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [37, 36, 35, 33, 32]
+}
+
+[sub_resource type="Animation" id="Animation_ou034"]
+resource_name = "wait_player_idle"
+length = 0.9
+loop_mode = 1
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FlyingMonster/FlyingMonsterSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.29, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [35, 36, 37]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8nfe2"]
 _data = {
 &"RESET": SubResource("Animation_pd0nt"),
@@ -137,24 +173,30 @@ _data = {
 &"death": SubResource("Animation_44obp"),
 &"flying": SubResource("Animation_8nfe2"),
 &"hurt": SubResource("Animation_f61xb"),
-&"idle": SubResource("Animation_leej7")
+&"idle": SubResource("Animation_leej7"),
+&"wait_player_active": SubResource("Animation_hqdlt"),
+&"wait_player_idle": SubResource("Animation_ou034")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f61xb"]
-size = Vector2(306, 164)
+size = Vector2(255, 216)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hqdlt"]
+radius = 17.262676
 
 [node name="FlyingMonster" type="Area2D"]
+z_index = 2
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("1_leej7")
-max_health = 20
+max_health = 50
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-5, 6)
 shape = SubResource("CircleShape2D_leej7")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_p760j")
+[node name="FlyingMonsterSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_xf8ou")
 hframes = 8
 vframes = 5
 
@@ -165,9 +207,8 @@ libraries = {
 }
 autoplay = "idle"
 
-[node name="FiniteStateMachine" type="Node" parent="." node_paths=PackedStringArray("debug_label", "initial_state", "monster", "anim_player", "rest_timer")]
+[node name="FiniteStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state", "monster", "anim_player", "rest_timer")]
 script = ExtResource("3_8nfe2")
-debug_label = NodePath("../DebugLabel")
 initial_state = NodePath("WaitPlayer")
 monster = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
@@ -210,30 +251,30 @@ shape = SubResource("RectangleShape2D_f61xb")
 
 [node name="ProgressBar" type="ProgressBar" parent="BossUI"]
 visible = false
-custom_minimum_size = Vector2(200, 0)
+custom_minimum_size = Vector2(100, 0)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -100.0
-offset_right = 100.0
-offset_bottom = 16.0
+offset_left = -50.0
+offset_top = 8.0
+offset_right = 50.0
+offset_bottom = 24.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 8
-
-[node name="DebugLabel" type="Label" parent="."]
-offset_left = -33.0
-offset_top = -51.0
-offset_right = 16.0
-offset_bottom = -28.0
-theme_override_font_sizes/font_size = 8
-text = "debug"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="BulletHolder" type="Node" parent="."]
 
 [node name="RestTimer" type="Timer" parent="."]
 wait_time = 4.0
 one_shot = true
+
+[node name="HurtArea" parent="." instance=ExtResource("13_hqdlt")]
+collision_layer = 0
+damage_to_deal = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtArea"]
+position = Vector2(-5, 6)
+shape = SubResource("CircleShape2D_hqdlt")
+debug_color = Color(0.94358796, 0.15879083, 0.4541, 0.41960785)
 
 [connection signal="body_entered" from="PlayerDetection" to="FiniteStateMachine/WaitPlayer" method="_on_player_detection_body_entered"]
