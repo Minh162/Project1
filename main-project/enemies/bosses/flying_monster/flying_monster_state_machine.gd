@@ -44,6 +44,8 @@ func change_state(new_state_name: String) -> void:
 		current_state.enter()
 
 func _on_rest_timer_timeout() -> void:
+	if not monster.focused_player:
+		return
 	monster.can_be_hurt = false
 	change_state("active")
 

@@ -9,8 +9,8 @@ func enter() -> void:
 	dash()
 
 func dash() -> void:
-	if not state_machine.monster.focused_player:
-		state_machine.change_state("idle")
+	if state_machine.monster.focused_player == null:
+		state_machine.change_state("rest")
 		return
 	
 	if current_dash_time == dash_number:
