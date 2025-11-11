@@ -813,7 +813,8 @@ frame = 4
 
 [node name="Label2" type="Label" parent="TileMapLayer/Portal"]
 anchors_preset = -1
-anchor_left = -0.40833333
+anchor_left = -0.80833334
+anchor_top = -0.15625
 anchor_right = -0.80833334
 anchor_bottom = -0.15625
 offset_left = 423.0
@@ -837,7 +838,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label3" type="Label" parent="TileMapLayer/Portal"]
 anchors_preset = -1
-anchor_left = -0.40833333
+anchor_left = -0.80833334
+anchor_top = -0.1625
 anchor_right = -0.80833334
 anchor_bottom = -0.1625
 offset_left = 501.0
@@ -849,7 +851,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label4" type="Label" parent="TileMapLayer/Portal"]
 anchors_preset = -1
-anchor_left = -0.40833333
+anchor_left = -0.75
+anchor_top = -0.1625
 anchor_right = -0.75
 anchor_bottom = -0.1625
 offset_left = 608.0
@@ -861,7 +864,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label5" type="Label" parent="TileMapLayer/Portal"]
 anchors_preset = -1
-anchor_left = -0.40833333
+anchor_left = -0.80833334
+anchor_top = -0.1625
 anchor_right = -0.80833334
 anchor_bottom = -0.1625
 offset_left = 406.0
@@ -873,7 +877,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label6" type="Label" parent="TileMapLayer/Portal"]
 anchors_preset = -1
-anchor_left = -0.40833333
+anchor_left = -0.825
+anchor_top = -0.1625
 anchor_right = -0.825
 anchor_bottom = -0.1625
 offset_left = 197.0
@@ -885,7 +890,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label7" type="Label" parent="TileMapLayer/Portal"]
 anchors_preset = -1
-anchor_left = -0.40833333
+anchor_left = -0.76666665
+anchor_top = -0.1625
 anchor_right = -0.76666665
 anchor_bottom = -0.1625
 offset_left = 1025.0
@@ -897,7 +903,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label8" type="Label" parent="TileMapLayer/Portal"]
 anchors_preset = -1
-anchor_left = -0.40833333
+anchor_left = -0.825
+anchor_top = -0.1625
 anchor_right = -0.825
 anchor_bottom = -0.1625
 offset_left = 1108.0
@@ -909,7 +916,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label9" type="Label" parent="TileMapLayer/Portal"]
 anchors_preset = -1
-anchor_left = -0.40833333
+anchor_left = -0.825
+anchor_top = -0.1625
 anchor_right = -0.825
 anchor_bottom = -0.1625
 offset_left = 1237.0
@@ -921,7 +929,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label10" type="Label" parent="TileMapLayer/Portal"]
 anchors_preset = -1
-anchor_left = -0.40833333
+anchor_left = -0.825
+anchor_top = -0.1625
 anchor_right = -0.825
 anchor_bottom = -0.1625
 offset_left = 1318.0
@@ -933,7 +942,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label11" type="Label" parent="TileMapLayer/Portal"]
 anchors_preset = -1
-anchor_left = -0.40833333
+anchor_left = -0.825
+anchor_top = -0.1625
 anchor_right = -0.825
 anchor_bottom = -0.1625
 offset_left = 1398.0
@@ -945,7 +955,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label12" type="Label" parent="TileMapLayer/Portal"]
 anchors_preset = -1
-anchor_left = -0.40833333
+anchor_left = -0.7125
+anchor_top = -0.1625
 anchor_right = -0.7125
 anchor_bottom = -0.1625
 offset_left = 976.0

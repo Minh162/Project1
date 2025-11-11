@@ -16,69 +16,64 @@
 [node name="Back" type="Node" parent="."]
 
 [node name="Layer00092" type="Sprite2D" parent="Back"]
-position = Vector2(604.00006, 20)
-scale = Vector2(1.730454, 1.730454)
+position = Vector2(124.18316, -12.8472395)
+scale = Vector2(0.3021189, 0.3021189)
 texture = ExtResource("1_nbx5i")
 
 [node name="Layer00064" type="Sprite2D" parent="Back"]
-position = Vector2(426.99997, -111.00001)
-scale = Vector2(1.8270568, 1.8270565)
-texture = ExtResource("2_egm8x")
-
-[node name="Layer00065" type="Sprite2D" parent="Back"]
-position = Vector2(1276, -104.00001)
-scale = Vector2(1.8270568, 1.8270565)
+position = Vector2(125.31787, -20.873854)
+scale = Vector2(0.36538178, 0.36538175)
 texture = ExtResource("2_egm8x")
 
 [node name="Layer00036" type="Sprite2D" parent="Back"]
-position = Vector2(664.00006, -117)
-scale = Vector2(1.8440979, 1.8440982)
+position = Vector2(189, -25)
+scale = Vector2(0.37383115, 0.3738313)
 texture = ExtResource("3_u7w4r")
 
 [node name="Layer00037" type="Sprite2D" parent="Back"]
-position = Vector2(979, -117)
-scale = Vector2(1.8440979, 1.8440982)
+position = Vector2(133, -27.000004)
+scale = Vector2(0.39852443, 0.39852452)
 texture = ExtResource("3_u7w4r")
 
 [node name="Layer0004Lights" type="Sprite2D" parent="Back"]
-position = Vector2(386, -63)
+position = Vector2(94.00001, -14)
+scale = Vector2(0.20474134, 0.20474136)
 texture = ExtResource("4_pafu7")
 
 [node name="Layer0004Lights2" type="Sprite2D" parent="Back"]
-position = Vector2(901, -66)
+position = Vector2(207, -15)
+scale = Vector2(0.20474134, 0.20474136)
 texture = ExtResource("4_pafu7")
 
 [node name="Layer00027" type="Sprite2D" parent="Back"]
-position = Vector2(542, 715)
-scale = Vector2(1.2047414, 1.2047414)
+position = Vector2(118, 149)
+scale = Vector2(0.26427805, 0.264278)
 texture = ExtResource("5_ya0k3")
 
 [node name="Canvas" type="Node" parent="."]
 
 [node name="HighestScoreLabel" type="Label" parent="Canvas"]
-offset_left = 12.0
-offset_top = 4.0
-offset_right = 320.0
-offset_bottom = 51.0
+offset_left = 404.0
+offset_top = -192.0
+offset_right = 712.0
+offset_bottom = -145.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_ddg2q")
 theme_override_font_sizes/font_size = 46
 text = "Highest Score: "
 
 [node name="Name" type="Label" parent="Canvas"]
-anchors_preset = -1
+anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -146.0
-offset_top = 131.0
-offset_right = 162.0
-offset_bottom = -94.0
+offset_left = -51.0
+offset_top = 3.0
+offset_right = 51.0
+offset_bottom = 50.0
 grow_horizontal = 2
-grow_vertical = 2
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_q4xqd")
-theme_override_font_sizes/font_size = 146
+theme_override_font_sizes/font_size = 51
 text = "GAME"
 
 [node name="Button" type="Node" parent="Canvas"]
@@ -89,15 +84,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -77.0
-offset_top = -120.5
-offset_right = 77.0
-offset_bottom = -65.5
+offset_left = -26.5
+offset_top = -36.0
+offset_right = 26.5
+offset_bottom = -22.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("6_ddg2q")
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxEmpty_nof8e")
 text = "New Game
 "
@@ -108,15 +103,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -77.0
-offset_top = -82.5
-offset_right = 77.0
-offset_bottom = -27.5
+offset_left = -25.0
+offset_top = -23.5
+offset_right = 25.0
+offset_bottom = -12.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("6_ddg2q")
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxEmpty_nof8e")
 text = "Continue
 "
@@ -127,15 +122,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -89.0
-offset_top = -43.5
-offset_right = 89.0
-offset_bottom = 11.5
+offset_left = -31.0
+offset_top = -10.5
+offset_right = 31.0
+offset_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("6_ddg2q")
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxEmpty_nof8e")
 text = "Multiplayer"
 
@@ -145,15 +140,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -89.0
-offset_top = -1.5
-offset_right = 89.0
-offset_bottom = 53.5
+offset_left = -25.0
+offset_top = 2.5
+offset_right = 25.0
+offset_bottom = 13.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("6_ddg2q")
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxEmpty_nof8e")
 text = "Settings"
 
@@ -163,29 +158,30 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -89.0
-offset_top = 36.5
-offset_right = 89.0
-offset_bottom = 91.5
+offset_left = -16.181824
+offset_top = 16.5
+offset_right = 16.181824
+offset_bottom = 27.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("6_ddg2q")
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxEmpty_nof8e")
 text = "Quit"
 
 [node name="Icon12" type="Sprite2D" parent="."]
 top_level = true
-position = Vector2(197, 455)
-scale = Vector2(0.6529449, 0.45371637)
+position = Vector2(47, 91.99999)
+scale = Vector2(0.19365998, 0.13456985)
 texture = ExtResource("4_f37e2")
 
-[node name="Label4" type="Label" parent="."]
+[node name="Label4" type="Label" parent="Icon12"]
 top_level = true
-offset_left = 155.0
-offset_top = 420.0
-offset_right = 265.0
-offset_bottom = 469.0
+offset_left = 25.0
+offset_top = 78.0
+offset_right = 66.0
+offset_bottom = 105.0
+theme_override_font_sizes/font_size = 8
 text = "player idle
 "
