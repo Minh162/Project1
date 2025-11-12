@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dx6ghd0iqdr1q"]
+
+[ext_resource type="Texture2D" uid="uid://cklj3cq2w21r4" path="res://assets/tiles/forest tile/Tileset/Pixel_Woods_Tileset.png" id="1_pww5u"]
+[ext_resource type="Script" uid="uid://dqnxrwv1f040e" path="res://others/teleportation.gd" id="1_w4w87"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w4w87"]
+size = Vector2(12, 32)
+
+[node name="Teleportation" type="Area2D"]
+collision_layer = 32
+collision_mask = 2
+script = ExtResource("1_w4w87")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_w4w87")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pww5u")
+region_enabled = true
+region_rect = Rect2(29, 224, 22, 32)
