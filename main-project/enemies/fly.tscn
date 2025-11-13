@@ -1,0 +1,145 @@
+[gd_scene load_steps=22 format=3 uid="uid://b73txr05n05j"]
+
+[ext_resource type="Script" uid="uid://cyqsh6el0jjft" path="res://enemies/fly.gd" id="1_gh0jo"]
+[ext_resource type="Texture2D" uid="uid://hcpseu0o44dp" path="res://assets/metroidvania_asset/enemies sprites/fly/blue_fly_attack_anim_srip_3.png" id="2_nmd8j"]
+[ext_resource type="Texture2D" uid="uid://bua1hbofjn83u" path="res://assets/metroidvania_asset/enemies sprites/fly/blue_fly_death_anim_strip_5.png" id="3_5x2l3"]
+[ext_resource type="Texture2D" uid="uid://c18xhv3agi4x6" path="res://assets/metroidvania_asset/enemies sprites/fly/blue_fly_idle_or_flying_anim_strip_3.png" id="3_d1yl7"]
+[ext_resource type="PackedScene" uid="uid://ca4oa4igebadu" path="res://components/health_component.tscn" id="5_gh0jo"]
+[ext_resource type="PackedScene" uid="uid://ccchd0fggd573" path="res://traps/hurt_area.tscn" id="6_gh0jo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1yl7"]
+atlas = ExtResource("2_nmd8j")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5x2l3"]
+atlas = ExtResource("2_nmd8j")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rchlc"]
+atlas = ExtResource("2_nmd8j")
+region = Rect2(16, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wwwe"]
+atlas = ExtResource("3_5x2l3")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1n3f3"]
+atlas = ExtResource("3_5x2l3")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0n2c0"]
+atlas = ExtResource("3_5x2l3")
+region = Rect2(16, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjknd"]
+atlas = ExtResource("3_5x2l3")
+region = Rect2(24, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7m2kh"]
+atlas = ExtResource("3_5x2l3")
+region = Rect2(32, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gh0jo"]
+atlas = ExtResource("3_d1yl7")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_io4gi"]
+atlas = ExtResource("3_d1yl7")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjhqr"]
+atlas = ExtResource("3_d1yl7")
+region = Rect2(16, 0, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gh0jo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d1yl7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5x2l3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rchlc")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3wwwe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1n3f3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0n2c0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjknd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7m2kh")
+}],
+"loop": false,
+"name": &"death",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gh0jo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_io4gi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjhqr")
+}],
+"loop": true,
+"name": &"idle_fly",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s1mfk"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rchlc"]
+radius = 39.512657
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_io4gi"]
+radius = 3.0413814
+
+[node name="Fly" type="Area2D" node_paths=PackedStringArray("health_component", "hurt_area")]
+scale = Vector2(2, 2)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_gh0jo")
+speed = 100.0
+health_component = NodePath("HealthComponent")
+hurt_area = NodePath("HurtArea")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_gh0jo")
+animation = &"idle_fly"
+
+[node name="HealthComponent" parent="." instance=ExtResource("5_gh0jo")]
+collision_layer = 4
+collision_mask = 0
+max_health = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HealthComponent"]
+shape = SubResource("CircleShape2D_s1mfk")
+
+[node name="PlayerDetectionRange" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rchlc")
+
+[node name="HurtArea" parent="." instance=ExtResource("6_gh0jo")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtArea"]
+shape = SubResource("CircleShape2D_io4gi")
+debug_color = Color(0.9206592, 0.10409529, 0.6418027, 0.41960785)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://ccb0hnepu6pj3"]
+[gd_scene load_steps=5 format=3 uid="uid://ccb0hnepu6pj3"]
 
 [ext_resource type="PackedScene" uid="uid://gfypnx766u88" path="res://characters/prince.tscn" id="1_hwyic"]
+[ext_resource type="PackedScene" uid="uid://b73txr05n05j" path="res://enemies/fly.tscn" id="2_fynsg"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_24uoo"]
 
@@ -42,6 +43,10 @@ position = Vector2(99, -8)
 SpawnPoint = NodePath("../Marker2D")
 
 [node name="Camera2D" type="Camera2D" parent="Prince"]
+zoom = Vector2(0.5, 0.5)
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(189, -52)
+position = Vector2(102, 11)
+
+[node name="Fly" parent="." instance=ExtResource("2_fynsg")]
+position = Vector2(327, -55)
