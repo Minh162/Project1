@@ -10,49 +10,49 @@ texture = ExtResource("1_thalc")
 use_texture_padding = false
 1:1/0 = 0
 1:1/0/terrain_set = 0
-1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.7985878, -8, 8, 8, 8, -8, -8)
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.79859, -8, 8, 8, 8, -8, -8)
 2:1/0 = 0
 2:1/0/terrain_set = 0
-2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.7985878, -8, 8, 8, 8, -8, -8)
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.79859, -8, 8, 8, 8, -8, -8)
 2:2/0 = 0
 2:2/0/terrain_set = 0
-2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.7985878, -8, 8, 8, 8, -8, -8)
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.79859, -8, 8, 8, 8, -8, -8)
 3:2/0 = 0
 3:2/0/terrain_set = 0
-3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.7985878, -8, 8, 8, 8, -8, -8)
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.79859, -8, 8, 8, 8, -8, -8)
 3:3/0 = 0
 3:3/0/terrain_set = 0
-3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.7985878, -8, 8, 8, 8, -8, -8)
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.79859, -8, 8, 8, 8, -8, -8)
 3:1/0 = 0
 3:1/0/terrain_set = 0
-3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.7985878, -8, 8, 8, 8, -8, -8)
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.79859, -8, 8, 8, 8, -8, -8)
 2:3/0 = 0
 2:3/0/terrain_set = 0
-2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.7985878, -8, 8, 8, 8, -8, -8)
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.79859, -8, 8, 8, 8, -8, -8)
 1:3/0 = 0
 1:3/0/terrain_set = 0
-1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.7985878, -8, 8, 8, 8, -8, -8)
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.79859, -8, 8, 8, 8, -8, -8)
 1:2/0 = 0
 1:2/0/terrain_set = 0
-1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.7985878, -8, 8, 8, 8, -8, -8)
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.79859, -8, 8, 8, 8, -8, -8)
 5:1/0 = 0
 5:1/0/terrain_set = 0
-5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.7985859, -8, -8, -8, 8)
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.79859, -8, -8, -8, 8)
 5:2/0 = 0
 5:2/0/terrain_set = 0
-5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.7985859, -8, -8, -8, 8)
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.79859, -8, -8, -8, 8)
 6:2/0 = 0
 6:2/0/terrain_set = 0
-6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.7985859, -8, -8, -8, 8)
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.79859, -8, -8, -8, 8)
 6:3/0 = 0
 6:3/0/terrain_set = 0
-6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.7985859, -8, -8, -8, 8)
+6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.79859, -8, -8, -8, 8)
 6:1/0 = 0
 6:1/0/terrain_set = 0
-6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.7985859, -8, -8, -8, 8)
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.79859, -8, -8, -8, 8)
 5:3/0 = 0
 5:3/0/terrain_set = 0
-5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.7985859, -8, -8, -8, 8)
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.79859, -8, -8, -8, 8)
 8:1/0 = 0
 9:1/0 = 0
 10:1/0 = 0
@@ -112,10 +112,10 @@ use_texture_padding = false
 12:7/0/terrain_set = 0
 6:5/0 = 0
 6:5/0/terrain_set = 0
-6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.7985859, -8, -8, -8, 8)
+6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.79859, -8, -8, -8, 8)
 5:5/0 = 0
 5:5/0/terrain_set = 0
-5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.7985859, -8, -8, -8, 8)
+5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.79859, -8, -8, -8, 8)
 3:5/0 = 0
 3:5/0/terrain_set = 0
 3:5/0/terrain = 0
@@ -152,7 +152,7 @@ use_texture_padding = false
 1:7/0/terrain_set = 0
 1:7/0/terrain = 0
 1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 8, 8, 8)
-1:7/0/physics_layer_0/polygon_1/points = PackedVector2Array(8, -8, -8, -8, -8, 1.7985878, -8, 8, 8, 8, -8, -8)
+1:7/0/physics_layer_0/polygon_1/points = PackedVector2Array(8, -8, -8, -8, -8, 1.79859, -8, 8, 8, 8, -8, -8)
 1:7/0/terrains_peering_bit/right_side = 0
 1:7/0/terrains_peering_bit/top_side = 0
 1:7/0/terrains_peering_bit/top_right_corner = 0
@@ -160,7 +160,7 @@ use_texture_padding = false
 2:7/0/terrain_set = 0
 2:7/0/terrain = 0
 2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 8, 8, 8)
-2:7/0/physics_layer_0/polygon_1/points = PackedVector2Array(8, -8, -8, -8, -8, 1.7985878, -8, 8, 8, 8, -8, -8)
+2:7/0/physics_layer_0/polygon_1/points = PackedVector2Array(8, -8, -8, -8, -8, 1.79859, -8, 8, 8, 8, -8, -8)
 2:7/0/terrains_peering_bit/right_side = 0
 2:7/0/terrains_peering_bit/left_side = 0
 2:7/0/terrains_peering_bit/top_left_corner = 0
@@ -196,22 +196,22 @@ use_texture_padding = false
 2:6/0/terrains_peering_bit/top_right_corner = 0
 1:9/0 = 0
 1:9/0/terrain_set = 0
-1:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.7985859, -8, -8, -8, 8)
+1:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.79859, -8, -8, -8, 8)
 2:9/0 = 0
 2:9/0/terrain_set = 0
-2:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.7985859, -8, -8, -8, 8)
+2:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.79859, -8, -8, -8, 8)
 3:9/0 = 0
 3:9/0/terrain_set = 0
-3:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.7985859, -8, -8, -8, 8)
+3:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.79859, -8, -8, -8, 8)
 3:10/0 = 0
 3:10/0/terrain_set = 0
-3:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.7985859, -8, -8, -8, 8)
+3:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.79859, -8, -8, -8, 8)
 2:10/0 = 0
 2:10/0/terrain_set = 0
-2:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.7985859, -8, -8, -8, 8)
+2:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.79859, -8, -8, -8, 8)
 1:10/0 = 0
 1:10/0/terrain_set = 0
-1:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.7985859, -8, -8, -8, 8)
+1:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.79859, -8, -8, -8, 8)
 1:11/0 = 0
 2:11/0 = 0
 1:12/0 = 0
@@ -223,12 +223,12 @@ use_texture_padding = false
 5:9/0 = 0
 5:9/0/terrain_set = 0
 5:9/0/terrain = 1
-5:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.7985859, -8, -8, -8, 8)
+5:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.79859, -8, -8, -8, 8)
 5:9/0/terrains_peering_bit/bottom_side = 1
 5:10/0 = 0
-5:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.7985859, -8, -8, -8, 8)
+5:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.79859, -8, -8, -8, 8)
 5:11/0 = 0
-5:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.7985859, -8, -8, -8, 8)
+5:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.79859, -8, -8, -8, 8)
 8:9/0 = 0
 7:9/0 = 0
 7:10/0 = 0
@@ -241,7 +241,7 @@ use_texture_padding = false
 10:9/0 = 0
 10:10/0 = 0
 11:9/0 = 0
-11:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.7985859, -8, -8, -8, 8)
+11:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.79859, -8, -8, -8, 8)
 12:9/0 = 0
 13:9/0 = 0
 13:10/0 = 0
@@ -276,46 +276,46 @@ use_texture_padding = false
 2:14/0 = 0
 2:14/0/terrain_set = 0
 2:14/0/terrain = 1
-2:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.7985878, -8, 8, 8, 8, -8, -8)
+2:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.79859, -8, 8, 8, 8, -8, -8)
 2:14/0/terrains_peering_bit/left_side = 1
 1:14/0 = 0
 1:14/0/terrain_set = 0
 1:14/0/terrain = 1
-1:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.7985878, -8, 8, 8, 8, -8, -8)
+1:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.79859, -8, 8, 8, 8, -8, -8)
 1:14/0/terrains_peering_bit/right_side = 1
 3:14/0 = 0
-3:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.7985878, -8, 8, 8, 8, -8, -8)
+3:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.79859, -8, 8, 8, 8, -8, -8)
 4:14/0 = 0
-4:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.7985878, -8, 8, 8, 8, -8, -8)
+4:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.79859, -8, 8, 8, 8, -8, -8)
 5:14/0 = 0
-5:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.7985878, -8, 8, 8, 8, -8, -8)
+5:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.79859, -8, 8, 8, 8, -8, -8)
 6:14/0 = 0
-6:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.7985878, -8, 8, 8, 8, -8, -8)
+6:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.79859, -8, 8, 8, 8, -8, -8)
 8:15/0 = 0
 8:15/0/terrain_set = 0
 8:15/0/terrain = 1
-8:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.7985878, -8, 8, 8, 8, -8, -8)
+8:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.79859, -8, 8, 8, 8, -8, -8)
 8:15/0/terrains_peering_bit/right_side = 1
 8:15/0/terrains_peering_bit/left_side = 1
 7:15/0 = 0
 7:15/0/terrain_set = 0
 7:15/0/terrain = 1
-7:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.7985878, -8, 8, 8, 8, -8, -8)
+7:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.79859, -8, 8, 8, 8, -8, -8)
 7:15/0/terrains_peering_bit/right_side = 1
 7:15/0/terrains_peering_bit/top_left_corner = 1
 9:15/0 = 0
 9:15/0/terrain_set = 0
 9:15/0/terrain = 1
-9:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.7985878, -8, 8, 8, 8, -8, -8)
+9:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.79859, -8, 8, 8, 8, -8, -8)
 9:15/0/terrains_peering_bit/right_side = 1
 9:15/0/terrains_peering_bit/left_side = 1
 9:15/0/terrains_peering_bit/top_right_corner = 1
 12:15/0 = 0
-12:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.7985878, -8, 8, 8, 8, -8, -8)
+12:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.79859, -8, 8, 8, 8, -8, -8)
 10:15/0 = 0
-10:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.7985878, -8, 8, 8, 8, -8, -8)
+10:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.79859, -8, 8, 8, 8, -8, -8)
 11:15/0 = 0
-11:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.7985878, -8, 8, 8, 8, -8, -8)
+11:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -8, -8, -8, -8, 1.79859, -8, 8, 8, 8, -8, -8)
 2:13/0 = 0
 6:9/0 = 0
 
@@ -380,7 +380,7 @@ sources/1 = SubResource("TileSetAtlasSource_uxh6d")
 
 [node name="Icon" type="Sprite2D" parent="Emeny"]
 position = Vector2(1351, 283)
-scale = Vector2(0.2734375, 0.28515634)
+scale = Vector2(0.273438, 0.285156)
 texture = ExtResource("2_2ksdt")
 
 [node name="Label" type="Label" parent="Emeny/Icon"]
@@ -391,8 +391,8 @@ offset_bottom = -39.0
 text = "ENEMY"
 
 [node name="Icon19" type="Sprite2D" parent="Emeny"]
-position = Vector2(1439.9999, 283)
-scale = Vector2(0.2734375, 0.28515634)
+position = Vector2(1440, 283)
+scale = Vector2(0.273438, 0.285156)
 texture = ExtResource("2_2ksdt")
 
 [node name="Label" type="Label" parent="Emeny/Icon19"]
@@ -403,8 +403,8 @@ offset_bottom = -39.0
 text = "ENEMY"
 
 [node name="Icon20" type="Sprite2D" parent="Emeny"]
-position = Vector2(1572.9998, 195)
-scale = Vector2(0.2734375, 0.28515634)
+position = Vector2(1573, 195)
+scale = Vector2(0.273438, 0.285156)
 texture = ExtResource("2_2ksdt")
 
 [node name="Label" type="Label" parent="Emeny/Icon20"]
@@ -415,223 +415,223 @@ offset_bottom = -39.0
 text = "FLY ENEMY"
 
 [node name="Icon2" type="Sprite2D" parent="Emeny"]
-position = Vector2(1125.0001, 520)
-scale = Vector2(0.16796842, 0.12695323)
+position = Vector2(1125, 520)
+scale = Vector2(0.167968, 0.126953)
 texture = ExtResource("2_2ksdt")
 
 [node name="Label" type="Label" parent="Emeny/Icon2"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon3" type="Sprite2D" parent="Emeny"]
-position = Vector2(1082, 392.99997)
-scale = Vector2(0.16796842, 0.12695323)
+position = Vector2(1082, 393)
+scale = Vector2(0.167968, 0.126953)
 texture = ExtResource("2_2ksdt")
 
 [node name="Label" type="Label" parent="Emeny/Icon3"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon4" type="Sprite2D" parent="Emeny"]
-position = Vector2(45, 116.99999)
-scale = Vector2(0.16796842, 0.12695323)
+position = Vector2(45, 117)
+scale = Vector2(0.167968, 0.126953)
 texture = ExtResource("2_2ksdt")
 
 [node name="Label" type="Label" parent="Emeny/Icon4"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon5" type="Sprite2D" parent="Emeny"]
 position = Vector2(241, 439)
-scale = Vector2(0.16796842, 0.12695323)
+scale = Vector2(0.167968, 0.126953)
 texture = ExtResource("2_2ksdt")
 
 [node name="Label" type="Label" parent="Emeny/Icon5"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon16" type="Sprite2D" parent="Emeny"]
-position = Vector2(113.00002, 436)
-scale = Vector2(0.16796842, 0.12695323)
+position = Vector2(113, 436)
+scale = Vector2(0.167968, 0.126953)
 texture = ExtResource("2_2ksdt")
 
 [node name="Label" type="Label" parent="Emeny/Icon16"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon6" type="Sprite2D" parent="Emeny"]
 position = Vector2(403, 327)
-scale = Vector2(0.16796842, 0.12695323)
+scale = Vector2(0.167968, 0.126953)
 texture = ExtResource("2_2ksdt")
 
 [node name="Label" type="Label" parent="Emeny/Icon6"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon8" type="Sprite2D" parent="Emeny"]
-position = Vector2(440.00003, 248)
-scale = Vector2(0.16796842, 0.12695323)
+position = Vector2(440, 248)
+scale = Vector2(0.167968, 0.126953)
 texture = ExtResource("2_2ksdt")
 
 [node name="Label" type="Label" parent="Emeny/Icon8"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon9" type="Sprite2D" parent="Emeny"]
-position = Vector2(790.00006, 81)
-scale = Vector2(0.16796842, 0.12695323)
+position = Vector2(790, 81)
+scale = Vector2(0.167968, 0.126953)
 texture = ExtResource("2_2ksdt")
 
 [node name="Label" type="Label" parent="Emeny/Icon9"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "FLY ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon10" type="Sprite2D" parent="Emeny"]
 position = Vector2(795, 248)
-scale = Vector2(0.16796842, 0.12695323)
+scale = Vector2(0.167968, 0.126953)
 texture = ExtResource("2_2ksdt")
 
 [node name="Label" type="Label" parent="Emeny/Icon10"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "FLY ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon15" type="Sprite2D" parent="Emeny"]
-position = Vector2(1062.0001, 182.99998)
-scale = Vector2(0.16796842, 0.12695323)
+position = Vector2(1062, 183)
+scale = Vector2(0.167968, 0.126953)
 texture = ExtResource("2_2ksdt")
 
 [node name="Label" type="Label" parent="Emeny/Icon15"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "FLY ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon11" type="Sprite2D" parent="Emeny"]
 position = Vector2(1070, 488)
-scale = Vector2(0.16796842, 0.12695323)
+scale = Vector2(0.167968, 0.126953)
 texture = ExtResource("2_2ksdt")
 
 [node name="Label" type="Label" parent="Emeny/Icon11"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "FLY ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon12" type="Sprite2D" parent="Emeny"]
-position = Vector2(637.0001, 443)
-scale = Vector2(0.16796842, 0.12695323)
+position = Vector2(637, 443)
+scale = Vector2(0.167968, 0.126953)
 texture = ExtResource("2_2ksdt")
 
 [node name="Label" type="Label" parent="Emeny/Icon12"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "FLY ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon18" type="Sprite2D" parent="Emeny"]
-position = Vector2(881.00006, 488.99997)
-scale = Vector2(0.16796842, 0.12695323)
+position = Vector2(881, 489)
+scale = Vector2(0.167968, 0.126953)
 texture = ExtResource("2_2ksdt")
 
 [node name="Label" type="Label" parent="Emeny/Icon18"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "FLY ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon13" type="Sprite2D" parent="Emeny"]
-position = Vector2(167.00002, 493)
-scale = Vector2(0.16796842, 0.12695323)
+position = Vector2(167, 493)
+scale = Vector2(0.167968, 0.126953)
 texture = ExtResource("2_2ksdt")
 
 [node name="Label" type="Label" parent="Emeny/Icon13"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "FLY ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon17" type="Sprite2D" parent="Emeny"]
-position = Vector2(49.000023, 357)
-scale = Vector2(0.16796842, 0.12695323)
+position = Vector2(49, 357)
+scale = Vector2(0.167968, 0.126953)
 texture = ExtResource("2_2ksdt")
 
 [node name="Label" type="Label" parent="Emeny/Icon17"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "FLY ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon14" type="Sprite2D" parent="Emeny"]
 position = Vector2(536, 333)
-scale = Vector2(0.16796842, 0.12695323)
+scale = Vector2(0.167968, 0.126953)
 texture = ExtResource("2_2ksdt")
 
 [node name="Label" type="Label" parent="Emeny/Icon14"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "FLY ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon7" type="Sprite2D" parent="Emeny"]
 position = Vector2(763, 520)
-scale = Vector2(0.16796842, 0.12695323)
+scale = Vector2(0.167968, 0.126953)
 texture = ExtResource("2_2ksdt")
 
 [node name="Label" type="Label" parent="Emeny/Icon7"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "ENEMY"
 metadata/_edit_use_anchors_ = true
 
@@ -814,8 +814,8 @@ tile_set = SubResource("TileSet_txaqi")
 [node name="Label13" type="Label" parent="CanvasGroup"]
 top_level = true
 anchors_preset = -1
-anchor_left = -0.5208333
-anchor_right = -0.5208333
+anchor_left = -0.520833
+anchor_right = -0.520833
 offset_left = 148.0
 offset_top = 220.0
 offset_right = 258.0
@@ -827,9 +827,9 @@ metadata/_edit_use_anchors_ = true
 [node name="Label12" type="Label" parent="CanvasGroup"]
 top_level = true
 anchors_preset = -1
-anchor_left = -1.0166667
+anchor_left = -1.01667
 anchor_top = -0.325
-anchor_right = -1.0166667
+anchor_right = -1.01667
 anchor_bottom = -0.325
 offset_left = 1120.0
 offset_top = 82.0
@@ -842,9 +842,9 @@ metadata/_edit_use_anchors_ = true
 [node name="Label2" type="Label" parent="CanvasGroup"]
 top_level = true
 anchors_preset = -1
-anchor_left = -2.0083334
-anchor_top = -0.6375
-anchor_right = -2.4083333
+anchor_left = -2.40833
+anchor_top = -0.8
+anchor_right = -2.40833
 anchor_bottom = -0.8
 offset_left = 806.0
 offset_top = 161.0
@@ -856,9 +856,9 @@ metadata/_edit_use_anchors_ = true
 [node name="Label3" type="Label" parent="CanvasGroup"]
 top_level = true
 anchors_preset = -1
-anchor_left = -2.4083333
-anchor_top = -0.8125
-anchor_right = -2.8083334
+anchor_left = -2.80833
+anchor_top = -0.975
+anchor_right = -2.80833
 anchor_bottom = -0.975
 offset_left = 982.0
 offset_top = 190.0
@@ -870,9 +870,9 @@ metadata/_edit_use_anchors_ = true
 [node name="Label4" type="Label" parent="CanvasGroup"]
 top_level = true
 anchors_preset = -1
-anchor_left = -1.775
-anchor_top = -0.65
-anchor_right = -2.1166666
+anchor_left = -2.11667
+anchor_top = -0.8125
+anchor_right = -2.11667
 anchor_bottom = -0.8125
 offset_left = 937.0
 offset_top = 332.0
@@ -884,9 +884,9 @@ metadata/_edit_use_anchors_ = true
 [node name="Label5" type="Label" parent="CanvasGroup"]
 top_level = true
 anchors_preset = -1
-anchor_left = -1.6083333
-anchor_top = -0.4875
-anchor_right = -2.0083334
+anchor_left = -2.00833
+anchor_top = -0.65
+anchor_right = -2.00833
 anchor_bottom = -0.65
 offset_left = 693.0
 offset_top = 585.0
@@ -898,9 +898,9 @@ metadata/_edit_use_anchors_ = true
 [node name="Label6" type="Label" parent="CanvasGroup"]
 top_level = true
 anchors_preset = -1
-anchor_left = -2.075
-anchor_top = -0.65
-anchor_right = -2.4916666
+anchor_left = -2.49167
+anchor_top = -0.8125
+anchor_right = -2.49167
 anchor_bottom = -0.8125
 offset_left = 592.0
 offset_top = 427.0
@@ -912,8 +912,8 @@ metadata/_edit_use_anchors_ = true
 [node name="Label7" type="Label" parent="CanvasGroup"]
 top_level = true
 anchors_preset = -1
-anchor_left = -1.8416667
-anchor_top = -0.65
+anchor_left = -2.2
+anchor_top = -0.8125
 anchor_right = -2.2
 anchor_bottom = -0.8125
 offset_left = 1370.0
@@ -926,9 +926,9 @@ metadata/_edit_use_anchors_ = true
 [node name="Label8" type="Label" parent="CanvasGroup"]
 top_level = true
 anchors_preset = -1
-anchor_left = -2.075
-anchor_top = -0.65
-anchor_right = -2.4916666
+anchor_left = -2.49167
+anchor_top = -0.8125
+anchor_right = -2.49167
 anchor_bottom = -0.8125
 offset_left = 1505.0
 offset_top = 605.0
@@ -940,9 +940,9 @@ metadata/_edit_use_anchors_ = true
 [node name="Label9" type="Label" parent="CanvasGroup"]
 top_level = true
 anchors_preset = -1
-anchor_left = -2.075
-anchor_top = -0.65
-anchor_right = -2.4916666
+anchor_left = -2.49167
+anchor_top = -0.8125
+anchor_right = -2.49167
 anchor_bottom = -0.8125
 offset_left = 1636.0
 offset_top = 540.0
@@ -954,9 +954,9 @@ metadata/_edit_use_anchors_ = true
 [node name="Label10" type="Label" parent="CanvasGroup"]
 top_level = true
 anchors_preset = -1
-anchor_left = -2.075
-anchor_top = -0.65
-anchor_right = -2.4916666
+anchor_left = -2.49167
+anchor_top = -0.8125
+anchor_right = -2.49167
 anchor_bottom = -0.8125
 offset_left = 1716.0
 offset_top = 381.0
@@ -968,9 +968,9 @@ metadata/_edit_use_anchors_ = true
 [node name="Label11" type="Label" parent="CanvasGroup"]
 top_level = true
 anchors_preset = -1
-anchor_left = -2.075
-anchor_top = -0.65
-anchor_right = -2.4916666
+anchor_left = -2.49167
+anchor_top = -0.8125
+anchor_right = -2.49167
 anchor_bottom = -0.8125
 offset_left = 1795.0
 offset_top = 380.0

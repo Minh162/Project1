@@ -167,314 +167,314 @@ tile_set = SubResource("TileSet_q7mnp")
 [node name="Enemy" type="Node" parent="TileMapLayer"]
 
 [node name="Icon9" type="Sprite2D" parent="TileMapLayer/Enemy"]
-position = Vector2(214.00002, 229)
-scale = Vector2(0.31835872, 0.24062061)
+position = Vector2(214, 229)
+scale = Vector2(0.318359, 0.240621)
 texture = ExtResource("4_q7mnp")
 
 [node name="Label" type="Label" parent="TileMapLayer/Enemy/Icon9"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "FLY ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon12" type="Sprite2D" parent="TileMapLayer/Enemy"]
-position = Vector2(863.00006, 326)
-scale = Vector2(0.31835872, 0.24062061)
+position = Vector2(863, 326)
+scale = Vector2(0.318359, 0.240621)
 texture = ExtResource("4_q7mnp")
 
 [node name="Label3" type="Label" parent="TileMapLayer/Enemy/Icon12"]
-offset_left = -37.693604
-offset_top = -58.182983
+offset_left = -37.6936
+offset_top = -58.183
 offset_right = 72.3064
-offset_bottom = -35.182983
+offset_bottom = -35.183
 text = "FLY ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon32" type="Sprite2D" parent="TileMapLayer/Enemy"]
-position = Vector2(778.00006, 385.00003)
-scale = Vector2(0.31835872, 0.24062061)
+position = Vector2(778, 385)
+scale = Vector2(0.318359, 0.240621)
 texture = ExtResource("4_q7mnp")
 
 [node name="Label3" type="Label" parent="TileMapLayer/Enemy/Icon32"]
-offset_left = -37.693604
-offset_top = -58.182983
+offset_left = -37.6936
+offset_top = -58.183
 offset_right = 72.3064
-offset_bottom = -35.182983
+offset_bottom = -35.183
 text = "ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon26" type="Sprite2D" parent="TileMapLayer/Enemy"]
-position = Vector2(971.00006, 95.00006)
-scale = Vector2(0.31835872, 0.24062061)
+position = Vector2(971, 95.0001)
+scale = Vector2(0.318359, 0.240621)
 texture = ExtResource("4_q7mnp")
 
 [node name="Label" type="Label" parent="TileMapLayer/Enemy/Icon26"]
-offset_left = -43.975758
-offset_top = -58.183136
-offset_right = 66.02425
-offset_bottom = -35.183136
+offset_left = -43.9758
+offset_top = -58.1831
+offset_right = 66.0242
+offset_bottom = -35.1831
 text = "FLY ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon13" type="Sprite2D" parent="TileMapLayer/Enemy"]
-position = Vector2(546.00006, 526)
-scale = Vector2(0.31835872, 0.24062061)
+position = Vector2(546, 526)
+scale = Vector2(0.318359, 0.240621)
 texture = ExtResource("4_q7mnp")
 
 [node name="Label" type="Label" parent="TileMapLayer/Enemy/Icon13"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "FLY ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon30" type="Sprite2D" parent="TileMapLayer/Enemy"]
-position = Vector2(448.00006, 422)
-scale = Vector2(0.31835872, 0.24062061)
+position = Vector2(448, 422)
+scale = Vector2(0.318359, 0.240621)
 texture = ExtResource("4_q7mnp")
 
 [node name="Label" type="Label" parent="TileMapLayer/Enemy/Icon30"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "FLY ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon28" type="Sprite2D" parent="TileMapLayer/Enemy"]
-position = Vector2(251.00003, 521)
-scale = Vector2(0.31835872, 0.24062061)
+position = Vector2(251, 521)
+scale = Vector2(0.318359, 0.240621)
 texture = ExtResource("4_q7mnp")
 
 [node name="Label" type="Label" parent="TileMapLayer/Enemy/Icon28"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "FLY ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon23" type="Sprite2D" parent="TileMapLayer/Enemy"]
-position = Vector2(585.00006, 697)
-scale = Vector2(0.31835872, 0.24062061)
+position = Vector2(585, 697)
+scale = Vector2(0.318359, 0.240621)
 texture = ExtResource("4_q7mnp")
 
 [node name="Label" type="Label" parent="TileMapLayer/Enemy/Icon23"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "FLY ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon19" type="Sprite2D" parent="TileMapLayer/Enemy"]
-position = Vector2(128.00009, 673)
-scale = Vector2(0.31835872, 0.24062061)
+position = Vector2(128, 673)
+scale = Vector2(0.318359, 0.240621)
 texture = ExtResource("4_q7mnp")
 
 [node name="Label" type="Label" parent="TileMapLayer/Enemy/Icon19"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "FLY ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon20" type="Sprite2D" parent="TileMapLayer/Enemy"]
-position = Vector2(199, 403.00003)
-scale = Vector2(0.31835872, 0.24062061)
+position = Vector2(199, 403)
+scale = Vector2(0.318359, 0.240621)
 texture = ExtResource("4_q7mnp")
 
 [node name="Label" type="Label" parent="TileMapLayer/Enemy/Icon20"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "FLY ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon14" type="Sprite2D" parent="TileMapLayer/Enemy"]
-position = Vector2(468.00006, 157.00006)
-scale = Vector2(0.31835872, 0.24062061)
+position = Vector2(468, 157)
+scale = Vector2(0.318359, 0.240621)
 texture = ExtResource("4_q7mnp")
 
 [node name="Label" type="Label" parent="TileMapLayer/Enemy/Icon14"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "FLY ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon16" type="Sprite2D" parent="TileMapLayer/Enemy"]
-position = Vector2(342.00003, 289)
-scale = Vector2(0.31835872, 0.24062061)
+position = Vector2(342, 289)
+scale = Vector2(0.318359, 0.240621)
 texture = ExtResource("4_q7mnp")
 
 [node name="Label" type="Label" parent="TileMapLayer/Enemy/Icon16"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "FLY ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon15" type="Sprite2D" parent="TileMapLayer/Enemy"]
-position = Vector2(365, 449.99997)
-scale = Vector2(0.31835872, 0.24062061)
+position = Vector2(365, 450)
+scale = Vector2(0.318359, 0.240621)
 texture = ExtResource("4_q7mnp")
 
 [node name="Label" type="Label" parent="TileMapLayer/Enemy/Icon15"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon27" type="Sprite2D" parent="TileMapLayer/Enemy"]
-position = Vector2(1011.00006, 113.99999)
-scale = Vector2(0.31835872, 0.24062061)
+position = Vector2(1011, 114)
+scale = Vector2(0.318359, 0.240621)
 texture = ExtResource("4_q7mnp")
 
 [node name="Label" type="Label" parent="TileMapLayer/Enemy/Icon27"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon17" type="Sprite2D" parent="TileMapLayer/Enemy"]
-position = Vector2(174.00002, 608.00006)
-scale = Vector2(0.31835872, 0.24062061)
+position = Vector2(174, 608)
+scale = Vector2(0.318359, 0.240621)
 texture = ExtResource("4_q7mnp")
 
 [node name="Label" type="Label" parent="TileMapLayer/Enemy/Icon17"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon24" type="Sprite2D" parent="TileMapLayer/Enemy"]
 position = Vector2(591, 558)
-scale = Vector2(0.31835872, 0.24062061)
+scale = Vector2(0.318359, 0.240621)
 texture = ExtResource("4_q7mnp")
 
 [node name="Label" type="Label" parent="TileMapLayer/Enemy/Icon24"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon18" type="Sprite2D" parent="TileMapLayer/Enemy"]
 position = Vector2(130, 706)
-scale = Vector2(0.31835872, 0.24062061)
+scale = Vector2(0.318359, 0.240621)
 texture = ExtResource("4_q7mnp")
 
 [node name="Label" type="Label" parent="TileMapLayer/Enemy/Icon18"]
-offset_left = -25.599775
-offset_top = -63.123287
-offset_right = 84.40022
-offset_bottom = -40.123287
+offset_left = -25.5998
+offset_top = -63.1233
+offset_right = 84.4002
+offset_bottom = -40.1233
 text = "ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon11" type="Sprite2D" parent="TileMapLayer/Enemy"]
-position = Vector2(619.00006, 166)
-scale = Vector2(0.2060538, 0.15573876)
+position = Vector2(619, 166)
+scale = Vector2(0.206054, 0.155739)
 texture = ExtResource("4_q7mnp")
 
 [node name="Label" type="Label" parent="TileMapLayer/Enemy/Icon11"]
-offset_left = -34.552437
-offset_top = -66.494705
-offset_right = 75.44756
-offset_bottom = -43.494705
+offset_left = -34.5524
+offset_top = -66.4947
+offset_right = 75.4476
+offset_bottom = -43.4947
 text = "ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon33" type="Sprite2D" parent="TileMapLayer/Enemy"]
-position = Vector2(647.00006, 99)
-scale = Vector2(0.31835872, 0.24062061)
+position = Vector2(647, 99)
+scale = Vector2(0.318359, 0.240621)
 texture = ExtResource("4_q7mnp")
 
 [node name="Label" type="Label" parent="TileMapLayer/Enemy/Icon33"]
-offset_left = -34.552437
-offset_top = -66.494705
-offset_right = 75.44756
-offset_bottom = -43.494705
+offset_left = -34.5524
+offset_top = -66.4947
+offset_right = 75.4476
+offset_bottom = -43.4947
 text = "FLY ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon29" type="Sprite2D" parent="TileMapLayer/Enemy"]
-position = Vector2(192.00002, 129.00002)
-scale = Vector2(0.31835872, 0.24062061)
+position = Vector2(192, 129)
+scale = Vector2(0.318359, 0.240621)
 texture = ExtResource("4_q7mnp")
 
 [node name="Label" type="Label" parent="TileMapLayer/Enemy/Icon29"]
-offset_left = -34.552437
-offset_top = -66.494705
-offset_right = 75.44756
-offset_bottom = -43.494705
+offset_left = -34.5524
+offset_top = -66.4947
+offset_right = 75.4476
+offset_bottom = -43.4947
 text = "Mini Boss"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon21" type="Sprite2D" parent="TileMapLayer/Enemy"]
 position = Vector2(864, 734)
-scale = Vector2(0.31835872, 0.24062061)
+scale = Vector2(0.318359, 0.240621)
 texture = ExtResource("4_q7mnp")
 
 [node name="Label" type="Label" parent="TileMapLayer/Enemy/Icon21"]
-offset_left = -34.552437
-offset_top = -66.494705
-offset_right = 75.44756
-offset_bottom = -43.494705
+offset_left = -34.5524
+offset_top = -66.4947
+offset_right = 75.4476
+offset_bottom = -43.4947
 text = "ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon22" type="Sprite2D" parent="TileMapLayer/Enemy"]
-position = Vector2(953.00006, 666)
-scale = Vector2(0.31835872, 0.24062061)
+position = Vector2(953, 666)
+scale = Vector2(0.318359, 0.240621)
 texture = ExtResource("4_q7mnp")
 
 [node name="Label" type="Label" parent="TileMapLayer/Enemy/Icon22"]
-offset_left = -34.552437
-offset_top = -66.494705
-offset_right = 75.44756
-offset_bottom = -43.494705
+offset_left = -34.5524
+offset_top = -66.4947
+offset_right = 75.4476
+offset_bottom = -43.4947
 text = "FLY ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon31" type="Sprite2D" parent="TileMapLayer/Enemy"]
-position = Vector2(764.00006, 664)
-scale = Vector2(0.31835872, 0.24062061)
+position = Vector2(764, 664)
+scale = Vector2(0.318359, 0.240621)
 texture = ExtResource("4_q7mnp")
 
 [node name="Label" type="Label" parent="TileMapLayer/Enemy/Icon31"]
-offset_left = -34.552437
-offset_top = -66.494705
-offset_right = 75.44756
-offset_bottom = -43.494705
+offset_left = -34.5524
+offset_top = -66.4947
+offset_right = 75.4476
+offset_bottom = -43.4947
 text = "FLY  ENEMY"
 metadata/_edit_use_anchors_ = true
 
 [node name="Icon25" type="Sprite2D" parent="TileMapLayer/Enemy"]
-position = Vector2(991.00006, 239.00002)
-scale = Vector2(0.31835872, 0.24062061)
+position = Vector2(991, 239)
+scale = Vector2(0.318359, 0.240621)
 texture = ExtResource("4_q7mnp")
 
 [node name="Label" type="Label" parent="TileMapLayer/Enemy/Icon25"]
-offset_left = -34.552437
-offset_top = -66.494705
-offset_right = 75.44756
-offset_bottom = -43.494705
+offset_left = -34.5524
+offset_top = -66.4947
+offset_right = 75.4476
+offset_bottom = -43.4947
 text = "ENEMY"
 metadata/_edit_use_anchors_ = true
 
@@ -770,8 +770,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label13" type="Label" parent="."]
 anchors_preset = -1
-anchor_left = -0.40833333
-anchor_right = -0.40833333
+anchor_left = -0.408333
+anchor_right = -0.408333
 offset_left = 40.0
 offset_top = 322.0
 offset_right = 150.0
@@ -782,8 +782,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label14" type="Label" parent="."]
 anchors_preset = -1
-anchor_left = -0.40833333
-anchor_right = -0.40833333
+anchor_left = -0.408333
+anchor_right = -0.408333
 offset_left = 357.0
 offset_top = 577.0
 offset_right = 467.0
@@ -794,8 +794,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label15" type="Label" parent="."]
 anchors_preset = -1
-anchor_left = -0.40833333
-anchor_right = -0.40833333
+anchor_left = -0.408333
+anchor_right = -0.408333
 offset_left = 788.0
 offset_top = 97.0
 offset_right = 898.0
@@ -806,8 +806,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label16" type="Label" parent="."]
 anchors_preset = -1
-anchor_left = -0.40833333
-anchor_right = -0.40833333
+anchor_left = -0.408333
+anchor_right = -0.408333
 offset_left = 600.0
 offset_top = 449.0
 offset_right = 730.0
@@ -818,8 +818,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label17" type="Label" parent="."]
 anchors_preset = -1
-anchor_left = -0.40833333
-anchor_right = -0.40833333
+anchor_left = -0.408333
+anchor_right = -0.408333
 offset_left = 255.0
 offset_top = 739.0
 offset_right = 385.0
@@ -830,8 +830,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label18" type="Label" parent="."]
 anchors_preset = -1
-anchor_left = -0.40833333
-anchor_right = -0.40833333
+anchor_left = -0.408333
+anchor_right = -0.408333
 offset_left = 613.0
 offset_top = 781.0
 offset_right = 743.0

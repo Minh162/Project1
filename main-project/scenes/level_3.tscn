@@ -930,14 +930,14 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 6
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "ForestGround_Grass"
-terrain_set_0/terrain_0/color = Color(1.1070073e-06, 0.4682687, 0.16981182, 1)
+terrain_set_0/terrain_0/color = Color(1.10701e-06, 0.468269, 0.169812, 1)
 terrain_set_0/terrain_1/name = "ForestGround_Stone"
 terrain_set_0/terrain_1/color = Color(0.4, 0.4, 0.4, 1)
 terrain_set_1/mode = 0
 terrain_set_1/terrain_0/name = "GroundGrass"
-terrain_set_1/terrain_0/color = Color(0.5019608, 0.93333334, 0.2509804, 1)
+terrain_set_1/terrain_0/color = Color(0.501961, 0.933333, 0.25098, 1)
 terrain_set_1/terrain_1/name = "GroundDirt"
-terrain_set_1/terrain_1/color = Color(0.383715, 0.3331441, 0.18105027, 1)
+terrain_set_1/terrain_1/color = Color(0.383715, 0.333144, 0.18105, 1)
 sources/0 = SubResource("TileSetAtlasSource_g2hoc")
 sources/1 = SubResource("TileSetAtlasSource_fldb1")
 sources/3 = SubResource("TileSetAtlasSource_guvtl")
@@ -987,12 +987,12 @@ position = Vector2(0, 11)
 curve = SubResource("Curve2D_vcx5n")
 
 [node name="BlueBird" parent="TileMap/Enemies/Path2D" instance=ExtResource("6_56dhn")]
-position = Vector2(284.09567, -234)
-progress = 104.100006
+position = Vector2(284.096, -234)
+progress = 104.1
 
 [node name="BlueBird2" parent="TileMap/Enemies/Path2D" instance=ExtResource("6_56dhn")]
-position = Vector2(388.2021, -234)
-progress = 208.20001
+position = Vector2(388.202, -234)
+progress = 208.2
 
 [node name="Path2D2" type="Path2D" parent="TileMap/Enemies"]
 position = Vector2(2, 12)
@@ -1002,7 +1002,7 @@ curve = SubResource("Curve2D_56dhn")
 position = Vector2(186, -169)
 
 [node name="BlueBird2" parent="TileMap/Enemies/Path2D2" instance=ExtResource("6_56dhn")]
-position = Vector2(354.49994, -169)
+position = Vector2(354.5, -169)
 progress = 168.5
 
 [node name="Path2D3" type="Path2D" parent="TileMap/Enemies"]
@@ -1013,7 +1013,7 @@ curve = SubResource("Curve2D_una4e")
 position = Vector2(186, -169)
 
 [node name="BlueBird2" parent="TileMap/Enemies/Path2D3" instance=ExtResource("6_56dhn")]
-position = Vector2(278.49997, -169)
+position = Vector2(278.5, -169)
 progress = 92.5
 
 [node name="Slime" parent="TileMap/Enemies" instance=ExtResource("8_q2dsb")]

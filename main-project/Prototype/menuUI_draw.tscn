@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://v1lwvfh56bxk"]
+[gd_scene load_steps=15 format=3 uid="uid://v1lwvfh56bxk"]
 
 [ext_resource type="Texture2D" uid="uid://cq51puelfq6nd" path="res://assets/backgrounds/Free Pixel Art Forest/PNG/Background layers/Layer_0009_2.png" id="1_nbx5i"]
 [ext_resource type="Texture2D" uid="uid://ckochnt0tlxx4" path="res://assets/backgrounds/Free Pixel Art Forest/PNG/Background layers/Layer_0006_4.png" id="2_egm8x"]
@@ -8,8 +8,16 @@
 [ext_resource type="Texture2D" uid="uid://b800plt24ly5y" path="res://assets/backgrounds/Free Pixel Art Forest/PNG/Background layers/Layer_0002_7.png" id="5_ya0k3"]
 [ext_resource type="FontFile" uid="uid://ccpeu102rjqi4" path="res://assets/fonts/BoldPixels (1).ttf" id="6_ddg2q"]
 [ext_resource type="FontFile" uid="uid://cgou02wgxyj4i" path="res://assets/fonts/ThaleahFat.ttf" id="7_q4xqd"]
+[ext_resource type="Texture2D" uid="uid://mdap8l0p5tbg" path="res://assets/buttons/20240707dragonHeaderB.png" id="9_egm8x"]
+[ext_resource type="Texture2D" uid="uid://c4cblb3f65xs0" path="res://assets/buttons/20240707dragonHeaderA.png" id="9_u7w4r"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nof8e"]
+[sub_resource type="Theme" id="Theme_nbx5i"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pafu7"]
+texture = ExtResource("9_u7w4r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u7w4r"]
+texture = ExtResource("9_egm8x")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nbx5i"]
 
@@ -18,44 +26,44 @@
 [node name="Back" type="Node" parent="."]
 
 [node name="Layer00092" type="Sprite2D" parent="Back"]
-position = Vector2(124.18316, -12.8472395)
-scale = Vector2(0.3021189, 0.3021189)
+position = Vector2(124.183, -12.8472)
+scale = Vector2(0.302119, 0.302119)
 texture = ExtResource("1_nbx5i")
 
 [node name="Layer00064" type="Sprite2D" parent="Back"]
-position = Vector2(125.31787, -20.873854)
-scale = Vector2(0.36538178, 0.36538175)
+position = Vector2(125.318, -20.8739)
+scale = Vector2(0.365382, 0.365382)
 texture = ExtResource("2_egm8x")
 
 [node name="Layer00036" type="Sprite2D" parent="Back"]
 position = Vector2(189, -25)
-scale = Vector2(0.37383115, 0.3738313)
+scale = Vector2(0.373831, 0.373831)
 texture = ExtResource("3_u7w4r")
 
 [node name="Layer00037" type="Sprite2D" parent="Back"]
-position = Vector2(133, -27.000004)
-scale = Vector2(0.39852443, 0.39852452)
+position = Vector2(133, -27)
+scale = Vector2(0.398524, 0.398525)
 texture = ExtResource("3_u7w4r")
 
 [node name="Layer0004Lights" type="Sprite2D" parent="Back"]
-position = Vector2(94.00001, -14)
-scale = Vector2(0.20474134, 0.20474136)
+position = Vector2(94, -14)
+scale = Vector2(0.204741, 0.204741)
 texture = ExtResource("4_pafu7")
 
 [node name="Layer0004Lights2" type="Sprite2D" parent="Back"]
 position = Vector2(207, -15)
-scale = Vector2(0.20474134, 0.20474136)
+scale = Vector2(0.204741, 0.204741)
 texture = ExtResource("4_pafu7")
 
 [node name="Layer00027" type="Sprite2D" parent="Back"]
 position = Vector2(118, 149)
-scale = Vector2(0.26427805, 0.264278)
+scale = Vector2(0.264278, 0.264278)
 texture = ExtResource("5_ya0k3")
 
 [node name="Icon12" type="Sprite2D" parent="."]
 top_level = true
-position = Vector2(47, 91.99999)
-scale = Vector2(0.19365998, 0.13456985)
+position = Vector2(47, 92)
+scale = Vector2(0.19366, 0.13457)
 texture = ExtResource("4_f37e2")
 
 [node name="Label4" type="Label" parent="Icon12"]
@@ -87,7 +95,7 @@ text = "GAME"
 
 [node name="Button" type="Node" parent="CanvasGroup"]
 
-[node name="Button Play" type="Button" parent="CanvasGroup/Button"]
+[node name="ButtonPlay" type="Button" parent="CanvasGroup/Button"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -99,85 +107,98 @@ offset_right = 26.5
 offset_bottom = -22.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_nbx5i")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("6_ddg2q")
-theme_override_font_sizes/font_size = 10
-theme_override_styles/normal = SubResource("StyleBoxEmpty_nof8e")
+theme_override_font_sizes/font_size = 7
+theme_override_styles/hover = SubResource("StyleBoxTexture_pafu7")
+theme_override_styles/normal = SubResource("StyleBoxTexture_u7w4r")
 text = "New Game
 "
 
-[node name="Button Continue" type="Button" parent="CanvasGroup/Button"]
+[node name="ButtonContinue" type="Button" parent="CanvasGroup/Button"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -25.0
-offset_top = -23.5
-offset_right = 25.0
-offset_bottom = -12.5
+offset_left = -26.5
+offset_top = -22.0
+offset_right = 26.5
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_nbx5i")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("6_ddg2q")
-theme_override_font_sizes/font_size = 10
-theme_override_styles/normal = SubResource("StyleBoxEmpty_nof8e")
+theme_override_font_sizes/font_size = 7
+theme_override_styles/hover = SubResource("StyleBoxTexture_pafu7")
+theme_override_styles/normal = SubResource("StyleBoxTexture_u7w4r")
 text = "Continue
 "
 
-[node name="Button Multilplayer" type="Button" parent="CanvasGroup/Button"]
+[node name="ButtonMultiplayer" type="Button" parent="CanvasGroup/Button"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -31.0
-offset_top = -10.5
-offset_right = 31.0
-offset_bottom = 0.5
+offset_left = -26.5
+offset_top = -8.0
+offset_right = 26.5
+offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_nbx5i")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("6_ddg2q")
-theme_override_font_sizes/font_size = 10
-theme_override_styles/normal = SubResource("StyleBoxEmpty_nof8e")
-text = "Multiplayer"
+theme_override_font_sizes/font_size = 7
+theme_override_styles/hover = SubResource("StyleBoxTexture_pafu7")
+theme_override_styles/normal = SubResource("StyleBoxTexture_u7w4r")
+text = "Multiplayer
+"
 
-[node name="Button Settings" type="Button" parent="CanvasGroup/Button"]
+[node name="ButtonSettings" type="Button" parent="CanvasGroup/Button"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -25.0
-offset_top = 2.5
-offset_right = 25.0
-offset_bottom = 13.5
+offset_left = -26.5
+offset_top = 6.0
+offset_right = 26.5
+offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_nbx5i")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("6_ddg2q")
-theme_override_font_sizes/font_size = 10
-theme_override_styles/normal = SubResource("StyleBoxEmpty_nof8e")
-text = "Settings"
+theme_override_font_sizes/font_size = 7
+theme_override_styles/hover = SubResource("StyleBoxTexture_pafu7")
+theme_override_styles/normal = SubResource("StyleBoxTexture_u7w4r")
+text = "Settings
+"
 
-[node name="Button Quit" type="Button" parent="CanvasGroup/Button"]
+[node name="ButtonQuit" type="Button" parent="CanvasGroup/Button"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -16.181824
-offset_top = 16.5
-offset_right = 16.181824
-offset_bottom = 27.5
+offset_left = -26.5
+offset_top = 20.0
+offset_right = 26.5
+offset_bottom = 34.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_nbx5i")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("6_ddg2q")
-theme_override_font_sizes/font_size = 10
-theme_override_styles/normal = SubResource("StyleBoxEmpty_nof8e")
-text = "Quit"
+theme_override_font_sizes/font_size = 7
+theme_override_styles/hover = SubResource("StyleBoxTexture_pafu7")
+theme_override_styles/normal = SubResource("StyleBoxTexture_u7w4r")
+text = "Quit
+"
 
 [node name="HighestScoreLabel" type="Label" parent="CanvasGroup"]
 top_level = true

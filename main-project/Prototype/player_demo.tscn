@@ -215,4 +215,4 @@ max_health = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HealthComponent"]
 position = Vector2(0, -5.5)
 shape = SubResource("RectangleShape2D_kt2jk")
-debug_color = Color(0.83128375, 0.24601951, 0.7619162, 0.41960785)
+debug_color = Color(0.831284, 0.24602, 0.761916, 0.419608)
