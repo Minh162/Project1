@@ -1,0 +1,83 @@
+[gd_scene load_steps=6 format=3 uid="uid://c4rge86n0j5th"]
+
+[ext_resource type="PackedScene" uid="uid://x1vaf8lwfkxy" path="res://enemies/bosses/death_god/death_god.tscn" id="2_3dbrm"]
+[ext_resource type="PackedScene" uid="uid://gfypnx766u88" path="res://characters/prince.tscn" id="2_fgoca"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_oxy82"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mb06y"]
+size = Vector2(240, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ejfr"]
+size = Vector2(240, 29)
+
+[node name="BossTest" type="Node"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-98, 204)
+scale = Vector2(2, 1)
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(119, 13.000002)
+scale = Vector2(240, 28.000004)
+texture = SubResource("PlaceholderTexture2D_oxy82")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(119, 13.5)
+shape = SubResource("RectangleShape2D_mb06y")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(367, -106)
+scale = Vector2(0.12593211, 12.663034)
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(119, 13.000002)
+scale = Vector2(240, 28.000004)
+texture = SubResource("PlaceholderTexture2D_oxy82")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(119, 13.5)
+shape = SubResource("RectangleShape2D_4ejfr")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(-110, -106.00001)
+scale = Vector2(0.12593211, 12.663034)
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3"]
+position = Vector2(119, 13.000002)
+scale = Vector2(240, 28.000004)
+texture = SubResource("PlaceholderTexture2D_oxy82")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(119, 13.5)
+shape = SubResource("RectangleShape2D_4ejfr")
+
+[node name="Prince" parent="." node_paths=PackedStringArray("SpawnPoint") instance=ExtResource("2_fgoca")]
+position = Vector2(-29, 200)
+SpawnPoint = NodePath("../Marker2D")
+
+[node name="MeleAttackComponent" parent="Prince" index="3"]
+damage_to_deal = 30
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(139, 77)
+zoom = Vector2(0.5, 0.5)
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(-35, 145)
+
+[node name="ActivePoint" type="Marker2D" parent="."]
+position = Vector2(122, 31)
+
+[node name="RestPoint" type="Marker2D" parent="."]
+position = Vector2(125, 176)
+
+[node name="DeathGod" parent="." node_paths=PackedStringArray("rest_point", "active_point") instance=ExtResource("2_3dbrm")]
+position = Vector2(235, 155)
+rest_point = NodePath("../RestPoint")
+active_point = NodePath("../ActivePoint")
+
+[editable path="Prince"]

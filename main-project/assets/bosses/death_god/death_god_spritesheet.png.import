@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6cumxc4lijae"
-path="res://.godot/imported/death_spritesheet.png-a208500fb56479ab1e6a1820327243a8.ctex"
+uid="uid://wfxgn8edesdf"
+path="res://.godot/imported/death_god_spritesheet.png-4b7136b337a5247d7d1f471c36ea407c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bosses/death_god/death_spritesheet.png"
-dest_files=["res://.godot/imported/death_spritesheet.png-a208500fb56479ab1e6a1820327243a8.ctex"]
+source_file="res://assets/bosses/death_god/death_god_spritesheet.png"
+dest_files=["res://.godot/imported/death_god_spritesheet.png-4b7136b337a5247d7d1f471c36ea407c.ctex"]
 
 [params]
 

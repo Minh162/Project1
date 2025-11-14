@@ -1,0 +1,109 @@
+[gd_scene load_steps=17 format=3 uid="uid://cxpkfv5ts1c6w"]
+
+[ext_resource type="Texture2D" uid="uid://d2tpx5yaggben" path="res://assets/bosses/death_god/summonAppear.png" id="1_wa51j"]
+[ext_resource type="Texture2D" uid="uid://bt3mtlu3y1mgq" path="res://assets/bosses/death_god/summonIdle.png" id="2_182e1"]
+[ext_resource type="Script" uid="uid://by6ld02oqg025" path="res://enemies/bosses/death_god/dark_fire_ball.gd" id="3_kuco7"]
+[ext_resource type="PackedScene" uid="uid://ccchd0fggd573" path="res://traps/hurt_area.tscn" id="4_yqd8v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_182e1"]
+atlas = ExtResource("1_wa51j")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kuco7"]
+atlas = ExtResource("1_wa51j")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqd8v"]
+atlas = ExtResource("1_wa51j")
+region = Rect2(100, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k183w"]
+atlas = ExtResource("1_wa51j")
+region = Rect2(0, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cfh0p"]
+atlas = ExtResource("1_wa51j")
+region = Rect2(50, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d7j6x"]
+atlas = ExtResource("1_wa51j")
+region = Rect2(100, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_irodn"]
+atlas = ExtResource("2_182e1")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hgunm"]
+atlas = ExtResource("2_182e1")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tannf"]
+atlas = ExtResource("2_182e1")
+region = Rect2(100, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hlm6n"]
+atlas = ExtResource("2_182e1")
+region = Rect2(150, 0, 50, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_irodn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_182e1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kuco7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqd8v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k183w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cfh0p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d7j6x")
+}],
+"loop": false,
+"name": &"appear",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_irodn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hgunm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tannf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hlm6n")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k183w"]
+radius = 5.0
+
+[node name="DarkFireBall" type="AnimatedSprite2D"]
+position = Vector2(2, -14)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_irodn")
+animation = &"appear"
+frame = 5
+frame_progress = 1.0
+script = ExtResource("3_kuco7")
+speed = 300.0
+
+[node name="HurtArea" parent="." instance=ExtResource("4_yqd8v")]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtArea"]
+position = Vector2(-1, 7)
+shape = SubResource("CircleShape2D_k183w")
