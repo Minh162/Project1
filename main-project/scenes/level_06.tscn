@@ -1,18 +1,18 @@
 [gd_scene load_steps=16 format=4 uid="uid://4wqbg70xmn0q"]
 
-[ext_resource type="TileSet" uid="uid://l27bsl1ldyw7" path="res://combined_tileset.tres" id="1_kuph3"]
-[ext_resource type="Texture2D" uid="uid://cklj3cq2w21r4" path="res://assets/tiles/forest tile/Tileset/Pixel_Woods_Tileset.png" id="2_abjnl"]
-[ext_resource type="Texture2D" uid="uid://do7bnbxb7xj5q" path="res://assets/tiles/dungeon tile/Dungeon Tile Set.png" id="3_wps6d"]
-[ext_resource type="Texture2D" uid="uid://dfdg6c2xkxi5e" path="res://assets/metroidvania_asset/tiles and background_foreground (new)/tileset.png" id="4_2hef4"]
-[ext_resource type="Texture2D" uid="uid://bafj7nctd6b1h" path="res://assets/tiles/floating island tile/AssetSheet_Yellow.png" id="5_lk3oq"]
-[ext_resource type="PackedScene" uid="uid://x1vaf8lwfkxy" path="res://enemies/bosses/death_god/death_god.tscn" id="6_kuph3"]
-[ext_resource type="PackedScene" uid="uid://dk1wbddcpsedk" path="res://others/goal.tscn" id="7_5fwrv"]
-[ext_resource type="PackedScene" uid="uid://dvb86dyf1x252" path="res://others/doors.tscn" id="8_e3utc"]
-[ext_resource type="PackedScene" uid="uid://gfypnx766u88" path="res://characters/prince.tscn" id="9_ymwnx"]
-[ext_resource type="Texture2D" uid="uid://bqqlyj0h138bi" path="res://assets/metroidvania_asset/tiles and background_foreground (new)/background.png" id="10_adfb8"]
+[ext_resource type="TileSet" uid="uid://l27bsl1ldyw7" path="res://combined_tileset.tres" id="1_ggs2r"]
+[ext_resource type="Texture2D" uid="uid://cklj3cq2w21r4" path="res://assets/tiles/forest tile/Tileset/Pixel_Woods_Tileset.png" id="2_k7nmt"]
+[ext_resource type="Texture2D" uid="uid://do7bnbxb7xj5q" path="res://assets/tiles/dungeon tile/Dungeon Tile Set.png" id="3_ph8se"]
+[ext_resource type="Texture2D" uid="uid://dfdg6c2xkxi5e" path="res://assets/metroidvania_asset/tiles and background_foreground (new)/tileset.png" id="4_40wum"]
+[ext_resource type="Texture2D" uid="uid://bafj7nctd6b1h" path="res://assets/tiles/floating island tile/AssetSheet_Yellow.png" id="5_8gg7k"]
+[ext_resource type="PackedScene" uid="uid://x1vaf8lwfkxy" path="res://enemies/bosses/death_god/death_god.tscn" id="6_21f2n"]
+[ext_resource type="PackedScene" uid="uid://dk1wbddcpsedk" path="res://others/goal.tscn" id="7_trbc6"]
+[ext_resource type="PackedScene" uid="uid://dvb86dyf1x252" path="res://others/doors.tscn" id="8_xjoi2"]
+[ext_resource type="PackedScene" uid="uid://gfypnx766u88" path="res://characters/prince.tscn" id="9_wwuk5"]
+[ext_resource type="Texture2D" uid="uid://bqqlyj0h138bi" path="res://assets/metroidvania_asset/tiles and background_foreground (new)/background.png" id="10_ho47o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g2hoc"]
-texture = ExtResource("2_abjnl")
+texture = ExtResource("2_k7nmt")
 11:0/0 = 0
 12:0/0 = 0
 13:0/0 = 0
@@ -343,7 +343,7 @@ texture = ExtResource("2_abjnl")
 18:15/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fldb1"]
-texture = ExtResource("3_wps6d")
+texture = ExtResource("3_ph8se")
 1:1/0 = 0
 2:1/0 = 0
 3:1/0 = 0
@@ -480,7 +480,7 @@ texture = ExtResource("3_wps6d")
 12:15/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_56dhn"]
-texture = ExtResource("4_2hef4")
+texture = ExtResource("4_40wum")
 0:0/0 = 0
 0:0/0/terrain_set = 1
 0:0/0/terrain = 0
@@ -796,7 +796,7 @@ texture = ExtResource("4_2hef4")
 5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_guvtl"]
-texture = ExtResource("5_lk3oq")
+texture = ExtResource("5_8gg7k")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -927,12 +927,12 @@ sources/1 = SubResource("TileSetAtlasSource_fldb1")
 sources/3 = SubResource("TileSetAtlasSource_guvtl")
 sources/2 = SubResource("TileSetAtlasSource_56dhn")
 
-[node name="Level6" type="Node2D"]
+[node name="Level06" type="Node2D"]
 
 [node name="TileMap" type="Node2D" parent="."]
 
 [node name="Decor" type="TileMapLayer" parent="TileMap"]
-tile_set = ExtResource("1_kuph3")
+tile_set = ExtResource("1_ggs2r")
 
 [node name="Ground" type="TileMapLayer" parent="TileMap"]
 position = Vector2(721, -390)
@@ -947,28 +947,28 @@ position = Vector2(633, -371)
 [node name="RestPoint" type="Marker2D" parent="TileMap/Boss"]
 position = Vector2(633, -279)
 
-[node name="DeathGod" parent="TileMap/Boss" node_paths=PackedStringArray("rest_point", "active_point") instance=ExtResource("6_kuph3")]
+[node name="DeathGod" parent="TileMap/Boss" node_paths=PackedStringArray("rest_point", "active_point") instance=ExtResource("6_21f2n")]
 position = Vector2(632, -279)
 rest_point = NodePath("../RestPoint")
 active_point = NodePath("../ActivePoint")
 
 [node name="InteractableObject" type="Node" parent="TileMap"]
 
-[node name="Goal" parent="TileMap/InteractableObject" instance=ExtResource("7_5fwrv")]
+[node name="Goal" parent="TileMap/InteractableObject" instance=ExtResource("7_trbc6")]
 position = Vector2(1214, -222)
 
-[node name="Doors" parent="TileMap/InteractableObject" node_paths=PackedStringArray("boss") instance=ExtResource("8_e3utc")]
+[node name="Doors" parent="TileMap/InteractableObject" node_paths=PackedStringArray("boss") instance=ExtResource("8_xjoi2")]
 position = Vector2(297, -196)
 boss = NodePath("../../Boss/DeathGod")
 
-[node name="Doors2" parent="TileMap/InteractableObject" node_paths=PackedStringArray("boss") instance=ExtResource("8_e3utc")]
+[node name="Doors2" parent="TileMap/InteractableObject" node_paths=PackedStringArray("boss") instance=ExtResource("8_xjoi2")]
 position = Vector2(1162, -265)
 boss = NodePath("../../Boss/DeathGod")
 
 [node name="SpawnPoint" type="Marker2D" parent="."]
 position = Vector2(54, -140)
 
-[node name="Prince" parent="." node_paths=PackedStringArray("SpawnPoint") instance=ExtResource("9_ymwnx")]
+[node name="Prince" parent="." node_paths=PackedStringArray("SpawnPoint") instance=ExtResource("9_wwuk5")]
 z_index = 1
 position = Vector2(57, -147)
 SpawnPoint = NodePath("../SpawnPoint")
@@ -985,5 +985,5 @@ limit_bottom = 55
 layer = -10
 
 [node name="Sprite2D" type="Sprite2D" parent="Background"]
-texture = ExtResource("10_adfb8")
+texture = ExtResource("10_ho47o")
 centered = false

@@ -13,11 +13,11 @@
 
 [sub_resource type="Theme" id="Theme_nbx5i"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pafu7"]
-texture = ExtResource("9_u7w4r")
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u7w4r"]
 texture = ExtResource("9_egm8x")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pafu7"]
+texture = ExtResource("9_u7w4r")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nbx5i"]
 
@@ -111,8 +111,8 @@ theme = SubResource("Theme_nbx5i")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("6_ddg2q")
 theme_override_font_sizes/font_size = 7
-theme_override_styles/hover = SubResource("StyleBoxTexture_pafu7")
 theme_override_styles/normal = SubResource("StyleBoxTexture_u7w4r")
+theme_override_styles/hover = SubResource("StyleBoxTexture_pafu7")
 text = "New Game
 "
 
@@ -132,8 +132,8 @@ theme = SubResource("Theme_nbx5i")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("6_ddg2q")
 theme_override_font_sizes/font_size = 7
-theme_override_styles/hover = SubResource("StyleBoxTexture_pafu7")
 theme_override_styles/normal = SubResource("StyleBoxTexture_u7w4r")
+theme_override_styles/hover = SubResource("StyleBoxTexture_pafu7")
 text = "Continue
 "
 
@@ -153,8 +153,8 @@ theme = SubResource("Theme_nbx5i")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("6_ddg2q")
 theme_override_font_sizes/font_size = 7
-theme_override_styles/hover = SubResource("StyleBoxTexture_pafu7")
 theme_override_styles/normal = SubResource("StyleBoxTexture_u7w4r")
+theme_override_styles/hover = SubResource("StyleBoxTexture_pafu7")
 text = "Multiplayer
 "
 
@@ -174,8 +174,8 @@ theme = SubResource("Theme_nbx5i")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("6_ddg2q")
 theme_override_font_sizes/font_size = 7
-theme_override_styles/hover = SubResource("StyleBoxTexture_pafu7")
 theme_override_styles/normal = SubResource("StyleBoxTexture_u7w4r")
+theme_override_styles/hover = SubResource("StyleBoxTexture_pafu7")
 text = "Settings
 "
 
@@ -195,8 +195,8 @@ theme = SubResource("Theme_nbx5i")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("6_ddg2q")
 theme_override_font_sizes/font_size = 7
-theme_override_styles/hover = SubResource("StyleBoxTexture_pafu7")
 theme_override_styles/normal = SubResource("StyleBoxTexture_u7w4r")
+theme_override_styles/hover = SubResource("StyleBoxTexture_pafu7")
 text = "Quit
 "
 

@@ -1,24 +1,24 @@
 [gd_scene load_steps=27 format=4 uid="uid://cyvhbseytw0fy"]
 
-[ext_resource type="TileSet" uid="uid://l27bsl1ldyw7" path="res://combined_tileset.tres" id="1_ha73p"]
-[ext_resource type="Texture2D" uid="uid://cklj3cq2w21r4" path="res://assets/tiles/forest tile/Tileset/Pixel_Woods_Tileset.png" id="3_56dhn"]
-[ext_resource type="Texture2D" uid="uid://do7bnbxb7xj5q" path="res://assets/tiles/dungeon tile/Dungeon Tile Set.png" id="4_ax3dk"]
-[ext_resource type="Texture2D" uid="uid://bafj7nctd6b1h" path="res://assets/tiles/floating island tile/AssetSheet_Yellow.png" id="5_q2dsb"]
-[ext_resource type="Texture2D" uid="uid://dfdg6c2xkxi5e" path="res://assets/metroidvania_asset/tiles and background_foreground (new)/tileset.png" id="5_vcx5n"]
-[ext_resource type="PackedScene" uid="uid://d0e1c304ipgrs" path="res://enemies/blue_bird.tscn" id="6_56dhn"]
-[ext_resource type="PackedScene" uid="uid://c4524x040s4ep" path="res://others/checkpoint.tscn" id="6_p3r0x"]
-[ext_resource type="PackedScene" uid="uid://dk1wbddcpsedk" path="res://others/goal.tscn" id="7_5xqnf"]
-[ext_resource type="PackedScene" uid="uid://cqr2ksrou3nv" path="res://traps/spike.tscn" id="7_ax3dk"]
-[ext_resource type="PackedScene" uid="uid://wk1poh2tnmxc" path="res://enemies/enemy_trigger_range.tscn" id="8_p3r0x"]
-[ext_resource type="PackedScene" uid="uid://ddyfys5jth01v" path="res://enemies/slime.tscn" id="8_q2dsb"]
-[ext_resource type="PackedScene" uid="uid://gfypnx766u88" path="res://characters/prince.tscn" id="8_una4e"]
-[ext_resource type="PackedScene" uid="uid://dbw8a0quast5t" path="res://others/coin.tscn" id="8_vcx5n"]
-[ext_resource type="PackedScene" uid="uid://dm7lt04uuygl2" path="res://enemies/goblin.tscn" id="9_5xqnf"]
-[ext_resource type="Texture2D" uid="uid://bqqlyj0h138bi" path="res://assets/metroidvania_asset/tiles and background_foreground (new)/background.png" id="9_ema3p"]
-[ext_resource type="PackedScene" uid="uid://bwjfbo6r6hkv1" path="res://enemies/rhino.tscn" id="10_una4e"]
+[ext_resource type="TileSet" uid="uid://l27bsl1ldyw7" path="res://combined_tileset.tres" id="1_7fv2j"]
+[ext_resource type="Texture2D" uid="uid://cklj3cq2w21r4" path="res://assets/tiles/forest tile/Tileset/Pixel_Woods_Tileset.png" id="2_r75pg"]
+[ext_resource type="Texture2D" uid="uid://do7bnbxb7xj5q" path="res://assets/tiles/dungeon tile/Dungeon Tile Set.png" id="3_8i68l"]
+[ext_resource type="Texture2D" uid="uid://dfdg6c2xkxi5e" path="res://assets/metroidvania_asset/tiles and background_foreground (new)/tileset.png" id="4_ovgwr"]
+[ext_resource type="Texture2D" uid="uid://bafj7nctd6b1h" path="res://assets/tiles/floating island tile/AssetSheet_Yellow.png" id="5_r73c0"]
+[ext_resource type="PackedScene" uid="uid://d0e1c304ipgrs" path="res://enemies/blue_bird.tscn" id="6_vpfgx"]
+[ext_resource type="PackedScene" uid="uid://ddyfys5jth01v" path="res://enemies/slime.tscn" id="7_ofsxh"]
+[ext_resource type="PackedScene" uid="uid://wk1poh2tnmxc" path="res://enemies/enemy_trigger_range.tscn" id="8_3uuul"]
+[ext_resource type="PackedScene" uid="uid://dm7lt04uuygl2" path="res://enemies/goblin.tscn" id="9_hx8r0"]
+[ext_resource type="PackedScene" uid="uid://bwjfbo6r6hkv1" path="res://enemies/rhino.tscn" id="10_es8is"]
+[ext_resource type="PackedScene" uid="uid://cqr2ksrou3nv" path="res://traps/spike.tscn" id="11_b7hmm"]
+[ext_resource type="PackedScene" uid="uid://c4524x040s4ep" path="res://others/checkpoint.tscn" id="12_cmg78"]
+[ext_resource type="PackedScene" uid="uid://dk1wbddcpsedk" path="res://others/goal.tscn" id="13_bntwn"]
+[ext_resource type="PackedScene" uid="uid://dbw8a0quast5t" path="res://others/coin.tscn" id="14_anoqk"]
+[ext_resource type="PackedScene" uid="uid://gfypnx766u88" path="res://characters/prince.tscn" id="15_64ryd"]
+[ext_resource type="Texture2D" uid="uid://bqqlyj0h138bi" path="res://assets/metroidvania_asset/tiles and background_foreground (new)/background.png" id="16_okw7j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g2hoc"]
-texture = ExtResource("3_56dhn")
+texture = ExtResource("2_r75pg")
 11:0/0 = 0
 12:0/0 = 0
 13:0/0 = 0
@@ -349,7 +349,7 @@ texture = ExtResource("3_56dhn")
 18:15/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fldb1"]
-texture = ExtResource("4_ax3dk")
+texture = ExtResource("3_8i68l")
 1:1/0 = 0
 2:1/0 = 0
 3:1/0 = 0
@@ -486,7 +486,7 @@ texture = ExtResource("4_ax3dk")
 12:15/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_56dhn"]
-texture = ExtResource("5_vcx5n")
+texture = ExtResource("4_ovgwr")
 0:0/0 = 0
 0:0/0/terrain_set = 1
 0:0/0/terrain = 0
@@ -812,7 +812,7 @@ texture = ExtResource("5_vcx5n")
 5:5/0/terrains_peering_bit/top_right_corner = 1
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_guvtl"]
-texture = ExtResource("5_q2dsb")
+texture = ExtResource("5_r73c0")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -967,13 +967,13 @@ size = Vector2(88, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_una4e"]
 size = Vector2(92.5, 20)
 
-[node name="Level3" type="Node2D"]
+[node name="Level04" type="Node2D"]
 
 [node name="TileMap" type="Node2D" parent="."]
 
 [node name="Decor" type="TileMapLayer" parent="TileMap"]
 tile_map_data = PackedByteArray("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")
-tile_set = ExtResource("1_ha73p")
+tile_set = ExtResource("1_7fv2j")
 
 [node name="Ground" type="TileMapLayer" parent="TileMap"]
 position = Vector2(721, -448)
@@ -986,88 +986,88 @@ tile_set = SubResource("TileSet_igmy8")
 position = Vector2(0, 11)
 curve = SubResource("Curve2D_vcx5n")
 
-[node name="BlueBird" parent="TileMap/Enemies/Path2D" instance=ExtResource("6_56dhn")]
-position = Vector2(284.096, -234)
+[node name="BlueBird" parent="TileMap/Enemies/Path2D" instance=ExtResource("6_vpfgx")]
+position = Vector2(284.09564, -234)
 progress = 104.1
 
-[node name="BlueBird2" parent="TileMap/Enemies/Path2D" instance=ExtResource("6_56dhn")]
-position = Vector2(388.202, -234)
+[node name="BlueBird2" parent="TileMap/Enemies/Path2D" instance=ExtResource("6_vpfgx")]
+position = Vector2(388.2021, -234)
 progress = 208.2
 
 [node name="Path2D2" type="Path2D" parent="TileMap/Enemies"]
 position = Vector2(2, 12)
 curve = SubResource("Curve2D_56dhn")
 
-[node name="BlueBird" parent="TileMap/Enemies/Path2D2" instance=ExtResource("6_56dhn")]
+[node name="BlueBird" parent="TileMap/Enemies/Path2D2" instance=ExtResource("6_vpfgx")]
 position = Vector2(186, -169)
 
-[node name="BlueBird2" parent="TileMap/Enemies/Path2D2" instance=ExtResource("6_56dhn")]
-position = Vector2(354.5, -169)
+[node name="BlueBird2" parent="TileMap/Enemies/Path2D2" instance=ExtResource("6_vpfgx")]
+position = Vector2(354.49994, -169)
 progress = 168.5
 
 [node name="Path2D3" type="Path2D" parent="TileMap/Enemies"]
 position = Vector2(1258, -100)
 curve = SubResource("Curve2D_una4e")
 
-[node name="BlueBird" parent="TileMap/Enemies/Path2D3" instance=ExtResource("6_56dhn")]
+[node name="BlueBird" parent="TileMap/Enemies/Path2D3" instance=ExtResource("6_vpfgx")]
 position = Vector2(186, -169)
 
-[node name="BlueBird2" parent="TileMap/Enemies/Path2D3" instance=ExtResource("6_56dhn")]
-position = Vector2(278.5, -169)
+[node name="BlueBird2" parent="TileMap/Enemies/Path2D3" instance=ExtResource("6_vpfgx")]
+position = Vector2(278.49997, -169)
 progress = 92.5
 
-[node name="Slime" parent="TileMap/Enemies" instance=ExtResource("8_q2dsb")]
+[node name="Slime" parent="TileMap/Enemies" instance=ExtResource("7_ofsxh")]
 position = Vector2(510, -272)
 scale = Vector2(2, 2)
 
 [node name="HealthComponent" parent="TileMap/Enemies/Slime" index="2"]
 max_health = 6
 
-[node name="Slime2" parent="TileMap/Enemies" instance=ExtResource("8_q2dsb")]
+[node name="Slime2" parent="TileMap/Enemies" instance=ExtResource("7_ofsxh")]
 position = Vector2(353, -272)
 scale = Vector2(2, 2)
 
 [node name="HealthComponent" parent="TileMap/Enemies/Slime2" index="2"]
 max_health = 6
 
-[node name="Slime3" parent="TileMap/Enemies" instance=ExtResource("8_q2dsb")]
+[node name="Slime3" parent="TileMap/Enemies" instance=ExtResource("7_ofsxh")]
 position = Vector2(1013, -336)
 scale = Vector2(2, 2)
 
 [node name="HealthComponent" parent="TileMap/Enemies/Slime3" index="2"]
 max_health = 6
 
-[node name="EnemyTriggerRange" parent="TileMap/Enemies" instance=ExtResource("8_p3r0x")]
+[node name="EnemyTriggerRange" parent="TileMap/Enemies" instance=ExtResource("8_3uuul")]
 position = Vector2(878, -148)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Enemies/EnemyTriggerRange"]
 position = Vector2(-2.5, -8)
 shape = SubResource("RectangleShape2D_p3r0x")
 
-[node name="Goblin" parent="TileMap/Enemies/EnemyTriggerRange" node_paths=PackedStringArray("trigger_range_area") instance=ExtResource("9_5xqnf")]
+[node name="Goblin" parent="TileMap/Enemies/EnemyTriggerRange" node_paths=PackedStringArray("trigger_range_area") instance=ExtResource("9_hx8r0")]
 position = Vector2(-31, 2)
 trigger_range_area = NodePath("..")
 
-[node name="Goblin2" parent="TileMap/Enemies/EnemyTriggerRange" node_paths=PackedStringArray("trigger_range_area") instance=ExtResource("9_5xqnf")]
+[node name="Goblin2" parent="TileMap/Enemies/EnemyTriggerRange" node_paths=PackedStringArray("trigger_range_area") instance=ExtResource("9_hx8r0")]
 position = Vector2(21, 2)
 trigger_range_area = NodePath("..")
 
-[node name="EnemyTriggerRange2" parent="TileMap/Enemies" instance=ExtResource("8_p3r0x")]
+[node name="EnemyTriggerRange2" parent="TileMap/Enemies" instance=ExtResource("8_3uuul")]
 position = Vector2(1929, -276)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Enemies/EnemyTriggerRange2"]
 position = Vector2(-4.75, -8)
 shape = SubResource("RectangleShape2D_una4e")
 
-[node name="Goblin" parent="TileMap/Enemies/EnemyTriggerRange2" node_paths=PackedStringArray("trigger_range_area") instance=ExtResource("9_5xqnf")]
+[node name="Goblin" parent="TileMap/Enemies/EnemyTriggerRange2" node_paths=PackedStringArray("trigger_range_area") instance=ExtResource("9_hx8r0")]
 position = Vector2(-31, 2)
 trigger_range_area = NodePath("..")
 
-[node name="Goblin2" parent="TileMap/Enemies/EnemyTriggerRange2" node_paths=PackedStringArray("trigger_range_area") instance=ExtResource("9_5xqnf")]
+[node name="Goblin2" parent="TileMap/Enemies/EnemyTriggerRange2" node_paths=PackedStringArray("trigger_range_area") instance=ExtResource("9_hx8r0")]
 position = Vector2(21, 2)
 trigger_range_area = NodePath("..")
 
-[node name="Rhino" parent="TileMap/Enemies" node_paths=PackedStringArray("raycast_to_check_player") instance=ExtResource("10_una4e")]
+[node name="Rhino" parent="TileMap/Enemies" node_paths=PackedStringArray("raycast_to_check_player") instance=ExtResource("10_es8is")]
 position = Vector2(1465, -144)
 raycast_to_check_player = NodePath("RayCast2D")
 speed = -200.0
@@ -1077,7 +1077,7 @@ position = Vector2(-15, -15)
 target_position = Vector2(-130, 0)
 collision_mask = 2
 
-[node name="Rhino2" parent="TileMap/Enemies" node_paths=PackedStringArray("raycast_to_check_player") instance=ExtResource("10_una4e")]
+[node name="Rhino2" parent="TileMap/Enemies" node_paths=PackedStringArray("raycast_to_check_player") instance=ExtResource("10_es8is")]
 position = Vector2(1674, -144)
 raycast_to_check_player = NodePath("RayCast2D")
 speed = -200.0
@@ -1089,207 +1089,207 @@ collision_mask = 2
 
 [node name="Trap" type="Node" parent="TileMap"]
 
-[node name="Spike" parent="TileMap/Trap" instance=ExtResource("7_ax3dk")]
+[node name="Spike" parent="TileMap/Trap" instance=ExtResource("11_b7hmm")]
 position = Vector2(1156, -128)
 
-[node name="Spike2" parent="TileMap/Trap" instance=ExtResource("7_ax3dk")]
+[node name="Spike2" parent="TileMap/Trap" instance=ExtResource("11_b7hmm")]
 position = Vector2(513, -96)
 
-[node name="Spike3" parent="TileMap/Trap" instance=ExtResource("7_ax3dk")]
+[node name="Spike3" parent="TileMap/Trap" instance=ExtResource("11_b7hmm")]
 position = Vector2(344, -96)
 
-[node name="Spike4" parent="TileMap/Trap" instance=ExtResource("7_ax3dk")]
+[node name="Spike4" parent="TileMap/Trap" instance=ExtResource("11_b7hmm")]
 position = Vector2(195, -96)
 
-[node name="Spike5" parent="TileMap/Trap" instance=ExtResource("7_ax3dk")]
+[node name="Spike5" parent="TileMap/Trap" instance=ExtResource("11_b7hmm")]
 position = Vector2(1034, -144)
 
-[node name="Spike6" parent="TileMap/Trap" instance=ExtResource("7_ax3dk")]
+[node name="Spike6" parent="TileMap/Trap" instance=ExtResource("11_b7hmm")]
 position = Vector2(1947, -144)
 
-[node name="Spike8" parent="TileMap/Trap" instance=ExtResource("7_ax3dk")]
+[node name="Spike8" parent="TileMap/Trap" instance=ExtResource("11_b7hmm")]
 position = Vector2(2067, -144)
 
-[node name="Spike7" parent="TileMap/Trap" instance=ExtResource("7_ax3dk")]
+[node name="Spike7" parent="TileMap/Trap" instance=ExtResource("11_b7hmm")]
 position = Vector2(2180, -144)
 
 [node name="InteractableObject" type="Node" parent="TileMap"]
 
-[node name="Checkpoint" parent="TileMap/InteractableObject" node_paths=PackedStringArray("spawn_point") instance=ExtResource("6_p3r0x")]
+[node name="Checkpoint" parent="TileMap/InteractableObject" node_paths=PackedStringArray("spawn_point") instance=ExtResource("12_cmg78")]
 position = Vector2(1187, -128)
 spawn_point = NodePath("../../../SpawnPoint")
 
-[node name="Goal" parent="TileMap/InteractableObject" instance=ExtResource("7_5xqnf")]
+[node name="Goal" parent="TileMap/InteractableObject" instance=ExtResource("13_bntwn")]
 position = Vector2(2339, -151)
 
 [node name="Pickups" type="Node" parent="TileMap"]
 
-[node name="Coin" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(17, -149)
 
-[node name="Coin2" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin2" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(47, -148)
 
-[node name="Coin3" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin3" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(80, -148)
 
-[node name="Coin4" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin4" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(114, -148)
 
-[node name="Coin5" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin5" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(253, -149)
 
-[node name="Coin6" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin6" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(277, -149)
 
-[node name="Coin7" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin7" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(210, -278)
 
-[node name="Coin8" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin8" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(339, -318)
 
-[node name="Coin9" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin9" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(366, -318)
 
-[node name="Coin10" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin10" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(393, -317)
 
-[node name="Coin11" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin11" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(338, -293)
 
-[node name="Coin12" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin12" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(367, -294)
 
-[node name="Coin13" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin13" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(394, -292)
 
-[node name="Coin14" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin14" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(571, -287)
 
-[node name="Coin15" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin15" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(571, -320)
 
-[node name="Coin16" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin16" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(572, -357)
 
-[node name="Coin17" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin17" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(683, -268)
 
-[node name="Coin18" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin18" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(721, -241)
 
-[node name="Coin19" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin19" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(759, -212)
 
-[node name="Coin20" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin20" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(990, -356)
 
-[node name="Coin21" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin21" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(1011, -356)
 
-[node name="Coin22" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin22" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(1032, -356)
 
-[node name="Coin23" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin23" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(979, -273)
 
-[node name="Coin42" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin42" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(833, -185)
 
-[node name="Coin43" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin43" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(912, -185)
 
-[node name="Coin24" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin24" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(1268, -279)
 
-[node name="Coin44" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin44" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(1290, -190)
 
-[node name="Coin45" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin45" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(1358, -179)
 
-[node name="Coin46" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin46" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(1408, -179)
 
-[node name="Coin47" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin47" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(1460, -178)
 
-[node name="Coin48" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin48" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(1512, -194)
 
-[node name="Coin49" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin49" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(1567, -182)
 
-[node name="Coin50" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin50" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(1616, -182)
 
-[node name="Coin51" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin51" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(1668, -182)
 
-[node name="Coin52" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin52" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(1719, -189)
 
-[node name="Coin53" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin53" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(1513, -247)
 
-[node name="Coin25" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin25" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(1309, -279)
 
-[node name="Coin26" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin26" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(1350, -278)
 
-[node name="Coin27" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin27" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(1498, -349)
 
-[node name="Coin28" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin28" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(1529, -348)
 
-[node name="Coin29" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin29" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(1660, -280)
 
-[node name="Coin30" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin30" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(1704, -266)
 
-[node name="Coin31" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin31" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(1738, -266)
 
-[node name="Coin32" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin32" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(1857, -308)
 
-[node name="Coin33" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin33" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(1904, -308)
 
-[node name="Coin34" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin34" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(1947, -310)
 
-[node name="Coin35" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin35" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(1993, -308)
 
-[node name="Coin36" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin36" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(2074, -247)
 
-[node name="Coin38" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin38" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(1906, -207)
 
-[node name="Coin39" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin39" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(1999, -210)
 
-[node name="Coin54" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin54" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(1999, -184)
 
-[node name="Coin55" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin55" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(1999, -235)
 
-[node name="Coin40" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin40" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(2208, -222)
 
-[node name="Coin41" parent="TileMap/Pickups" instance=ExtResource("8_vcx5n")]
+[node name="Coin41" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(2240, -222)
 
 [node name="SpawnPoint" type="Marker2D" parent="."]
 position = Vector2(57, -303)
 
-[node name="Prince" parent="." node_paths=PackedStringArray("SpawnPoint") instance=ExtResource("8_una4e")]
+[node name="Prince" parent="." node_paths=PackedStringArray("SpawnPoint") instance=ExtResource("15_64ryd")]
 z_index = 1
 position = Vector2(57, -310)
 SpawnPoint = NodePath("../SpawnPoint")
@@ -1306,7 +1306,7 @@ limit_bottom = 0
 layer = -10
 
 [node name="Sprite2D" type="Sprite2D" parent="Background"]
-texture = ExtResource("9_ema3p")
+texture = ExtResource("16_okw7j")
 centered = false
 
 [editable path="TileMap/Enemies/Slime"]
