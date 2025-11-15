@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://gpbwwgcq2iij"]
+
+[ext_resource type="Script" uid="uid://dwdsaptith2l8" path="res://components/shoot_attack_component.gd" id="1_1na3e"]
+
+[node name="ShootAttackComponent" type="Node2D"]
+script = ExtResource("1_1na3e")
+
+[node name="ProjectileHolder" type="Node" parent="."]

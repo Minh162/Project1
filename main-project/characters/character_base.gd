@@ -8,7 +8,7 @@ class_name PlayerCharacter
 @export var jump_velocity: float = -300.0
 @export var double_jump_velocity: float = -150.0
 @export var player_knock_back : float = 200.0
-
+@export var health_bar : ProgressBar
 @onready var character_sprite: Sprite2D = $Sprite2D
 
 var can_double_jump: bool = true
@@ -23,6 +23,9 @@ func _ready() -> void:
 	self.global_position = SpawnPoint.global_position
 	health_component.hurt.connect(_on_player_hurt)
 	health_component.death.connect(_on_player_death)
+	
+	health_bar.max_value = health_component.max_health
+	health_bar.value = health_component.current_health
 
 func _physics_process(delta: float) -> void:
 	if not is_alive:
@@ -96,6 +99,7 @@ func handle_attack_anim() -> void:
 		is_attacking = false
 
 func _on_player_hurt(hurt_pos: Vector2) -> void:
+	health_bar.value = health_component.current_health
 	is_hurting = true
 	anim_player.play("hurt")
 	var knockback_direction = (self.global_position - hurt_pos).normalized()

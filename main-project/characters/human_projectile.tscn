@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dg47426qip2bd"]
+
+[ext_resource type="Script" uid="uid://b63trg605gy68" path="res://characters/human_projectile.gd" id="1_nllcm"]
+
+[node name="HumanProjectile" type="Area2D"]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_nllcm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+rect = Rect2(-3, -3, 6, 6)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccb0hnepu6pj3"]
+[gd_scene load_steps=8 format=3 uid="uid://ccb0hnepu6pj3"]
 
 [ext_resource type="PackedScene" uid="uid://gfypnx766u88" path="res://characters/prince.tscn" id="1_hwyic"]
+[ext_resource type="PackedScene" uid="uid://btxh6234ofevs" path="res://characters/archer.tscn" id="2_0bjgt"]
 [ext_resource type="PackedScene" uid="uid://b73txr05n05j" path="res://enemies/fly.tscn" id="2_fynsg"]
+[ext_resource type="PackedScene" uid="uid://ukdn7ocoagn0" path="res://characters/swordman.tscn" id="3_8xa0b"]
+[ext_resource type="PackedScene" uid="uid://ckjvt20h6shtm" path="res://characters/caliever.tscn" id="5_4igph"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_24uoo"]
 
@@ -38,15 +41,32 @@ texture = SubResource("PlaceholderTexture2D_24uoo")
 position = Vector2(119, 13.5)
 shape = SubResource("RectangleShape2D_fynsg")
 
-[node name="Prince" parent="." node_paths=PackedStringArray("SpawnPoint") instance=ExtResource("1_hwyic")]
-position = Vector2(99, -8)
-SpawnPoint = NodePath("../Marker2D")
-
-[node name="Camera2D" type="Camera2D" parent="Prince"]
-zoom = Vector2(0.5, 0.5)
-
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(102, 11)
 
 [node name="Fly" parent="." instance=ExtResource("2_fynsg")]
 position = Vector2(327, -55)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(159, -15)
+scale = Vector2(2, 2)
+zoom = Vector2(0.5, 0.5)
+
+[node name="Archer" parent="." node_paths=PackedStringArray("SpawnPoint") instance=ExtResource("2_0bjgt")]
+visible = false
+SpawnPoint = NodePath("../Marker2D")
+
+[node name="Swordman" parent="." node_paths=PackedStringArray("SpawnPoint") instance=ExtResource("3_8xa0b")]
+visible = false
+position = Vector2(-60, 1)
+SpawnPoint = NodePath("../Marker2D")
+
+[node name="Prince" parent="." node_paths=PackedStringArray("SpawnPoint") instance=ExtResource("1_hwyic")]
+visible = false
+position = Vector2(-129, -4)
+SpawnPoint = NodePath("../Marker2D")
+
+[node name="Caliever" parent="." node_paths=PackedStringArray("SpawnPoint") instance=ExtResource("5_4igph")]
+visible = false
+position = Vector2(74, -7)
+SpawnPoint = NodePath("../Marker2D")

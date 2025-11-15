@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccgcqy0t5w53h"]
+
+[ext_resource type="PackedScene" uid="uid://dg47426qip2bd" path="res://characters/human_projectile.tscn" id="1_wamdj"]
+[ext_resource type="Texture2D" uid="uid://51ag11y2ajo6" path="res://assets/character_asset/HumansProjectiles.png" id="2_tbr7j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p2cq1"]
+size = Vector2(11, 5)
+
+[node name="Arrow" instance=ExtResource("1_wamdj")]
+collision_mask = 5
+speed = 300.0
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_tbr7j")
+region_enabled = true
+region_rect = Rect2(16, 0, 16, 16)
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="1"]
+rect = Rect2(-3, -1, 7, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_p2cq1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
