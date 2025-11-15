@@ -13,3 +13,4 @@ func _on_body_entered(body: Node2D) -> void:
 		animated_sprite_2d.play("pickup")
 		await animated_sprite_2d.animation_finished
 		queue_free()
+		GameManager.collect_coin()

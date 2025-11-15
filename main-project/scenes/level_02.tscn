@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://de3hb8hip4eqj"]
+[gd_scene load_steps=20 format=4 uid="uid://de3hb8hip4eqj"]
 
 [ext_resource type="TileSet" uid="uid://l27bsl1ldyw7" path="res://combined_tileset.tres" id="1_ikbui"]
 [ext_resource type="Texture2D" uid="uid://cklj3cq2w21r4" path="res://assets/tiles/forest tile/Tileset/Pixel_Woods_Tileset.png" id="2_vqvml"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dbw8a0quast5t" path="res://others/coin.tscn" id="11_ocwh6"]
 [ext_resource type="PackedScene" uid="uid://gfypnx766u88" path="res://characters/prince.tscn" id="12_thh7q"]
 [ext_resource type="Texture2D" uid="uid://bqqlyj0h138bi" path="res://assets/metroidvania_asset/tiles and background_foreground (new)/background.png" id="13_7hevf"]
+[ext_resource type="PackedScene" uid="uid://br2sor2tmhf6a" path="res://scenes/UI/game_ui.tscn" id="14_vqvml"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g2hoc"]
 texture = ExtResource("2_vqvml")
@@ -783,5 +784,7 @@ layer = -10
 [node name="Sprite2D" type="Sprite2D" parent="Background"]
 texture = ExtResource("13_7hevf")
 centered = false
+
+[node name="GameUI" parent="." instance=ExtResource("14_vqvml")]
 
 [editable path="TileMap/Enemies/TriggerRange"]

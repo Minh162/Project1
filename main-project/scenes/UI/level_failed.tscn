@@ -1,0 +1,127 @@
+[gd_scene load_steps=9 format=3 uid="uid://cfhf6hs2a26cd"]
+
+[ext_resource type="Texture2D" uid="uid://cq51puelfq6nd" path="res://assets/backgrounds/Free Pixel Art Forest/PNG/Background layers/Layer_0009_2.png" id="1_xl30m"]
+[ext_resource type="Texture2D" uid="uid://ckochnt0tlxx4" path="res://assets/backgrounds/Free Pixel Art Forest/PNG/Background layers/Layer_0006_4.png" id="2_81hmo"]
+[ext_resource type="Texture2D" uid="uid://npkj5lifxrwa" path="res://assets/backgrounds/Free Pixel Art Forest/PNG/Background layers/Layer_0003_6.png" id="3_evk2m"]
+[ext_resource type="Texture2D" uid="uid://cwgx3ypl0vbgb" path="res://assets/backgrounds/Free Pixel Art Forest/PNG/Background layers/Layer_0004_Lights.png" id="4_kddr4"]
+[ext_resource type="Texture2D" uid="uid://b800plt24ly5y" path="res://assets/backgrounds/Free Pixel Art Forest/PNG/Background layers/Layer_0002_7.png" id="5_0aux8"]
+[ext_resource type="FontFile" uid="uid://cgou02wgxyj4i" path="res://assets/fonts/ThaleahFat.ttf" id="6_ej4oa"]
+[ext_resource type="Texture2D" uid="uid://syf30lmqsj8m" path="res://assets/UI/Buttons/Square-Medium/Home/Default.png" id="8_bh7q1"]
+[ext_resource type="Texture2D" uid="uid://duw40rki07xv6" path="res://assets/UI/Buttons/Square-Medium/Levels/Default.png" id="9_yow05"]
+
+[node name="LevelFailed" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back2" type="Node" parent="."]
+
+[node name="Layer00092" type="Sprite2D" parent="Back2"]
+position = Vector2(124.183, -12.8472)
+scale = Vector2(0.302119, 0.302119)
+texture = ExtResource("1_xl30m")
+
+[node name="Layer00064" type="Sprite2D" parent="Back2"]
+position = Vector2(125.318, -20.8739)
+scale = Vector2(0.365382, 0.365382)
+texture = ExtResource("2_81hmo")
+
+[node name="Layer00036" type="Sprite2D" parent="Back2"]
+position = Vector2(189, -25)
+scale = Vector2(0.373831, 0.373831)
+texture = ExtResource("3_evk2m")
+
+[node name="Layer00037" type="Sprite2D" parent="Back2"]
+position = Vector2(133, -27)
+scale = Vector2(0.398524, 0.398525)
+texture = ExtResource("3_evk2m")
+
+[node name="Layer0004Lights" type="Sprite2D" parent="Back2"]
+position = Vector2(94, -14)
+scale = Vector2(0.204741, 0.204741)
+texture = ExtResource("4_kddr4")
+
+[node name="Layer0004Lights2" type="Sprite2D" parent="Back2"]
+position = Vector2(207, -15)
+scale = Vector2(0.204741, 0.204741)
+texture = ExtResource("4_kddr4")
+
+[node name="Layer00027" type="Sprite2D" parent="Back2"]
+position = Vector2(118, 149)
+scale = Vector2(0.264278, 0.264278)
+texture = ExtResource("5_0aux8")
+
+[node name="CanvasGroup" type="CanvasLayer" parent="."]
+
+[node name="CanvasGroup" type="Panel" parent="CanvasGroup"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasGroup/CanvasGroup"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.49803922)
+
+[node name="Name" type="Label" parent="CanvasGroup/CanvasGroup"]
+top_level = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -93.5
+offset_top = 12.0
+offset_right = 93.5
+offset_bottom = 59.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_ej4oa")
+theme_override_font_sizes/font_size = 36
+text = "LEVEL FAILED"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="VBoxContainer" parent="CanvasGroup/CanvasGroup"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -42.0
+offset_top = -75.0
+offset_right = 42.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="Line2" type="HBoxContainer" parent="CanvasGroup/CanvasGroup/Button"]
+layout_mode = 2
+size_flags_vertical = 8
+alignment = 1
+
+[node name="Button" type="Button" parent="CanvasGroup/CanvasGroup/Button/Line2"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+icon = ExtResource("8_bh7q1")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button2" type="Button" parent="CanvasGroup/CanvasGroup/Button/Line2"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+icon = ExtResource("9_yow05")
+flat = true
+icon_alignment = 1
+expand_icon = true

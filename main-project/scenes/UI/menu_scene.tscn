@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://bq3aokpinmm4g"]
+[gd_scene load_steps=14 format=3 uid="uid://bq3aokpinmm4g"]
 
 [ext_resource type="Texture2D" uid="uid://cq51puelfq6nd" path="res://assets/backgrounds/Free Pixel Art Forest/PNG/Background layers/Layer_0009_2.png" id="1_3jbyw"]
+[ext_resource type="Script" uid="uid://b5vg4g5p734pi" path="res://scenes/UI/menu_scene.gd" id="1_ghbny"]
 [ext_resource type="Texture2D" uid="uid://ckochnt0tlxx4" path="res://assets/backgrounds/Free Pixel Art Forest/PNG/Background layers/Layer_0006_4.png" id="2_ghbny"]
 [ext_resource type="Texture2D" uid="uid://npkj5lifxrwa" path="res://assets/backgrounds/Free Pixel Art Forest/PNG/Background layers/Layer_0003_6.png" id="3_winw2"]
 [ext_resource type="Texture2D" uid="uid://cwgx3ypl0vbgb" path="res://assets/backgrounds/Free Pixel Art Forest/PNG/Background layers/Layer_0004_Lights.png" id="4_uw2rt"]
@@ -25,6 +26,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ghbny")
 
 [node name="Back" type="Node" parent="."]
 
@@ -153,3 +155,8 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_u7w4r")
 theme_override_styles/hover = SubResource("StyleBoxTexture_pafu7")
 text = "Quit
 "
+
+[connection signal="pressed" from="CanvasLayer/CanvasGroup/Button/ButtonPlay" to="." method="_on_button_play_pressed"]
+[connection signal="pressed" from="CanvasLayer/CanvasGroup/Button/ButtonMultiplayer" to="." method="_on_button_multiplayer_pressed"]
+[connection signal="pressed" from="CanvasLayer/CanvasGroup/Button/ButtonSettings" to="." method="_on_button_settings_pressed"]
+[connection signal="pressed" from="CanvasLayer/CanvasGroup/Button/ButtonQuit" to="." method="_on_button_quit_pressed"]

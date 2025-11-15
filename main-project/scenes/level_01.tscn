@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://ftx8p05qlmqt"]
+[gd_scene load_steps=18 format=4 uid="uid://ftx8p05qlmqt"]
 
 [ext_resource type="TileSet" uid="uid://l27bsl1ldyw7" path="res://combined_tileset.tres" id="1_lwi15"]
 [ext_resource type="PackedScene" uid="uid://ddyfys5jth01v" path="res://enemies/slime.tscn" id="2_e6mo4"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://gfypnx766u88" path="res://characters/prince.tscn" id="8_42ncp"]
 [ext_resource type="Texture2D" uid="uid://bqqlyj0h138bi" path="res://assets/metroidvania_asset/tiles and background_foreground (new)/background.png" id="9_s61md"]
 [ext_resource type="PackedScene" uid="uid://dk1wbddcpsedk" path="res://others/goal.tscn" id="10_d46x6"]
+[ext_resource type="PackedScene" uid="uid://br2sor2tmhf6a" path="res://scenes/UI/game_ui.tscn" id="11_e6mo4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rus8k"]
 size = Vector2(98, 52)
@@ -173,3 +174,5 @@ centered = false
 
 [node name="Goal" parent="." instance=ExtResource("10_d46x6")]
 position = Vector2(2297, -40)
+
+[node name="GameUI" parent="." instance=ExtResource("11_e6mo4")]
