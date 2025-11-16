@@ -1,6 +1,7 @@
 extends Node
 class_name DeathGodStateMachine
 
+@export var gold: int = 50
 @export var initial_state: DeathGodState
 @export var monster : DeathGod
 @export var anim_player: AnimationPlayer
@@ -60,4 +61,5 @@ func _on_death() -> void:
 	rest_timer.stop()
 	change_state("death")
 	monster.boss_slained.emit()
+	GameManager.collected_coin += gold
 	

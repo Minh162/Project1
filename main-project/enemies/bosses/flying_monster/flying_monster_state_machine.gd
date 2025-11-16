@@ -1,6 +1,7 @@
 extends Node
 class_name FlyingMonsterStateMachine
 
+@export var gold: int = 30
 @export var initial_state: FlyingMonsterState
 @export var monster : FlyingBoss
 @export var anim_player: AnimationPlayer
@@ -46,6 +47,8 @@ func change_state(new_state_name: String) -> void:
 func _on_rest_timer_timeout() -> void:
 	if not monster.focused_player:
 		return
+	if current_state.name.to_lower() == "death":
+		return
 	monster.can_be_hurt = false
 	change_state("active")
 
@@ -53,5 +56,7 @@ func _on_hurt(_hurt_pos) -> void:
 	change_state("hurt")
 
 func _on_death() -> void:
+	rest_timer.stop()
 	change_state("death")
 	monster.boss_slained.emit()
+	GameManager.collected_coin += gold

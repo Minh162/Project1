@@ -959,10 +959,10 @@ tile_set = SubResource("TileSet_igmy8")
 [node name="Boss" type="Node" parent="TileMap"]
 
 [node name="FlyingMonster" parent="TileMap/Boss" node_paths=PackedStringArray("rest_point", "active_point") instance=ExtResource("6_fpl26")]
-unique_name_in_owner = true
 position = Vector2(634, -247)
 rest_point = NodePath("../RestPoint")
 active_point = NodePath("../ActivePoint")
+max_health = 4
 
 [node name="CollisionShape2D" parent="TileMap/Boss/FlyingMonster/PlayerDetection" index="0"]
 position = Vector2(-9.5, 4)
