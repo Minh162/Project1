@@ -132,6 +132,19 @@ text = "Co-op
 "
 icon_alignment = 2
 
+[node name="ButtonCharacters" type="Button" parent="CanvasLayer/CanvasGroup/Button"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_nbx5i")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_lqt17")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxTexture_u7w4r")
+theme_override_styles/hover = SubResource("StyleBoxTexture_pafu7")
+text = "Character"
+autowrap_trim_flags = 0
+icon_alignment = 1
+
 [node name="ButtonSettings" type="Button" parent="CanvasLayer/CanvasGroup/Button"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -158,5 +171,6 @@ text = "Quit
 
 [connection signal="pressed" from="CanvasLayer/CanvasGroup/Button/ButtonPlay" to="." method="_on_button_play_pressed"]
 [connection signal="pressed" from="CanvasLayer/CanvasGroup/Button/ButtonMultiplayer" to="." method="_on_button_multiplayer_pressed"]
+[connection signal="pressed" from="CanvasLayer/CanvasGroup/Button/ButtonCharacters" to="." method="_on_button_characters_pressed"]
 [connection signal="pressed" from="CanvasLayer/CanvasGroup/Button/ButtonSettings" to="." method="_on_button_settings_pressed"]
 [connection signal="pressed" from="CanvasLayer/CanvasGroup/Button/ButtonQuit" to="." method="_on_button_quit_pressed"]

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=5 format=3 uid="uid://fo66k20cgrl4"]
+
+[ext_resource type="Texture2D" uid="uid://b4orxpm0mketl" path="res://assets/character_asset/MiniCavalierMan.png" id="1_5i1cb"]
+[ext_resource type="PackedScene" uid="uid://ckjvt20h6shtm" path="res://characters/caliever.tscn" id="2_6npcp"]
+[ext_resource type="Script" uid="uid://fhbg241khbnb" path="res://characters/character_resources/character_data.gd" id="3_bnfxk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8fac"]
+atlas = ExtResource("1_5i1cb")
+region = Rect2(8, 8, 16, 24)
+
+[resource]
+script = ExtResource("3_bnfxk")
+character_id = "04"
+character_name = "Caliever"
+icon = SubResource("AtlasTexture_v8fac")
+scene = ExtResource("2_6npcp")
+description = "Fast with lots of health"
+max_health = 10
+damage = 3.0
+jump_height = 350.0
+speed = 200.0
+metadata/_custom_type_script = "uid://fhbg241khbnb"

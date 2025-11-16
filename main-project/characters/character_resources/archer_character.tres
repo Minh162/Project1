@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=5 format=3 uid="uid://cu2n5xcq0w2oo"]
+
+[ext_resource type="Texture2D" uid="uid://b2motgimrel31" path="res://assets/character_asset/MiniArcherMan.png" id="1_b3qm5"]
+[ext_resource type="PackedScene" uid="uid://btxh6234ofevs" path="res://characters/archer.tscn" id="2_g7773"]
+[ext_resource type="Script" uid="uid://fhbg241khbnb" path="res://characters/character_resources/character_data.gd" id="3_v8fac"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8fac"]
+atlas = ExtResource("1_b3qm5")
+region = Rect2(8, 16, 16, 16)
+
+[resource]
+script = ExtResource("3_v8fac")
+character_id = "03"
+character_name = "Archer"
+icon = SubResource("AtlasTexture_v8fac")
+scene = ExtResource("2_g7773")
+description = "Less damage and health but more fast"
+max_health = 3
+damage = 1.0
+jump_height = 350.0
+speed = 150.0
+price = 50
+metadata/_custom_type_script = "uid://fhbg241khbnb"

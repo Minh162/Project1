@@ -111,6 +111,8 @@ func _on_player_death() -> void:
 	set_collision_layer_value(2, false)
 	is_alive = false
 	anim_player.play("death")
+	SceneChangingManager.load_level_failed()
+	queue_free()
 
 func set_anim() -> void:
 	if is_attacking || is_hurting:

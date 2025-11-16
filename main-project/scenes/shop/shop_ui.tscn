@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://cuospxfawcyh5"]
+
+[ext_resource type="Script" uid="uid://ctsy83i0amad6" path="res://scenes/shop/shop_ui.gd" id="1_380ce"]
+[ext_resource type="Script" uid="uid://fhbg241khbnb" path="res://characters/character_resources/character_data.gd" id="2_m4vnt"]
+[ext_resource type="Resource" uid="uid://dcr5e1brqr6m" path="res://characters/character_resources/prince_character.tres" id="3_ux4ja"]
+[ext_resource type="Resource" uid="uid://djfkis5l8oq2d" path="res://characters/character_resources/swordman_character.tres" id="4_fhq02"]
+[ext_resource type="Resource" uid="uid://cu2n5xcq0w2oo" path="res://characters/character_resources/archer_character.tres" id="5_v8qg2"]
+[ext_resource type="Resource" uid="uid://fo66k20cgrl4" path="res://characters/character_resources/caliever_character.tres" id="6_ucr0t"]
+
+[node name="ShopUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_380ce")
+all_characters = Array[ExtResource("2_m4vnt")]([ExtResource("3_ux4ja"), ExtResource("4_fhq02"), ExtResource("5_v8qg2"), ExtResource("6_ucr0t")])
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Panel/ScrollContainer"]
+layout_mode = 2

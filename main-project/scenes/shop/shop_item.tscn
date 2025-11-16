@@ -1,0 +1,98 @@
+[gd_scene load_steps=5 format=3 uid="uid://d043jm67b6ypi"]
+
+[ext_resource type="Texture2D" uid="uid://b2motgimrel31" path="res://assets/character_asset/MiniArcherMan.png" id="1_35nb3"]
+[ext_resource type="Script" uid="uid://dhnfpkscotu8v" path="res://scenes/shop/shop_item.gd" id="1_hannv"]
+[ext_resource type="FontFile" uid="uid://v1jl3l28bcet" path="res://assets/fonts/dedicool.regular.ttf" id="2_hannv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kfj00"]
+atlas = ExtResource("1_35nb3")
+region = Rect2(8, 16, 16, 16)
+
+[node name="ShopItem" type="Panel"]
+custom_minimum_size = Vector2(100, 110)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -55.0
+offset_right = 50.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hannv")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -55.0
+offset_right = 50.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Icon" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = SubResource("AtlasTexture_kfj00")
+stretch_mode = 5
+
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_hannv")
+theme_override_font_sizes/font_size = 8
+text = "Archer"
+horizontal_alignment = 1
+
+[node name="Health" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_hannv")
+theme_override_font_sizes/font_size = 8
+text = "Max health: 10"
+horizontal_alignment = 1
+
+[node name="Damage" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_hannv")
+theme_override_font_sizes/font_size = 8
+text = "Damage: 10"
+horizontal_alignment = 1
+
+[node name="Speed" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_hannv")
+theme_override_font_sizes/font_size = 8
+text = "Speed: 10"
+horizontal_alignment = 1
+
+[node name="Price" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_hannv")
+theme_override_font_sizes/font_size = 8
+text = "Price: 100"
+horizontal_alignment = 1
+
+[node name="ButtonBuy" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_hannv")
+theme_override_font_sizes/font_size = 8
+text = "Buy"
+icon_alignment = 1
+expand_icon = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonBuy" to="." method="_on_button_pressed"]

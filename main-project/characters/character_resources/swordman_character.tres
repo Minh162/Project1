@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=5 format=3 uid="uid://djfkis5l8oq2d"]
+
+[ext_resource type="Texture2D" uid="uid://cai6lni4au5kc" path="res://assets/character_asset/MiniSwordMan.png" id="1_4csvn"]
+[ext_resource type="Script" uid="uid://fhbg241khbnb" path="res://characters/character_resources/character_data.gd" id="1_ov2p2"]
+[ext_resource type="PackedScene" uid="uid://ukdn7ocoagn0" path="res://characters/swordman.tscn" id="2_8bw25"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ww46"]
+atlas = ExtResource("1_4csvn")
+region = Rect2(8, 16, 16, 16)
+
+[resource]
+script = ExtResource("1_ov2p2")
+character_id = "02"
+character_name = "Swordman"
+icon = SubResource("AtlasTexture_2ww46")
+scene = ExtResource("2_8bw25")
+description = "Wider ranged attack with more health"
+max_health = 6
+damage = 2.0
+jump_height = 300.0
+speed = 100.0
+price = 50
+metadata/_custom_type_script = "uid://fhbg241khbnb"
