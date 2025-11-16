@@ -6,7 +6,7 @@ class_name HealthComponent
 var current_health : int:
 	set(value):
 		current_health = value
-		if value == 0:
+		if value <= 0:
 			death.emit()
 
 var parent_node : Node2D

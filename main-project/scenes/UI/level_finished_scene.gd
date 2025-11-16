@@ -1,7 +1,6 @@
 extends Control
 
 @onready var coin_collected_label: Label = $CanvasGroup/CanvasGroup/Button/CoinCollectedLabel
-@onready var most_coin_collected_label: Label = $CanvasGroup/CanvasGroup/Button/MostCoinCollectedLabel
 
 func _process(_delta: float) -> void:
 	coin_collected_label.text = "Coin collected: " + str(GameManager.collected_coin)

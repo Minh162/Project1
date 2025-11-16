@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name PlayerCharacter
 
-@export var SpawnPoint : Marker2D
+var SpawnPoint : Marker2D
 @export var anim_player : AnimationPlayer
 @export var health_component : HealthComponent
 @export var speed: float = 100.0
@@ -20,12 +20,14 @@ var knockback: Vector2 = Vector2.ZERO
 var knockback_timer: float = 0.0
 
 func _ready() -> void:
-	self.global_position = SpawnPoint.global_position
 	health_component.hurt.connect(_on_player_hurt)
 	health_component.death.connect(_on_player_death)
 	
 	health_bar.max_value = health_component.max_health
 	health_bar.value = health_component.current_health
+
+func spawn() -> void:
+	self.global_position = SpawnPoint.global_position
 
 func _physics_process(delta: float) -> void:
 	if not is_alive:
