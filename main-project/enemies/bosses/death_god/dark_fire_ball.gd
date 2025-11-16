@@ -14,7 +14,7 @@ func _ready() -> void:
 	self.play("idle")
 
 func _physics_process(delta: float) -> void:
-	if is_active:
+	if is_active and focus_player != null:
 		if not focus_player:
 			queue_free()
 		

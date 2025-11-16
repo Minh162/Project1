@@ -8,11 +8,13 @@ var purchased_characters : Array = ["01"]   # contains character_id
 var selected_character : String = ""        # character_id
 
 # Audio settings
-var sfx_volume : float = 1.0   # 0.0 - 1.0
-var music_volume : float = 1.0 # 0.0 - 1.0
+var sfx_volume : float = 1.0
+var music_volume : float = 1.0
 
 func _ready() -> void:
 	load_data()
+	apply_audio_settings()
+	print("list purchased characters: " + str(purchased_characters))
 	print("Selected character:", selected_character)
 	print("Coins:", coin)
 	print("SFX volume:", sfx_volume, "Music volume:", music_volume)
@@ -102,17 +104,30 @@ func select_character(character_id: String):
 	else:
 		print("Character not owned!")
 
-
 # -------------------
 # Audio management
 # -------------------
 
 func set_sfx_volume(volume: float):
 	sfx_volume = clamp(volume, 0.0, 1.0)
+
+	var bus_idx = AudioServer.get_bus_index("Sfx")
+	AudioServer.set_bus_volume_db(bus_idx, linear_to_db(sfx_volume))
+
 	save_data()
-	print("SFX volume set to:", sfx_volume)
+
 
 func set_music_volume(volume: float):
 	music_volume = clamp(volume, 0.0, 1.0)
+
+	var bus_idx = AudioServer.get_bus_index("Music")
+	AudioServer.set_bus_volume_db(bus_idx, linear_to_db(music_volume))
+
 	save_data()
-	print("Music volume set to:", music_volume)
+
+func apply_audio_settings():
+	var sfx_bus = AudioServer.get_bus_index("Sfx")
+	AudioServer.set_bus_volume_db(sfx_bus, linear_to_db(sfx_volume))
+
+	var music_bus = AudioServer.get_bus_index("Music")
+	AudioServer.set_bus_volume_db(music_bus, linear_to_db(music_volume))

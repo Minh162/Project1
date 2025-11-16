@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://de3hb8hip4eqj"]
+[gd_scene load_steps=21 format=4 uid="uid://de3hb8hip4eqj"]
 
 [ext_resource type="TileSet" uid="uid://l27bsl1ldyw7" path="res://combined_tileset.tres" id="1_ikbui"]
 [ext_resource type="Texture2D" uid="uid://cklj3cq2w21r4" path="res://assets/tiles/forest tile/Tileset/Pixel_Woods_Tileset.png" id="2_vqvml"]
@@ -11,8 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://c4524x040s4ep" path="res://others/checkpoint.tscn" id="9_37jkp"]
 [ext_resource type="PackedScene" uid="uid://dk1wbddcpsedk" path="res://others/goal.tscn" id="10_ci1t6"]
 [ext_resource type="PackedScene" uid="uid://dbw8a0quast5t" path="res://others/coin.tscn" id="11_ocwh6"]
-[ext_resource type="PackedScene" uid="uid://gfypnx766u88" path="res://characters/prince.tscn" id="12_thh7q"]
+[ext_resource type="PackedScene" uid="uid://b3c6pinfex17t" path="res://characters/player.tscn" id="12_xo5qq"]
 [ext_resource type="Texture2D" uid="uid://bqqlyj0h138bi" path="res://assets/metroidvania_asset/tiles and background_foreground (new)/background.png" id="13_7hevf"]
+[ext_resource type="Script" uid="uid://k7jqw021vw02" path="res://scenes/follow_camera.gd" id="13_ev6m5"]
 [ext_resource type="PackedScene" uid="uid://br2sor2tmhf6a" path="res://scenes/UI/game_ui.tscn" id="14_vqvml"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g2hoc"]
@@ -683,7 +684,7 @@ position = Vector2(1473, -191)
 
 [node name="Checkpoint" parent="TileMap/InteractableObject" node_paths=PackedStringArray("spawn_point") instance=ExtResource("9_37jkp")]
 position = Vector2(1228, -176)
-spawn_point = NodePath("../../../SpawnPoint")
+spawn_point = NodePath("../../../Player/SpawnPoint")
 
 [node name="Goal" parent="TileMap/InteractableObject" instance=ExtResource("10_ci1t6")]
 position = Vector2(2229, -200)
@@ -762,21 +763,23 @@ position = Vector2(1853, -211)
 [node name="Coin24" parent="TileMap/Pickups" instance=ExtResource("11_ocwh6")]
 position = Vector2(1536, -211)
 
-[node name="SpawnPoint" type="Marker2D" parent="."]
+[node name="Player" parent="." node_paths=PackedStringArray("follow_camera", "spawn_point") instance=ExtResource("12_xo5qq")]
+follow_camera = NodePath("FollowCamera")
+spawn_point = NodePath("SpawnPoint")
+
+[node name="SpawnPoint" type="Marker2D" parent="Player"]
 position = Vector2(174, -197)
 
-[node name="Prince" parent="." node_paths=PackedStringArray("SpawnPoint") instance=ExtResource("12_thh7q")]
-z_index = 1
+[node name="FollowCamera" type="Camera2D" parent="Player"]
 position = Vector2(173, -243)
-SpawnPoint = NodePath("../SpawnPoint")
-
-[node name="Camera2D" type="Camera2D" parent="Prince"]
+scale = Vector2(2, 2)
 offset = Vector2(0, -30)
 zoom = Vector2(0.75, 0.75)
 limit_left = 1
 limit_top = -10000001
 limit_right = 2608
 limit_bottom = 0
+script = ExtResource("13_ev6m5")
 
 [node name="Background" type="CanvasLayer" parent="."]
 layer = -10

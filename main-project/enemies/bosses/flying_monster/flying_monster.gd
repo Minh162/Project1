@@ -38,7 +38,7 @@ func find_nearest_player() -> PlayerCharacter:
 		if child_distance_squared < prev_distance_squared:
 			nearest_player = child
 	
-	if nearest_player.is_alive:
+	if nearest_player and nearest_player.is_alive:
 		return nearest_player
 	else:
 		return null

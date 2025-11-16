@@ -1,0 +1,12 @@
+[gd_scene load_steps=7 format=3 uid="uid://b3c6pinfex17t"]
+
+[ext_resource type="Script" uid="uid://5j1w2d2f20pm" path="res://characters/player.gd" id="1_dnjla"]
+[ext_resource type="Script" uid="uid://fhbg241khbnb" path="res://characters/character_resources/character_data.gd" id="2_h1q25"]
+[ext_resource type="Resource" uid="uid://dcr5e1brqr6m" path="res://characters/character_resources/prince_character.tres" id="3_j31ep"]
+[ext_resource type="Resource" uid="uid://djfkis5l8oq2d" path="res://characters/character_resources/swordman_character.tres" id="4_6t23p"]
+[ext_resource type="Resource" uid="uid://cu2n5xcq0w2oo" path="res://characters/character_resources/archer_character.tres" id="5_n8jd0"]
+[ext_resource type="Resource" uid="uid://fo66k20cgrl4" path="res://characters/character_resources/caliever_character.tres" id="6_q605b"]
+
+[node name="Player" type="Node"]
+script = ExtResource("1_dnjla")
+list_characters = Array[ExtResource("2_h1q25")]([ExtResource("3_j31ep"), ExtResource("4_6t23p"), ExtResource("5_n8jd0"), ExtResource("6_q605b")])

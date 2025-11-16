@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://4wqbg70xmn0q"]
+[gd_scene load_steps=18 format=4 uid="uid://4wqbg70xmn0q"]
 
 [ext_resource type="TileSet" uid="uid://l27bsl1ldyw7" path="res://combined_tileset.tres" id="1_ggs2r"]
 [ext_resource type="Texture2D" uid="uid://cklj3cq2w21r4" path="res://assets/tiles/forest tile/Tileset/Pixel_Woods_Tileset.png" id="2_k7nmt"]
@@ -8,7 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://x1vaf8lwfkxy" path="res://enemies/bosses/death_god/death_god.tscn" id="6_21f2n"]
 [ext_resource type="PackedScene" uid="uid://dk1wbddcpsedk" path="res://others/goal.tscn" id="7_trbc6"]
 [ext_resource type="PackedScene" uid="uid://dvb86dyf1x252" path="res://others/doors.tscn" id="8_xjoi2"]
-[ext_resource type="PackedScene" uid="uid://gfypnx766u88" path="res://characters/prince.tscn" id="9_wwuk5"]
+[ext_resource type="PackedScene" uid="uid://b3c6pinfex17t" path="res://characters/player.tscn" id="9_ph8se"]
+[ext_resource type="Script" uid="uid://k7jqw021vw02" path="res://scenes/follow_camera.gd" id="10_40wum"]
 [ext_resource type="Texture2D" uid="uid://bqqlyj0h138bi" path="res://assets/metroidvania_asset/tiles and background_foreground (new)/background.png" id="10_ho47o"]
 [ext_resource type="PackedScene" uid="uid://br2sor2tmhf6a" path="res://scenes/UI/game_ui.tscn" id="11_k7nmt"]
 
@@ -966,21 +967,23 @@ boss = NodePath("../../Boss/DeathGod")
 position = Vector2(1162, -265)
 boss = NodePath("../../Boss/DeathGod")
 
-[node name="SpawnPoint" type="Marker2D" parent="."]
-position = Vector2(54, -140)
+[node name="Player" parent="." node_paths=PackedStringArray("follow_camera", "spawn_point") instance=ExtResource("9_ph8se")]
+follow_camera = NodePath("Camera2D")
+spawn_point = NodePath("SpawnPoint")
 
-[node name="Prince" parent="." node_paths=PackedStringArray("SpawnPoint") instance=ExtResource("9_wwuk5")]
-z_index = 1
+[node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(57, -147)
-SpawnPoint = NodePath("../SpawnPoint")
-
-[node name="Camera2D" type="Camera2D" parent="Prince"]
+scale = Vector2(2, 2)
 offset = Vector2(0, -90)
 zoom = Vector2(0.5, 0.5)
 limit_left = 1
 limit_top = -10000001
 limit_right = 2608
 limit_bottom = 55
+script = ExtResource("10_40wum")
+
+[node name="SpawnPoint" type="Marker2D" parent="Player"]
+position = Vector2(54, -140)
 
 [node name="Background" type="CanvasLayer" parent="."]
 layer = -10

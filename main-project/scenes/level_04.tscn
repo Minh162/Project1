@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://cyvhbseytw0fy"]
+[gd_scene load_steps=29 format=4 uid="uid://cyvhbseytw0fy"]
 
 [ext_resource type="TileSet" uid="uid://l27bsl1ldyw7" path="res://combined_tileset.tres" id="1_7fv2j"]
 [ext_resource type="Texture2D" uid="uid://cklj3cq2w21r4" path="res://assets/tiles/forest tile/Tileset/Pixel_Woods_Tileset.png" id="2_r75pg"]
@@ -14,8 +14,9 @@
 [ext_resource type="PackedScene" uid="uid://c4524x040s4ep" path="res://others/checkpoint.tscn" id="12_cmg78"]
 [ext_resource type="PackedScene" uid="uid://dk1wbddcpsedk" path="res://others/goal.tscn" id="13_bntwn"]
 [ext_resource type="PackedScene" uid="uid://dbw8a0quast5t" path="res://others/coin.tscn" id="14_anoqk"]
-[ext_resource type="PackedScene" uid="uid://gfypnx766u88" path="res://characters/prince.tscn" id="15_64ryd"]
+[ext_resource type="PackedScene" uid="uid://b3c6pinfex17t" path="res://characters/player.tscn" id="15_ovgwr"]
 [ext_resource type="Texture2D" uid="uid://bqqlyj0h138bi" path="res://assets/metroidvania_asset/tiles and background_foreground (new)/background.png" id="16_okw7j"]
+[ext_resource type="Script" uid="uid://k7jqw021vw02" path="res://scenes/follow_camera.gd" id="16_r73c0"]
 [ext_resource type="PackedScene" uid="uid://br2sor2tmhf6a" path="res://scenes/UI/game_ui.tscn" id="17_r75pg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g2hoc"]
@@ -1118,7 +1119,7 @@ position = Vector2(2180, -144)
 
 [node name="Checkpoint" parent="TileMap/InteractableObject" node_paths=PackedStringArray("spawn_point") instance=ExtResource("12_cmg78")]
 position = Vector2(1187, -128)
-spawn_point = NodePath("../../../SpawnPoint")
+spawn_point = NodePath("../../../Player/SpawnPoint")
 
 [node name="Goal" parent="TileMap/InteractableObject" instance=ExtResource("13_bntwn")]
 position = Vector2(2339, -151)
@@ -1287,21 +1288,23 @@ position = Vector2(2208, -222)
 [node name="Coin41" parent="TileMap/Pickups" instance=ExtResource("14_anoqk")]
 position = Vector2(2240, -222)
 
-[node name="SpawnPoint" type="Marker2D" parent="."]
-position = Vector2(57, -303)
+[node name="Player" parent="." node_paths=PackedStringArray("follow_camera", "spawn_point") instance=ExtResource("15_ovgwr")]
+follow_camera = NodePath("CameraFollow")
+spawn_point = NodePath("SpawnPoint")
 
-[node name="Prince" parent="." node_paths=PackedStringArray("SpawnPoint") instance=ExtResource("15_64ryd")]
-z_index = 1
+[node name="CameraFollow" type="Camera2D" parent="Player"]
 position = Vector2(57, -310)
-SpawnPoint = NodePath("../SpawnPoint")
-
-[node name="Camera2D" type="Camera2D" parent="Prince"]
+scale = Vector2(2, 2)
 offset = Vector2(0, -30)
 zoom = Vector2(0.75, 0.75)
 limit_left = 1
 limit_top = -10000001
 limit_right = 2608
 limit_bottom = 0
+script = ExtResource("16_r73c0")
+
+[node name="SpawnPoint" type="Marker2D" parent="Player"]
+position = Vector2(57, -303)
 
 [node name="Background" type="CanvasLayer" parent="."]
 layer = -10

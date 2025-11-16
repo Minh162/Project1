@@ -83,6 +83,8 @@ offset_left = 70.0
 offset_top = 53.0
 offset_right = 169.0
 offset_bottom = 95.0
+max_value = 1.0
+step = 0.01
 
 [node name="SFXSlider" type="HSlider" parent="CanvasGroup"]
 top_level = true
@@ -90,6 +92,8 @@ offset_left = 70.0
 offset_top = 89.0
 offset_right = 169.0
 offset_bottom = 131.0
+max_value = 1.0
+step = 0.01
 
 [node name="MusicLabel" type="Label" parent="CanvasGroup"]
 offset_left = 71.0
