@@ -1,21 +1,25 @@
-[gd_scene load_steps=26 format=3 uid="uid://dy453cyhrwp5e"]
+[gd_scene load_steps=29 format=3 uid="uid://dy453cyhrwp5e"]
 
 [ext_resource type="Script" uid="uid://colbhiornlcbf" path="res://enemies/bosses/flying_monster/flying_monster.gd" id="1_leej7"]
+[ext_resource type="Shader" uid="uid://ctwquyuv011n6" path="res://enemies/bosses/hit_flash.tres" id="2_bxxvo"]
 [ext_resource type="Texture2D" uid="uid://cv25ane235fx8" path="res://assets/bosses/flying_monster/FlyingMonsterSpriteSheet.png" id="2_xf8ou"]
 [ext_resource type="Script" uid="uid://c2i1gugc522of" path="res://enemies/bosses/flying_monster/flying_monster_state_machine.gd" id="3_8nfe2"]
 [ext_resource type="Script" uid="uid://c5pwtnwr3pk7e" path="res://enemies/bosses/flying_monster/flying_monster_wait_player_state.gd" id="4_44obp"]
 [ext_resource type="Script" uid="uid://cn7c67rvep5ni" path="res://enemies/bosses/flying_monster/flying_monster_rest_state.gd" id="5_8gw4x"]
-[ext_resource type="Script" uid="uid://ces50v5suifdb" path="res://enemies/bosses/flying_monster/flying_monster_idle_state.gd" id="6_lwvki"]
 [ext_resource type="Script" uid="uid://cytaj802xrco1" path="res://enemies/bosses/flying_monster/flying_monster_active_state.gd" id="6_pd0nt"]
 [ext_resource type="Script" uid="uid://d4ixlww6go1s6" path="res://enemies/bosses/flying_monster/flying_monster_shoot_state.gd" id="7_e8vug"]
 [ext_resource type="PackedScene" uid="uid://dfg23m7fd87hk" path="res://enemies/bosses/flying_monster/flying_monster_bullet.tscn" id="8_0jh52"]
 [ext_resource type="Script" uid="uid://rl35ru7a6mni" path="res://enemies/bosses/flying_monster/flying_monster_dash_state.gd" id="9_vukie"]
-[ext_resource type="Script" uid="uid://b7hu82tixbaqc" path="res://enemies/bosses/flying_monster/flying_monster_hurt_state.gd" id="10_x7la4"]
 [ext_resource type="Script" uid="uid://dacp7qmqgv587" path="res://enemies/bosses/flying_monster/flying_monster_death_state.gd" id="12_lwvki"]
 [ext_resource type="PackedScene" uid="uid://ccchd0fggd573" path="res://traps/hurt_area.tscn" id="13_hqdlt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_leej7"]
 radius = 30.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ab6wr"]
+shader = ExtResource("2_bxxvo")
+shader_parameter/enabled = false
+shader_parameter/ColorParameter = Color(1, 1, 1, 1)
 
 [sub_resource type="Animation" id="Animation_pd0nt"]
 length = 0.001
@@ -184,6 +188,43 @@ size = Vector2(255, 216)
 [sub_resource type="CircleShape2D" id="CircleShape2D_hqdlt"]
 radius = 17.262676
 
+[sub_resource type="Animation" id="Animation_pmxbq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FlyingMonsterSprite:material:shader_parameter/enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_j7vsr"]
+resource_name = "hit_flash"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FlyingMonsterSprite:material:shader_parameter/enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r24ei"]
+_data = {
+&"RESET": SubResource("Animation_pmxbq"),
+&"hit_flash": SubResource("Animation_j7vsr")
+}
+
 [node name="FlyingMonster" type="Area2D"]
 z_index = 2
 collision_layer = 4
@@ -196,6 +237,7 @@ position = Vector2(-5, 6)
 shape = SubResource("CircleShape2D_leej7")
 
 [node name="FlyingMonsterSprite" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ab6wr")
 texture = ExtResource("2_xf8ou")
 hframes = 8
 vframes = 5
@@ -207,21 +249,19 @@ libraries = {
 }
 autoplay = "idle"
 
-[node name="FiniteStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state", "monster", "anim_player", "rest_timer")]
+[node name="FiniteStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state", "monster", "anim_player", "rest_timer", "hit_flash_anim_player")]
 script = ExtResource("3_8nfe2")
 initial_state = NodePath("WaitPlayer")
 monster = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
 rest_timer = NodePath("../RestTimer")
+hit_flash_anim_player = NodePath("../HitFlashAnimationPlayer")
 
 [node name="WaitPlayer" type="Node" parent="FiniteStateMachine"]
 script = ExtResource("4_44obp")
 
 [node name="Rest" type="Node" parent="FiniteStateMachine"]
 script = ExtResource("5_8gw4x")
-
-[node name="Idle" type="Node" parent="FiniteStateMachine"]
-script = ExtResource("6_lwvki")
 
 [node name="Active" type="Node" parent="FiniteStateMachine"]
 script = ExtResource("6_pd0nt")
@@ -233,9 +273,6 @@ bullet_holder = NodePath("../../BulletHolder")
 
 [node name="Dash" type="Node" parent="FiniteStateMachine"]
 script = ExtResource("9_vukie")
-
-[node name="Hurt" type="Node" parent="FiniteStateMachine"]
-script = ExtResource("10_x7la4")
 
 [node name="Death" type="Node" parent="FiniteStateMachine"]
 script = ExtResource("12_lwvki")
@@ -276,5 +313,10 @@ damage_to_deal = 2
 position = Vector2(-5, 6)
 shape = SubResource("CircleShape2D_hqdlt")
 debug_color = Color(0.94358796, 0.15879083, 0.4541, 0.41960785)
+
+[node name="HitFlashAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_r24ei")
+}
 
 [connection signal="body_entered" from="PlayerDetection" to="FiniteStateMachine/WaitPlayer" method="_on_player_detection_body_entered"]

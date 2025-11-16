@@ -1,8 +1,8 @@
 extends FlyingMonsterState
-
+var tween : Tween
 func enter() -> void:
 	state_machine.anim_player.play("flying")
-	var tween : Tween = get_tree().create_tween().bind_node(self)
+	tween = get_tree().create_tween().bind_node(self)
 	tween.tween_property(
 		state_machine.monster, 
 		"global_position", 
@@ -11,3 +11,6 @@ func enter() -> void:
 	)
 	await tween.finished
 	state_machine.change_state("shoot")
+
+func exit() -> void:
+	tween.kill()

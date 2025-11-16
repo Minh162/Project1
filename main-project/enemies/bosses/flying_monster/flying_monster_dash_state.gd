@@ -3,7 +3,7 @@ extends FlyingMonsterState
 @export var dash_time : float = 0.5
 @export var dash_number : int = 2
 var current_dash_time = 0
-
+var tween
 func enter() -> void:
 	current_dash_time = 0
 	dash()
@@ -19,7 +19,7 @@ func dash() -> void:
 	current_dash_time += 1
 	state_machine.anim_player.play("attack")
 	await state_machine.anim_player.animation_finished
-	var tween = get_tree().create_tween().bind_node(self)
+	tween = get_tree().create_tween().bind_node(self)
 	tween.tween_property(
 		state_machine.monster,
 		"global_position",
@@ -35,3 +35,6 @@ func dash() -> void:
 		0.5
 	)
 	tween.tween_callback(dash).set_delay(1.0)
+
+func exit() -> void:
+	tween.kill()

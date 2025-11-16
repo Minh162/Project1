@@ -28,9 +28,4 @@ func _on_area_exited(area: Area2D) -> void:
 
 func deal_damage() -> void:
 	for enemy: HealthComponent in list_enemies_in_attack_range:
-		if enemy is FlyingBoss:
-			if enemy.can_be_hurt:
-				enemy.get_hurt(damage_to_deal)
-		else:
-			enemy.get_hurt(damage_to_deal)
-			
+		enemy.get_hurt(damage_to_deal)

@@ -962,7 +962,7 @@ tile_set = SubResource("TileSet_igmy8")
 position = Vector2(634, -247)
 rest_point = NodePath("../RestPoint")
 active_point = NodePath("../ActivePoint")
-max_health = 4
+max_health = 70
 
 [node name="CollisionShape2D" parent="TileMap/Boss/FlyingMonster/PlayerDetection" index="0"]
 position = Vector2(-9.5, 4)

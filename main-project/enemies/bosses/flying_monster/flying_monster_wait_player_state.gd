@@ -16,7 +16,6 @@ var player_entered : bool = false:
 		await state_machine.anim_player.animation_finished
 		state_machine.monster.boss_start.emit()
 		state_machine.change_state("active")
-		
 
 func _on_player_detection_body_entered(body: Node2D) -> void:
 	if body is PlayerCharacter:

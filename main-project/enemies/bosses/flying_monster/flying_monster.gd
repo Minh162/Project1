@@ -11,7 +11,6 @@ signal boss_start
 signal boss_slained
 
 var focused_player : PlayerCharacter
-var can_be_hurt : bool = false
 
 func _ready() -> void:
 	current_health = max_health

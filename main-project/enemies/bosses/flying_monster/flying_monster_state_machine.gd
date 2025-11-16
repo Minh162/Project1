@@ -6,6 +6,7 @@ class_name FlyingMonsterStateMachine
 @export var monster : FlyingBoss
 @export var anim_player: AnimationPlayer
 @export var rest_timer : Timer
+@export var hit_flash_anim_player: AnimationPlayer
 var current_state: FlyingMonsterState
 var states: Dictionary = {}
 
@@ -49,11 +50,10 @@ func _on_rest_timer_timeout() -> void:
 		return
 	if current_state.name.to_lower() == "death":
 		return
-	monster.can_be_hurt = false
 	change_state("active")
 
 func _on_hurt(_hurt_pos) -> void:
-	change_state("hurt")
+	hit_flash_anim_player.play("hit_flash")
 
 func _on_death() -> void:
 	rest_timer.stop()
