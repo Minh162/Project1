@@ -11,6 +11,7 @@ func _ready() -> void:
 
 
 func _on_button_back_pressed() -> void:
+	BackgroundMusicManager.button_sound.play()
 	SceneChangingManager.load_menu()
 
 

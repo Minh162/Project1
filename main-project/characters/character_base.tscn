@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://bffut8uk2qqct"]
+[gd_scene load_steps=8 format=3 uid="uid://bffut8uk2qqct"]
 
 [ext_resource type="Script" uid="uid://dl4ltxioqa7me" path="res://characters/character_base.gd" id="1_1mj81"]
 [ext_resource type="PackedScene" uid="uid://ca4oa4igebadu" path="res://components/health_component.tscn" id="2_gepiv"]
+[ext_resource type="AudioStream" uid="uid://ct67fyxvdudog" path="res://assets/sfx/player/attack.mp3" id="3_idkg6"]
+[ext_resource type="AudioStream" uid="uid://cj2bc1pvw87hl" path="res://assets/sfx/player/hurt.mp3" id="4_y1w77"]
+[ext_resource type="AudioStream" uid="uid://dcqk1dxit026u" path="res://assets/sfx/player/jump.mp3" id="5_pq74r"]
+[ext_resource type="AudioStream" uid="uid://ckugoww8fvm1l" path="res://assets/sfx/player/landing.mp3" id="6_sjc3o"]
+[ext_resource type="AudioStream" uid="uid://cdwl7g0g2ekh" path="res://assets/sfx/player/death.mp3" id="7_mx2sf"]
 
 [node name="CharacterBase" type="CharacterBody2D" node_paths=PackedStringArray("health_component") groups=["Player"]]
 script = ExtResource("1_1mj81")
@@ -15,3 +20,27 @@ double_jump_velocity = -200.0
 [node name="HealthComponent" parent="." instance=ExtResource("2_gepiv")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HealthComponent"]
+
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+current = true
+
+[node name="HurtCooldownTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="Audios" type="Node2D" parent="."]
+
+[node name="AttackSound" type="AudioStreamPlayer2D" parent="Audios"]
+stream = ExtResource("3_idkg6")
+
+[node name="HurtSound" type="AudioStreamPlayer2D" parent="Audios"]
+stream = ExtResource("4_y1w77")
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="Audios"]
+stream = ExtResource("5_pq74r")
+
+[node name="LandSound" type="AudioStreamPlayer2D" parent="Audios"]
+stream = ExtResource("6_sjc3o")
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="Audios"]
+stream = ExtResource("7_mx2sf")

@@ -1,9 +1,11 @@
-[gd_scene load_steps=38 format=3 uid="uid://ddyfys5jth01v"]
+[gd_scene load_steps=40 format=3 uid="uid://ddyfys5jth01v"]
 
 [ext_resource type="PackedScene" uid="uid://8vawg5br04m6" path="res://enemies/enemy.tscn" id="1_6ftag"]
 [ext_resource type="Script" uid="uid://xyck7n07bxtv" path="res://enemies/slime.gd" id="2_mks6d"]
 [ext_resource type="Texture2D" uid="uid://dt7cy3syejrl7" path="res://assets/metroidvania_asset/enemies sprites/slime/slime_spritesheet.png" id="2_qtm3c"]
 [ext_resource type="PackedScene" uid="uid://ccchd0fggd573" path="res://traps/hurt_area.tscn" id="3_n1ijq"]
+[ext_resource type="AudioStream" uid="uid://s5tro6faf57o" path="res://assets/sfx/enemy/Slime/slime.mp3" id="5_xienu"]
+[ext_resource type="AudioStream" uid="uid://m5o6rtybrbv1" path="res://assets/sfx/enemy/Slime/slime_death.mp3" id="6_w8rxk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n1ijq"]
 atlas = ExtResource("2_qtm3c")
@@ -278,3 +280,14 @@ debug_color = Color(0.75390434, 0.45428276, 0.14208585, 0.41960785)
 position = Vector2(-8, 0)
 target_position = Vector2(0, 10)
 hit_from_inside = true
+
+[node name="SlimeMove" type="AudioStreamPlayer2D" parent="." index="5"]
+stream = ExtResource("5_xienu")
+autoplay = true
+max_distance = 100.0
+bus = &"Sfx"
+
+[node name="SlimeDeath" type="AudioStreamPlayer2D" parent="." index="6"]
+stream = ExtResource("6_w8rxk")
+max_distance = 100.0
+bus = &"Sfx"

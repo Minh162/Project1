@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5omsj4uypqra"]
+
+[ext_resource type="Script" uid="uid://drxnv3cnietgw" path="res://managers/background_music_manager.gd" id="1_og8wm"]
+[ext_resource type="AudioStream" uid="uid://by6cyxgkhw2yi" path="res://assets/sfx/ui/backgroundmusic.mp3" id="2_0yop0"]
+[ext_resource type="AudioStream" uid="uid://yxgm0pwhhfnl" path="res://assets/sfx/ui/gameplaymusic.mp3" id="3_dwpuv"]
+[ext_resource type="AudioStream" uid="uid://b3a067rkwi0q2" path="res://assets/sfx/ui/button.mp3" id="4_0yop0"]
+
+[node name="BackgroundMusicManager" type="Node"]
+script = ExtResource("1_og8wm")
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_0yop0")
+bus = &"Music"
+
+[node name="GamePlayMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_dwpuv")
+bus = &"Music"
+
+[node name="ButtonSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_0yop0")
+volume_db = -10.0
+pitch_scale = 0.9

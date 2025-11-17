@@ -13,6 +13,7 @@ var level_finished_scene: String = "res://scenes/UI/level_finished.tscn"
 var shop_scene : String = "res://scenes/shop/shop_scene.tscn"
 
 func load_level(level_number: int):
+	BackgroundMusicManager.play_game_play_music()
 	GameManager.current_level = "level0" + str(level_number)
 	GameManager.start_new_game()
 	SceneManager.change_scene(
@@ -21,6 +22,8 @@ func load_level(level_number: int):
 	)
 
 func load_menu():
+	if not BackgroundMusicManager.menu_music.playing:
+		BackgroundMusicManager.play_menu_music()
 	SceneManager.change_scene(
 		menu_scene,
 		{ "pattern": "scribbles", "pattern_leave": "squares" }
@@ -33,6 +36,8 @@ func load_setting():
 	)
 
 func load_level_choosing():
+	if not BackgroundMusicManager.menu_music.playing:
+		BackgroundMusicManager.play_menu_music()
 	SceneManager.change_scene(
 		level_choosing_scene,
 		{ "pattern": "scribbles", "pattern_leave": "squares" }

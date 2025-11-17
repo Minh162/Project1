@@ -21,6 +21,9 @@ func _ready() -> void:
 
 func get_hurt(taken_damage, hurt_pos: Vector2 = Vector2.ZERO) -> void:
 	if current_health > 0:
+		if parent_node is PlayerCharacter:
+			if not parent_node.hurt_cooldown_timer.is_stopped():
+				return
 		current_health -= taken_damage
 		hurt.emit(hurt_pos)
 
@@ -29,6 +32,6 @@ func get_hurt_and_back_to_spawn_point() -> void:
 		return
 	if current_health > 0:
 		current_health -= 1
-		hurt.emit(Vector2.UP)
-		await get_tree().create_timer(1.0).timeout
+		await get_tree().create_timer(0.2).timeout
 		parent_node.global_position = parent_node.SpawnPoint.global_position
+		hurt.emit(Vector2.ZERO)

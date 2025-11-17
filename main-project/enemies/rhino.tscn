@@ -1,10 +1,12 @@
-[gd_scene load_steps=30 format=3 uid="uid://bwjfbo6r6hkv1"]
+[gd_scene load_steps=32 format=3 uid="uid://bwjfbo6r6hkv1"]
 
 [ext_resource type="Texture2D" uid="uid://bqp0mcfxy3bdb" path="res://assets/more_enemy_assets/Rino/Hit Wall (52x34).png" id="1_5pmfh"]
 [ext_resource type="Texture2D" uid="uid://vfojop42fxry" path="res://assets/more_enemy_assets/Rino/Idle (52x34).png" id="1_31l63"]
 [ext_resource type="Script" uid="uid://b4lm3jkpgn2eu" path="res://enemies/rhino.gd" id="1_sdrd4"]
 [ext_resource type="Texture2D" uid="uid://rf0507nt5sjd" path="res://assets/more_enemy_assets/Rino/Run (52x34).png" id="2_1b4qu"]
 [ext_resource type="PackedScene" uid="uid://ccchd0fggd573" path="res://traps/hurt_area.tscn" id="4_kyfyu"]
+[ext_resource type="AudioStream" uid="uid://c026lsxtpssw2" path="res://assets/sfx/enemy/Rhino/rhino_hit_wall.mp3" id="6_fkp28"]
+[ext_resource type="AudioStream" uid="uid://b3f3fb4ykd0qm" path="res://assets/sfx/enemy/Rhino/rhino_player_detect.mp3" id="6_m5hja"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a1xj0"]
 atlas = ExtResource("1_5pmfh")
@@ -200,5 +202,17 @@ damage_to_deal = 2
 position = Vector2(0.75, -14)
 shape = SubResource("RectangleShape2D_kyfyu")
 debug_color = Color(0.971222, 0, 0.45265538, 0.41960785)
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_fkp28")
+volume_db = 10.0
+max_distance = 200.0
+bus = &"Sfx"
+
+[node name="PlayerDetectSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_m5hja")
+volume_db = 10.0
+max_distance = 200.0
+bus = &"Sfx"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

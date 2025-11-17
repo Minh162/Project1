@@ -1,11 +1,14 @@
 extends CharacterBody2D
 
+
 @export var health_component: HealthComponent
 @export var hurt_area: HurtArea
 @export var speed : float = -30.0
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var ground_check: RayCast2D = $GroundCheck
+@onready var slime_move: AudioStreamPlayer2D = $SlimeMove
+@onready var slime_death: AudioStreamPlayer2D = $SlimeDeath
 
 var is_alive : bool = true
 var can_move : bool = true
@@ -46,6 +49,10 @@ func _physics_process(delta: float) -> void:
 func _on_death() -> void:
 	if not is_alive:
 		return
+	
+	slime_move.stop()
+	slime_death.play()
+	
 	is_alive = false
 	hurt_area.queue_free()
 	animated_sprite_2d.play("death")

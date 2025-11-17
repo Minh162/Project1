@@ -1,10 +1,11 @@
-[gd_scene load_steps=23 format=3 uid="uid://d0e1c304ipgrs"]
+[gd_scene load_steps=24 format=3 uid="uid://d0e1c304ipgrs"]
 
 [ext_resource type="Texture2D" uid="uid://bf11xcvs7l711" path="res://assets/more_enemy_assets/BlueBird/Flying (32x32).png" id="1_7iwg1"]
 [ext_resource type="Script" uid="uid://ce28u8bn44hu0" path="res://enemies/blue_bird.gd" id="1_wsdw1"]
 [ext_resource type="PackedScene" uid="uid://ccchd0fggd573" path="res://traps/hurt_area.tscn" id="2_e2yph"]
 [ext_resource type="Texture2D" uid="uid://bnc2dubcnvdcf" path="res://assets/more_enemy_assets/BlueBird/Hit (32x32).png" id="3_55q6a"]
 [ext_resource type="PackedScene" uid="uid://ca4oa4igebadu" path="res://components/health_component.tscn" id="4_qdux3"]
+[ext_resource type="AudioStream" uid="uid://b8he7scssgilu" path="res://assets/sfx/enemy/Bird/crow.mp3" id="6_c3oil"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e2yph"]
 atlas = ExtResource("1_7iwg1")
@@ -151,3 +152,10 @@ max_health = 5
 position = Vector2(0, 0.25)
 shape = SubResource("RectangleShape2D_qdux3")
 debug_color = Color(0.9670357, 0, 0.47979528, 0.41960785)
+
+[node name="BirdSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_c3oil")
+volume_db = 10.0
+autoplay = true
+max_distance = 100.0
+bus = &"Sfx"
