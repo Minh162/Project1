@@ -10,7 +10,6 @@ func _ready() -> void:
 		if character.character_id == SaveManager.selected_character:
 			selected_character = character
 			break
-	
 	var character_instance : PlayerCharacter = selected_character.scene.instantiate()
 	character_instance.SpawnPoint = spawn_point
 	character_instance.spawn()

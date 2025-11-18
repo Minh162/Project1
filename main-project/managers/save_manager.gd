@@ -40,6 +40,11 @@ func save_data():
 
 func load_data():
 	if not FileAccess.file_exists(save_path):
+		coin = 0
+		purchased_characters = ["01"]
+		selected_character = "01"
+		sfx_volume = 1.0
+		music_volume = 1.0
 		save_data()
 		return
 
@@ -50,7 +55,7 @@ func load_data():
 	if typeof(data) == TYPE_DICTIONARY:
 		coin = data.get("coin", 0)
 		purchased_characters = data.get("purchased_characters", ["01"])
-		selected_character = data.get("selected_character", "")
+		selected_character = data.get("selected_character", "01")
 		sfx_volume = data.get("sfx_volume", 1.0)
 		music_volume = data.get("music_volume", 1.0)
 		print("Data loaded.")
