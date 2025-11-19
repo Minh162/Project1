@@ -38,7 +38,7 @@ func _ready() -> void:
 func spawn() -> void:
 	self.global_position = SpawnPoint.global_position
 
-func _physics_process(delta: float) -> void:
+func _process(delta: float) -> void:
 	if not is_alive:
 		return
 	

@@ -1,5 +1,7 @@
 extends FlyingMonsterState
 
+@onready var dash_sound: AudioStreamPlayer2D = $DashSound
+
 @export var dash_time : float = 0.5
 @export var dash_number : int = 2
 var current_dash_time = 0
@@ -17,6 +19,7 @@ func dash() -> void:
 		state_machine.change_state("rest")
 		return
 	current_dash_time += 1
+	dash_sound.play()
 	state_machine.anim_player.play("attack")
 	await state_machine.anim_player.animation_finished
 	tween = get_tree().create_tween().bind_node(self)

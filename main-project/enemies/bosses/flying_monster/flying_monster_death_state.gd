@@ -1,6 +1,7 @@
 extends FlyingMonsterState
 
 @onready var hurt_collision: CollisionShape2D = $"../../CollisionShape2D"
+@onready var disappear_sound: AudioStreamPlayer2D = $DisappearSound
 
 func enter() -> void:
 	state_machine.anim_player.play("death")
@@ -12,6 +13,7 @@ func enter() -> void:
 		state_machine.monster.active_point.global_position,
 		1.5
 	)
+	disappear_sound.play()
 	state_machine.anim_player.play("attack")
 	await state_machine.anim_player.animation_finished
 	state_machine.anim_player.play("attack")
