@@ -3,15 +3,17 @@ extends Area2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var hit_sound: AudioStreamPlayer2D = $HitSound
 @onready var player_detect_sound: AudioStreamPlayer2D = $PlayerDetectSound
+@onready var cooldown_timer: Timer = $CooldownTimer
 
 @export var raycast_to_check_player : RayCast2D
 @export var speed : float = 100.0
 var is_trigger : bool = false
+var can_detect : bool = true
 var is_hurting : bool = false
 var direction : int = 1
 
 func _process(delta: float) -> void:
-	if raycast_to_check_player.is_colliding() and not is_trigger:
+	if raycast_to_check_player.is_colliding() and not is_trigger and can_detect:
 		is_trigger = true
 		player_detect_sound.play()
 	
@@ -25,6 +27,7 @@ func _process(delta: float) -> void:
 		animated_sprite_2d.play("idle")
 
 func _on_body_entered(_body: Node2D) -> void:
+	can_detect = false
 	is_trigger = false
 	is_hurting = true
 	hit_sound.stop()
@@ -32,6 +35,9 @@ func _on_body_entered(_body: Node2D) -> void:
 	animated_sprite_2d.play("hit_wall")
 	await animated_sprite_2d.animation_finished
 	is_hurting = false
-	await get_tree().create_timer(3.0).timeout
+	cooldown_timer.start()
+
+func _on_cooldown_timer_timeout() -> void:
+	can_detect = true
 	direction *= -1
 	scale.x *= -1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dy453cyhrwp5e"]
+[gd_scene load_steps=32 format=3 uid="uid://dy453cyhrwp5e"]
 
 [ext_resource type="Script" uid="uid://colbhiornlcbf" path="res://enemies/bosses/flying_monster/flying_monster.gd" id="1_leej7"]
 [ext_resource type="Shader" uid="uid://ctwquyuv011n6" path="res://enemies/bosses/hit_flash.tres" id="2_bxxvo"]
@@ -6,10 +6,13 @@
 [ext_resource type="Script" uid="uid://c2i1gugc522of" path="res://enemies/bosses/flying_monster/flying_monster_state_machine.gd" id="3_8nfe2"]
 [ext_resource type="Script" uid="uid://c5pwtnwr3pk7e" path="res://enemies/bosses/flying_monster/flying_monster_wait_player_state.gd" id="4_44obp"]
 [ext_resource type="Script" uid="uid://cn7c67rvep5ni" path="res://enemies/bosses/flying_monster/flying_monster_rest_state.gd" id="5_8gw4x"]
+[ext_resource type="AudioStream" uid="uid://d2a0wfkuvqav2" path="res://assets/sfx/enemy/dragonboss/dragonbossappear.mp3" id="6_ab6wr"]
 [ext_resource type="Script" uid="uid://cytaj802xrco1" path="res://enemies/bosses/flying_monster/flying_monster_active_state.gd" id="6_pd0nt"]
 [ext_resource type="Script" uid="uid://d4ixlww6go1s6" path="res://enemies/bosses/flying_monster/flying_monster_shoot_state.gd" id="7_e8vug"]
 [ext_resource type="PackedScene" uid="uid://dfg23m7fd87hk" path="res://enemies/bosses/flying_monster/flying_monster_bullet.tscn" id="8_0jh52"]
 [ext_resource type="Script" uid="uid://rl35ru7a6mni" path="res://enemies/bosses/flying_monster/flying_monster_dash_state.gd" id="9_vukie"]
+[ext_resource type="AudioStream" uid="uid://cf5d1hl4encdn" path="res://assets/sfx/enemy/dragonboss/dragonshoot.mp3" id="10_hqdlt"]
+[ext_resource type="AudioStream" uid="uid://btt88ajyibp6r" path="res://assets/sfx/enemy/dragonboss/dragonrushin.mp3" id="12_bxxvo"]
 [ext_resource type="Script" uid="uid://dacp7qmqgv587" path="res://enemies/bosses/flying_monster/flying_monster_death_state.gd" id="12_lwvki"]
 [ext_resource type="PackedScene" uid="uid://ccchd0fggd573" path="res://traps/hurt_area.tscn" id="13_hqdlt"]
 
@@ -260,6 +263,10 @@ hit_flash_anim_player = NodePath("../HitFlashAnimationPlayer")
 [node name="WaitPlayer" type="Node" parent="FiniteStateMachine"]
 script = ExtResource("4_44obp")
 
+[node name="AppearSound" type="AudioStreamPlayer2D" parent="FiniteStateMachine/WaitPlayer"]
+stream = ExtResource("6_ab6wr")
+bus = &"Sfx"
+
 [node name="Rest" type="Node" parent="FiniteStateMachine"]
 script = ExtResource("5_8gw4x")
 
@@ -271,11 +278,23 @@ script = ExtResource("7_e8vug")
 bullet_scene = ExtResource("8_0jh52")
 bullet_holder = NodePath("../../BulletHolder")
 
+[node name="ShootSound" type="AudioStreamPlayer2D" parent="FiniteStateMachine/Shoot"]
+stream = ExtResource("10_hqdlt")
+bus = &"Sfx"
+
 [node name="Dash" type="Node" parent="FiniteStateMachine"]
 script = ExtResource("9_vukie")
 
+[node name="DashSound" type="AudioStreamPlayer2D" parent="FiniteStateMachine/Dash"]
+stream = ExtResource("12_bxxvo")
+bus = &"Sfx"
+
 [node name="Death" type="Node" parent="FiniteStateMachine"]
 script = ExtResource("12_lwvki")
+
+[node name="DisappearSound" type="AudioStreamPlayer2D" parent="FiniteStateMachine/Death"]
+stream = ExtResource("6_ab6wr")
+bus = &"Sfx"
 
 [node name="PlayerDetection" type="Area2D" parent="."]
 collision_layer = 0

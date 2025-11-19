@@ -3,6 +3,8 @@ extends FlyingMonsterState
 @export var bullet_scene: PackedScene
 @export var bullet_holder: Node
 
+@onready var shoot_sound: AudioStreamPlayer2D = $ShootSound
+
 func enter() -> void:
 	state_machine.anim_player.play("attack")
 	await state_machine.anim_player.animation_finished
@@ -15,3 +17,4 @@ func shoot() -> void:
 	bullet_instance.direction = state_machine.monster.global_position.direction_to(state_machine.monster.focused_player.global_position)
 	bullet_instance.global_position = state_machine.monster.global_position
 	bullet_holder.add_child(bullet_instance)
+	shoot_sound.play()

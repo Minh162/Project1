@@ -2,6 +2,7 @@ extends DeathGodState
 
 var max_attack_times : int = 2
 var current_attack_time : int = 0
+@onready var tele_sound: AudioStreamPlayer2D = $TeleSound
 
 func enter() -> void:
 	current_attack_time = 0
@@ -18,6 +19,7 @@ func attack() -> void:
 		state_machine.change_state("rest")
 		return
 	state_machine.monster.is_attacking = false
+	tele_sound.play()
 	state_machine.anim_player.play("disappear")
 	await state_machine.anim_player.animation_finished
 	var nearest_player_pos = state_machine.monster.focused_player.global_position
