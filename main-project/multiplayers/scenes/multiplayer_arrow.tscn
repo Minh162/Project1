@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://clktyr2kst1v0"]
+
+[ext_resource type="Texture2D" uid="uid://51ag11y2ajo6" path="res://assets/character_asset/HumansProjectiles.png" id="2_dr0jm"]
+[ext_resource type="Script" uid="uid://3v8nb3yp6bq5" path="res://multiplayers/scripts/multiplayer_arrow.gd" id="2_sbuc0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5bbi"]
+size = Vector2(11, 5)
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_o5bbi"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:direction")
+properties/1/spawn = true
+properties/1/replication_mode = 0
+properties/2/path = NodePath(".:fired_by_name")
+properties/2/spawn = true
+properties/2/replication_mode = 0
+properties/3/path = NodePath(".:rotation")
+properties/3/spawn = true
+properties/3/replication_mode = 2
+
+[node name="MultiplayerArrow" type="Area2D"]
+collision_layer = 64
+collision_mask = 3
+script = ExtResource("2_sbuc0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_dr0jm")
+region_enabled = true
+region_rect = Rect2(16, 0, 16, 16)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+rect = Rect2(-3, -1, 7, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_o5bbi")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_o5bbi")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

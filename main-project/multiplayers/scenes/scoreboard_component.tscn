@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://2hbrwxlvmuw6"]
+
+[ext_resource type="Script" uid="uid://dadh7unoly71e" path="res://multiplayers/scripts/scoreboard_component.gd" id="1_rjirn"]
+
+[node name="ScoreboardComponent" type="Node"]
+script = ExtResource("1_rjirn")
