@@ -1,6 +1,7 @@
 extends Control
 
 @onready var name_edit: LineEdit = $VBoxContainer/NameEdit
+@onready var ip_address: LineEdit = $VBoxContainer/IpAddress
 
 func _on_host_button_pressed() -> void:
 	if name_edit.text.is_empty():
@@ -13,7 +14,11 @@ func _on_join_button_pressed() -> void:
 	if name_edit.text.is_empty():
 		print("Add name")
 		return
-	NetworkManager.create_local_client("localhost", 8080, name_edit.text)
+	
+	if ip_address.text.is_empty():
+		print("Need ip address")
+		return
+	NetworkManager.create_local_client(ip_address.text, 8080, name_edit.text)
 
 
 func _on_menu_button_pressed() -> void:
