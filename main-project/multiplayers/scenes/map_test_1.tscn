@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=4 uid="uid://1r6i3anhd8q4"]
+[gd_scene load_steps=7 format=4 uid="uid://1r6i3anhd8q4"]
 
 [ext_resource type="Script" uid="uid://ddavwdqtc66dw" path="res://multiplayers/scripts/game.gd" id="1_vkx6f"]
 [ext_resource type="TileSet" uid="uid://l27bsl1ldyw7" path="res://combined_tileset.tres" id="1_yoe2p"]
 [ext_resource type="PackedScene" uid="uid://cp6fmq88avygy" path="res://multiplayers/scenes/area_door.tscn" id="3_srsc0"]
 [ext_resource type="PackedScene" uid="uid://2hbrwxlvmuw6" path="res://multiplayers/scenes/scoreboard_component.tscn" id="4_srsc0"]
+[ext_resource type="FontFile" uid="uid://ccpeu102rjqi4" path="res://assets/fonts/BoldPixels (1).ttf" id="5_hvlu4"]
+[ext_resource type="Texture2D" uid="uid://bqqlyj0h138bi" path="res://assets/metroidvania_asset/tiles and background_foreground (new)/background.png" id="5_qfq2a"]
 
 [node name="MultiplayerMap" type="Node" node_paths=PackedStringArray("spawn_path", "list_spawn_points", "host_spawn_point", "client_spawn_point")]
 script = ExtResource("1_vkx6f")
@@ -134,5 +136,35 @@ visible = false
 layout_mode = 2
 text = "Play Again"
 
+[node name="StartTimerLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_hvlu4")
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartTimer" type="Timer" parent="CanvasLayer"]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -10
+
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+texture = ExtResource("5_qfq2a")
+centered = false
+
 [connection signal="pressed" from="CanvasLayer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/ResultPanel/MarginContainer/VBoxContainer/PlayAgainButton" to="." method="_on_play_again_button_pressed"]
+[connection signal="timeout" from="CanvasLayer/StartTimer" to="." method="_on_start_time_timeout"]

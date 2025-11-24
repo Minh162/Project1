@@ -1,5 +1,5 @@
 extends Control
-class_name Lobby
+class_name LocalLobby
 
 @onready var list_players: VBoxContainer = $Panel/VBoxContainer/ListPlayers
 @onready var start_button: Button = $Panel/VBoxContainer/StartButton
@@ -12,8 +12,6 @@ func _ready() -> void:
 			func(_p_id):
 				update_list_player()
 		)
-		
-		label.text = "Lobby: " + NetworkManager.relay_peer.online_id
 	
 	if not NetworkManager.is_hosting_game:
 		start_button.hide()

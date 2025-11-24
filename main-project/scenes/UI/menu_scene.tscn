@@ -128,8 +128,7 @@ theme_override_fonts/font = ExtResource("7_lqt17")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxTexture_u7w4r")
 theme_override_styles/hover = SubResource("StyleBoxTexture_pafu7")
-text = "Co-op
-"
+text = "Arena"
 icon_alignment = 2
 
 [node name="ButtonCharacters" type="Button" parent="CanvasLayer/CanvasGroup/Button"]

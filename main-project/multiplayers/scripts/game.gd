@@ -5,6 +5,9 @@ extends Node
 @export var host_spawn_point: Marker2D
 @export var client_spawn_point : Marker2D
 
+@onready var start_timer_label: Label = $CanvasLayer/StartTimerLabel
+@onready var start_timer: Timer = $CanvasLayer/StartTimer
+
 var spawn_manager: SpawnManager
 func _ready() -> void:
 	if NetworkManager.is_hosting_game:
@@ -20,6 +23,11 @@ func _ready() -> void:
 	if not NetworkManager.is_hosting_game:
 		spawn_players.rpc_id(1)
 
+
+func _process(_delta: float) -> void:
+	if not start_timer.is_stopped():
+		start_timer_label.text = str(int(start_timer.time_left))
+
 @rpc("any_peer", "call_remote")
 func spawn_players():
 	spawn_manager.first_time_spawn()
@@ -29,3 +37,7 @@ func _on_main_menu_button_pressed() -> void:
 
 func _on_play_again_button_pressed() -> void:
 	NetworkManager.load_game_scene.rpc()
+
+
+func _on_start_time_timeout() -> void:
+	start_timer_label.hide()
