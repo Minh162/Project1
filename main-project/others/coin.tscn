@@ -1,8 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://dbw8a0quast5t"]
+[gd_scene load_steps=19 format=3 uid="uid://dbw8a0quast5t"]
 
 [ext_resource type="Script" uid="uid://c616ej5csp7q" path="res://others/coin.gd" id="1_8qqf0"]
 [ext_resource type="Texture2D" uid="uid://c3rjenqxakv0l" path="res://assets/metroidvania_asset/miscellaneous sprites/coin_anim_strip_6.png" id="2_631ho"]
 [ext_resource type="Texture2D" uid="uid://cfeva6k78gdwj" path="res://assets/metroidvania_asset/miscellaneous sprites/coin_pickup_anim_strip_6.png" id="3_631ho"]
+[ext_resource type="AudioStream" uid="uid://cqg2pxnr634v4" path="res://assets/sfx/player/getcoin.mp3" id="4_kyn8s"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_631ho"]
 radius = 5.0
@@ -120,5 +121,10 @@ sprite_frames = SubResource("SpriteFrames_tx7r1")
 animation = &"idle"
 autoplay = "idle"
 frame = 3
+
+[node name="CollectSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_kyn8s")
+max_distance = 500.0
+bus = &"Sfx"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
