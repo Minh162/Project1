@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://b73txr05n05j"]
+[gd_scene load_steps=23 format=3 uid="uid://b73txr05n05j"]
 
 [ext_resource type="Script" uid="uid://cyqsh6el0jjft" path="res://enemies/fly.gd" id="1_gh0jo"]
 [ext_resource type="Texture2D" uid="uid://hcpseu0o44dp" path="res://assets/metroidvania_asset/enemies sprites/fly/blue_fly_attack_anim_srip_3.png" id="2_nmd8j"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c18xhv3agi4x6" path="res://assets/metroidvania_asset/enemies sprites/fly/blue_fly_idle_or_flying_anim_strip_3.png" id="3_d1yl7"]
 [ext_resource type="PackedScene" uid="uid://ca4oa4igebadu" path="res://components/health_component.tscn" id="5_gh0jo"]
 [ext_resource type="PackedScene" uid="uid://ccchd0fggd573" path="res://traps/hurt_area.tscn" id="6_gh0jo"]
+[ext_resource type="AudioStream" uid="uid://ctn3sness4qlg" path="res://assets/sfx/enemy/flies/flydeath.mp3" id="7_io4gi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d1yl7"]
 atlas = ExtResource("2_nmd8j")
@@ -140,6 +141,11 @@ shape = SubResource("CircleShape2D_rchlc")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtArea"]
 shape = SubResource("CircleShape2D_io4gi")
 debug_color = Color(0.9206592, 0.10409529, 0.6418027, 0.41960785)
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_io4gi")
+max_distance = 300.0
+bus = &"Sfx"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

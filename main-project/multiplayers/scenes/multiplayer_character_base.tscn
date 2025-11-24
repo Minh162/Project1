@@ -1,0 +1,93 @@
+[gd_scene load_steps=11 format=3 uid="uid://bw2t0rlmenamk"]
+
+[ext_resource type="Script" uid="uid://bhn60j41xelpk" path="res://multiplayers/scripts/multiplayer_character_base.gd" id="1_g1ois"]
+[ext_resource type="PackedScene" uid="uid://ca4oa4igebadu" path="res://components/health_component.tscn" id="2_t4yhp"]
+[ext_resource type="AudioStream" uid="uid://ct67fyxvdudog" path="res://assets/sfx/player/attack.mp3" id="3_ryvjl"]
+[ext_resource type="AudioStream" uid="uid://cj2bc1pvw87hl" path="res://assets/sfx/player/hurt.mp3" id="4_5ired"]
+[ext_resource type="AudioStream" uid="uid://dcqk1dxit026u" path="res://assets/sfx/player/jump.mp3" id="5_v7cgc"]
+[ext_resource type="AudioStream" uid="uid://ckugoww8fvm1l" path="res://assets/sfx/player/landing.mp3" id="6_nov2i"]
+[ext_resource type="AudioStream" uid="uid://cdwl7g0g2ekh" path="res://assets/sfx/player/death.mp3" id="7_6lgpx"]
+[ext_resource type="Script" uid="uid://buokbwty7257t" path="res://multiplayers/scripts/player_input.gd" id="8_txf1o"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_mnpe4"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath("Sprite2D:flip_h")
+properties/1/spawn = true
+properties/1/replication_mode = 2
+properties/2/path = NodePath(".:current_anim_state")
+properties/2/spawn = true
+properties/2/replication_mode = 2
+properties/3/path = NodePath("HealthComponent:current_health")
+properties/3/spawn = true
+properties/3/replication_mode = 1
+properties/4/path = NodePath(".:display_name")
+properties/4/spawn = true
+properties/4/replication_mode = 2
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_txf1o"]
+properties/0/path = NodePath(".:input_dir")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:jump_just_pressed")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+properties/2/path = NodePath(".:just_attack")
+properties/2/spawn = true
+properties/2/replication_mode = 1
+properties/3/path = NodePath(".:mouse_direction")
+properties/3/spawn = true
+properties/3/replication_mode = 1
+properties/4/path = NodePath(".:mouse_pos")
+properties/4/spawn = true
+properties/4/replication_mode = 2
+
+[node name="MultiplayerCharacterBase" type="CharacterBody2D" node_paths=PackedStringArray("player_input") groups=["Player"]]
+scale = Vector2(2, 2)
+collision_layer = 2
+script = ExtResource("1_g1ois")
+player_input = NodePath("PlayerInput")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="HealthComponent" parent="." instance=ExtResource("2_t4yhp")]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HealthComponent"]
+
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+current = true
+
+[node name="HurtCooldownTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="Audios" type="Node2D" parent="."]
+
+[node name="AttackSound" type="AudioStreamPlayer2D" parent="Audios"]
+stream = ExtResource("3_ryvjl")
+
+[node name="HurtSound" type="AudioStreamPlayer2D" parent="Audios"]
+stream = ExtResource("4_5ired")
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="Audios"]
+stream = ExtResource("5_v7cgc")
+
+[node name="LandSound" type="AudioStreamPlayer2D" parent="Audios"]
+stream = ExtResource("6_nov2i")
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="Audios"]
+stream = ExtResource("7_6lgpx")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_mnpe4")
+
+[node name="PlayerInput" type="Node2D" parent="."]
+script = ExtResource("8_txf1o")
+
+[node name="InputSynchronizer" type="MultiplayerSynchronizer" parent="PlayerInput"]
+replication_config = SubResource("SceneReplicationConfig_txf1o")

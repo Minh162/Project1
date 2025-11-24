@@ -1,9 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://dm7lt04uuygl2"]
+[gd_scene load_steps=17 format=3 uid="uid://dm7lt04uuygl2"]
 
 [ext_resource type="Script" uid="uid://bsyylmgdf8wme" path="res://enemies/goblin.gd" id="1_87tty"]
 [ext_resource type="Texture2D" uid="uid://cbcalihflun6s" path="res://assets/metroidvania_asset/enemies sprites/goblin/goblin_spritesheet.png" id="1_gdb6r"]
 [ext_resource type="PackedScene" uid="uid://ca4oa4igebadu" path="res://components/health_component.tscn" id="3_25ewh"]
+[ext_resource type="AudioStream" uid="uid://d1c011dli6jyu" path="res://assets/sfx/enemy/Goblin/goblin-death.mp3" id="5_1lwjo"]
 [ext_resource type="PackedScene" uid="uid://dj1a2m3n587v3" path="res://components/monster_attack_component.tscn" id="5_kcl7o"]
+[ext_resource type="AudioStream" uid="uid://ckpnaucp1t5wx" path="res://assets/sfx/enemy/Goblin/goblin.mp3" id="6_1lwjo"]
 
 [sub_resource type="Animation" id="Animation_y1yvb"]
 length = 0.001
@@ -250,3 +252,15 @@ debug_color = Color(0.43230838, 0.6012669, 1.1551381e-06, 0.41960785)
 position = Vector2(6.5, -4.5)
 shape = SubResource("RectangleShape2D_kcl7o")
 debug_color = Color(0.9369294, 0.06591474, 0.60109645, 0.41960785)
+
+[node name="HurtSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_1lwjo")
+max_distance = 300.0
+bus = &"Sfx"
+
+[node name="IdleSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_1lwjo")
+volume_db = -10.0
+autoplay = true
+max_distance = 200.0
+bus = &"Sfx"

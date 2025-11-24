@@ -11,6 +11,9 @@ var level_choosing_scene: String = "res://scenes/UI/level_choosing_scene.tscn"
 var level_failed_scene: String = "res://scenes/UI/level_failed.tscn"
 var level_finished_scene: String = "res://scenes/UI/level_finished.tscn"
 var shop_scene : String = "res://scenes/shop/shop_scene.tscn"
+var arena_scene: String = "res://multiplayers/scenes/arena_mode_scene.tscn"
+var relay_multiplayer_menu : String = "res://multiplayers/scenes/relay_multiplayer_menu.tscn"
+var local_multiplayer_menu : String = "res://multiplayers/scenes/local_multiplayer_menu.tscn"
 
 func load_level(level_number: int):
 	BackgroundMusicManager.play_game_play_music()
@@ -58,5 +61,23 @@ func load_level_failed():
 func load_shop():
 	SceneManager.change_scene(
 		shop_scene,
+		{ "pattern": "scribbles", "pattern_leave": "squares" }
+	)
+
+func load_arena_scene():
+	SceneManager.change_scene(
+		arena_scene,
+		{ "pattern": "scribbles", "pattern_leave": "squares" }
+	)
+
+func load_local_arena_menu():
+	SceneManager.change_scene(
+		local_multiplayer_menu,
+		{ "pattern": "scribbles", "pattern_leave": "squares" }
+	)
+
+func load_relay_arena_menu():
+	SceneManager.change_scene(
+		relay_multiplayer_menu,
 		{ "pattern": "scribbles", "pattern_leave": "squares" }
 	)

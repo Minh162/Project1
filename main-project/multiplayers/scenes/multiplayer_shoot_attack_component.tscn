@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfpd8dn5vrnbo"]
+
+[ext_resource type="Script" uid="uid://1uw6r87yf826" path="res://multiplayers/scripts/multiplayer_shoot_attack_component.gd" id="1_d3ewk"]
+[ext_resource type="PackedScene" uid="uid://clktyr2kst1v0" path="res://multiplayers/scenes/multiplayer_arrow.tscn" id="2_p7syr"]
+
+[node name="MultiplayerShootAttackComponent" type="Node2D"]
+script = ExtResource("1_d3ewk")
+projectile = ExtResource("2_p7syr")
+
+[node name="ProjectileHolder" type="Node" parent="."]
+
+[node name="ProjectileSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("uid://clktyr2kst1v0")
+spawn_path = NodePath("../ProjectileHolder")

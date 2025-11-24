@@ -55,9 +55,8 @@ texture = SubResource("PlaceholderTexture2D_oxy82")
 position = Vector2(119, 13.5)
 shape = SubResource("RectangleShape2D_4ejfr")
 
-[node name="Prince" parent="." node_paths=PackedStringArray("SpawnPoint") instance=ExtResource("2_fgoca")]
+[node name="Prince" parent="." instance=ExtResource("2_fgoca")]
 position = Vector2(-29, 200)
-SpawnPoint = NodePath("../Marker2D")
 
 [node name="MeleAttackComponent" parent="Prince" index="3"]
 damage_to_deal = 30

@@ -6,7 +6,7 @@ func _on_button_play_pressed() -> void:
 
 func _on_button_multiplayer_pressed() -> void:
 	BackgroundMusicManager.button_sound.play()
-	pass # Replace with function body.
+	SceneChangingManager.load_arena_scene()
 
 func _on_button_settings_pressed() -> void:
 	BackgroundMusicManager.button_sound.play()

@@ -5,6 +5,7 @@ extends Area2D
 @export var hurt_area : HurtArea
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var death_sound: AudioStreamPlayer2D = $DeathSound
 
 var is_dead = false
 var list_player_in_range : Array = []
@@ -46,7 +47,9 @@ func _on_body_exited(body: Node2D) -> void:
 		list_player_in_range.erase(body)
 
 func _on_death() -> void:
+	death_sound.play()
 	is_dead = true
+	hurt_area.queue_free()
 	animated_sprite_2d.play("death")
 	await animated_sprite_2d.animation_finished
 	queue_free()

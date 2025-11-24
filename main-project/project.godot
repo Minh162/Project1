@@ -22,18 +22,21 @@ SceneChangingManager="*res://managers/scene_changing_manager.tscn"
 GameManager="*res://managers/game_manager.tscn"
 SaveManager="*res://managers/save_manager.gd"
 BackgroundMusicManager="*res://managers/background_music_manager.tscn"
+NetworkManager="*res://multiplayers/scripts/network_manager.gd"
+MatchManager="*res://multiplayers/scripts/match_manager.gd"
 
 [display]
 
 window/size/viewport_width=240
 window/size/viewport_height=160
+window/size/always_on_top=true
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/scene_manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/nodetunnel/plugin.cfg", "res://addons/scene_manager/plugin.cfg")
 
 [global_group]
 
@@ -91,4 +94,5 @@ attack={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-renderer/rendering_method="mobile"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

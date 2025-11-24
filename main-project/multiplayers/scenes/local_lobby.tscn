@@ -1,0 +1,118 @@
+[gd_scene load_steps=8 format=3 uid="uid://ceynv216gmxg"]
+
+[ext_resource type="Script" uid="uid://kb0w60ex8eif" path="res://multiplayers/scripts/local_lobby.gd" id="1_i0400"]
+[ext_resource type="Texture2D" uid="uid://cq51puelfq6nd" path="res://assets/backgrounds/Free Pixel Art Forest/PNG/Background layers/Layer_0009_2.png" id="2_bqfe8"]
+[ext_resource type="Texture2D" uid="uid://ckochnt0tlxx4" path="res://assets/backgrounds/Free Pixel Art Forest/PNG/Background layers/Layer_0006_4.png" id="3_n5mer"]
+[ext_resource type="Texture2D" uid="uid://npkj5lifxrwa" path="res://assets/backgrounds/Free Pixel Art Forest/PNG/Background layers/Layer_0003_6.png" id="4_l1dv4"]
+[ext_resource type="Texture2D" uid="uid://cwgx3ypl0vbgb" path="res://assets/backgrounds/Free Pixel Art Forest/PNG/Background layers/Layer_0004_Lights.png" id="5_p58nu"]
+[ext_resource type="Texture2D" uid="uid://b800plt24ly5y" path="res://assets/backgrounds/Free Pixel Art Forest/PNG/Background layers/Layer_0002_7.png" id="6_sqg24"]
+[ext_resource type="FontFile" uid="uid://ccpeu102rjqi4" path="res://assets/fonts/BoldPixels (1).ttf" id="7_45yif"]
+
+[node name="LocalLobby" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i0400")
+
+[node name="Back" type="Node" parent="."]
+
+[node name="Layer00092" type="Sprite2D" parent="Back"]
+position = Vector2(124.183, -12.8472)
+scale = Vector2(0.302119, 0.302119)
+texture = ExtResource("2_bqfe8")
+
+[node name="Layer00064" type="Sprite2D" parent="Back"]
+position = Vector2(125.318, -20.8739)
+scale = Vector2(0.365382, 0.365382)
+texture = ExtResource("3_n5mer")
+
+[node name="Layer00036" type="Sprite2D" parent="Back"]
+position = Vector2(189, -25)
+scale = Vector2(0.373831, 0.373831)
+texture = ExtResource("4_l1dv4")
+
+[node name="Layer00037" type="Sprite2D" parent="Back"]
+position = Vector2(133, -27)
+scale = Vector2(0.398524, 0.398525)
+texture = ExtResource("4_l1dv4")
+
+[node name="Layer0004Lights" type="Sprite2D" parent="Back"]
+position = Vector2(94, -14)
+scale = Vector2(0.204741, 0.204741)
+texture = ExtResource("5_p58nu")
+
+[node name="Layer0004Lights2" type="Sprite2D" parent="Back"]
+position = Vector2(207, -15)
+scale = Vector2(0.204741, 0.204741)
+texture = ExtResource("5_p58nu")
+
+[node name="Layer00027" type="Sprite2D" parent="Back"]
+position = Vector2(118, 149)
+scale = Vector2(0.264278, 0.264278)
+texture = ExtResource("6_sqg24")
+
+[node name="Panel" type="Panel" parent="."]
+z_index = 10
+custom_minimum_size = Vector2(150, 100)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -75.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 110.0
+grow_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+custom_minimum_size = Vector2(150, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -50.0
+offset_right = 75.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_45yif")
+text = "LOBBY"
+horizontal_alignment = 1
+
+[node name="ListPlayers" type="VBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StartButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_45yif")
+text = "Start"
+
+[node name="MenuButton" type="Button" parent="."]
+z_index = 10
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_top = -39.0
+offset_right = 48.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("7_45yif")
+text = "Main Menu"
+
+[connection signal="pressed" from="Panel/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://csfwqkpr8kp65"]
+
+[ext_resource type="Script" uid="uid://dfffiaauthw41" path="res://multiplayers/scenes/multiplayer_game_ui.gd" id="1_7gvn4"]
+
+[node name="MultiplayerGameUI" type="CanvasLayer"]
+script = ExtResource("1_7gvn4")
+
+[node name="MenuButton" type="Button" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -26.0
+offset_top = 4.0
+offset_right = 26.0
+offset_bottom = 24.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 8
+text = "Main Menu"
+
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]

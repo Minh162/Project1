@@ -6,6 +6,8 @@ extends CharacterBody2D
 @export var trigger_range_area: Area2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
+@onready var hurt_sound: AudioStreamPlayer2D = $HurtSound
+@onready var idle_sound: AudioStreamPlayer2D = $IdleSound
 
 var is_alive : bool = true
 var can_move : bool = true
@@ -100,10 +102,14 @@ func _on_trigger_range_body_exited(body: Node2D) -> void:
 func _on_globin_hurt(_hurt_pos: Vector2) -> void:
 	is_hurting = true
 	can_move = false
+	idle_sound.stop()
+	hurt_sound.play()
 	animation_player.play("hit")
 	await animation_player.animation_finished
 	can_move = true
 	is_hurting = false
+	await hurt_sound.finished
+	idle_sound.play()
 
 func _on_globin_death() -> void:
 	if not is_alive:
