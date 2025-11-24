@@ -190,7 +190,6 @@ bg_color = Color(0.31801978, 0.3180198, 0.31801963, 1)
 bg_color = Color(0, 0.6862745, 0.33333334, 0.63529414)
 
 [node name="MultiplayerArcher" node_paths=PackedStringArray("anim_player", "health_component", "health_bar", "name_label") instance=ExtResource("1_scq7o")]
-collision_layer = 0
 anim_player = NodePath("AnimationPlayer")
 health_component = NodePath("HealthComponent")
 speed = 150.0
